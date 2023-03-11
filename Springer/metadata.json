@@ -1,0 +1,130 @@
+{
+    "articles":[
+        {
+            "title": "Towards a Deep Improviser: a prototype deep learning post-tonal free music generator",
+            "doi": "https://doi.org/10.1007/s00521-018-3765-x",
+            "year": 2018,
+            "institution": ["University of London","Western Sydney University","austraLYSIS"],
+            "location": ["United Kingdom","Australia"],
+            "database": "Springer",
+            "file": "s00521-018-3765-x.pdf"
+        },
+        {
+            "title": "From artificial neural networks to deep learning for music generation: history, concepts and trends",
+            "doi": "https://doi.org/10.1007/s00521-020-05399-0",
+            "year": 2020,
+            "institution": ["UNIRIO","Sorbonne Universite"],
+            "location": ["Brazil","France"],
+            "database": "Springer",
+            "file": "s00521-020-05399-0.pdf"
+        },
+        {
+            "title": "Conditional hybrid GAN for melody generation from lyrics",
+            "doi": "https://doi.org/10.1007/s00521-022-07863-5",
+            "year": 2022,
+            "institution": ["Indian Institute of Technology Delhi","Zhejiang University","National Institute of Informatics and SOKENDAI"],
+            "location": ["China","India","Japan"],
+            "database": "Springer",
+            "file": "s00521-022-07863-5.pdf"
+        },
+        {
+            "title": "Scene2Wav: a deep convolutional sequence-to-conditional SampleRNN for emotional scene musicalization",
+            "doi": "https://doi.org/10.1007/s11042-020-09636-5",
+            "year": 2020,
+            "institution": ["Kyungpook National University"],
+            "location": ["South Korea"],
+            "database": "Springer",
+            "file": "s11042-020-09636-5.pdf"
+        },
+        {
+            "title": "Attentional networks for music generation",
+            "doi": "https://doi.org/10.1007/s11042-021-11881-1",
+            "year": 2022,
+            "institution": ["Jawaharlal Nehru University","Indian Institute of Information Technology"],
+            "location": ["India"],
+            "database": "Springer",
+            "file": "s11042-021-11881-1.pdf"
+        },
+        {
+            "title": "Monophonic music composition using genetic algorithm and Bresenham’s line algorithm",
+            "doi": "https://doi.org/10.1007/s11042-022-12185-8",
+            "year": 2022,
+            "institution": ["IIT (ISM) Dhanbad"],
+            "location": ["India"],
+            "database": "Springer",
+            "file": "s11042-022-12185-8.pdf"
+        },
+        {
+            "title": "Polyphonic music generation generative adversarial network with Markov decision process",
+            "doi": "https://doi.org/10.1007/s11042-022-12925-w",
+            "year": 2022,
+            "institution": ["Guangzhou University"],
+            "location": ["China"],
+            "database": "Springer",
+            "file": "s11042-022-12925-w.pdf"
+        },
+        {
+            "title": "A combination of multi-objective genetic algorithm and deep learning for music harmony generation",
+            "doi": "https://doi.org/10.1007/s11042-022-13329-6",
+            "year": 2022,
+            "institution": ["Iran Broadcasting University"],
+            "location": ["Iran"],
+            "database": "Springer",
+            "file": "s11042-022-13329-6.pdf"
+        },
+        {
+            "title": "A Style-Specific Music Composition Neural Network",
+            "doi": "https://doi.org/10.1007/s11063-020-10241-8",
+            "year": 2020,
+            "institution": ["National Natural Science Foundation of China"],
+            "location": ["China"],
+            "database": "Springer",
+            "file": "s11063-020-10241-8.pdf"
+        },
+        {
+            "title": "Self-Supervised Music Motion Synchronization Learning for Music-Driven Conducting Motion Generation",
+            "doi": "https://doi.org/10.1007/s11390-022-2030-z",
+            "year": 2022,
+            "institution": ["Hohai University","Nantong University"],
+            "location": ["China"],
+            "database": "Springer",
+            "file": "s11390-022-2030-z.pdf"
+        },
+        {
+            "title": "Integration of a music generator and a song lyrics generator to create Spanish popular songs",
+            "doi": "https://doi.org/10.1007/s12652-020-01822-5",
+            "year": 2020,
+            "institution": ["Universidad de Salamanca","University of Coimbra"],
+            "location": ["Spain", "Portugal"],
+            "database": "Springer",
+            "file": "s12652-020-01822-5.pdf"
+        },
+        {
+            "title": "Transformer-based ensemble method for multiple predominant instruments recognition in polyphonic music",
+            "doi": "https://doi.org/10.1186/s13636-022-00245-8",
+            "year": 2022,
+            "institution": ["APJ Abdul Kalam Technological University"],
+            "location": ["India"],
+            "database": "Springer",
+            "file": "s13636-022-00245-8.pdf"
+        },
+        {
+            "title": "Genre Recognition from Symbolic Music with CNNs: Performance and Explainability",
+            "doi": "https://doi.org/10.1007/s42979-022-01490-6",
+            "year": 2022,
+            "institution": ["National Technical University of Athens"],
+            "location": ["Greece"],
+            "database": "Springer",
+            "file": "s42979-022-01490-6.pdf"
+        },
+        {
+            "title": "CycleDRUMS: automatic drum arrangement for bass lines using CycleGAN",
+            "doi": "https://doi.org/10.1007/s44163-023-00047-7",
+            "year": 2023,
+            "institution": ["University of Rome"],
+            "location": ["Italy"],
+            "database": "Springer",
+            "file": "s44163-023-00047-7.pdf"
+        }
+    ]
+}

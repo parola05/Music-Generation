@@ -1,0 +1,166 @@
+{
+    "articles":[
+        {
+            "title": "MP3net: coherent, minute-long music generation from raw audio with a simple convolutional GAN",
+            "doi": "arXiv:2101.04785",
+            "year": 2021,
+            "institution": null,
+            "location": null,
+            "database": "ArXiv",
+            "file": "2101.04785.pdf"
+        },
+        {
+            "title": "Hierarchical Recurrent Neural Networks for Conditional Melody Generation with Long-term Structure",
+            "doi": "arXiv:2102.09794",
+            "year": 2021,
+            "institution": ["Singapore University of Technology and Design"],
+            "location": ["Singapore"],
+            "database": "ArXiv",
+            "file": "2102.09794.pdf"
+        },
+        {
+            "title": "LEARNING TO GENERATE MUSIC WITH SENTIMENT",
+            "doi": "arXiv:2103.06125",
+            "year": 2021,
+            "institution": ["University of California"],
+            "location": ["United States"],
+            "database": "ArXiv",
+            "file": "2103.06125.pdf"
+        },
+        {
+            "title": "Personalized Popular Music Generation Using Imitation and Structure",
+            "doi": "arXiv:2105.04709",
+            "year": 2021,
+            "institution": ["Carnegie Mellon University", "National University of Singapore"],
+            "location": ["United States", "Singapore"],
+            "database": "ArXiv",
+            "file": "2105.04709.pdf"
+        },
+        {
+            "title": "GAN Computers Generate Arts? A Survey on Visual Arts, Music, and Literary Text Generation using Generative Adversarial Network",
+            "doi": "arXiv:2108.03857",
+            "year": 2021,
+            "institution": ["American University of Sharja"],
+            "location": ["United Arab Emirates"],
+            "database": "ArXiv",
+            "file": "2108.03857.pdf"
+        },
+        {
+            "title": "CONTROLLABLE DEEP MELODY GENERATION VIA HIERARCHICAL MUSIC STRUCTURE REPRESENTATION",
+            "doi": "arXiv:2109.00663",
+            "year": 2021,
+            "institution": ["Carnegie Mellon university", "Adobe Inc."],
+            "location": ["United States"],
+            "database": "ArXiv",
+            "file": "2109.00663.pdf"
+        },
+        {
+            "title": "Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer",
+            "doi": "arXiv:2111.04093",
+            "year": 2022,
+            "institution": null,
+            "location": null,
+            "database": "ArXiv",
+            "file": "2111.04093.pdf"
+        },
+        {
+            "title": "Evaluating Deep Music Generation Methods Using Data Augmentation",
+            "doi": "arXiv:2201.00052",
+            "year": 2021,
+            "institution": ["Imperial College London", "University of Augsburg"],
+            "location": ["United Kingdom", "Germany"],
+            "database": "ArXiv",
+            "file": "2201.00052.pdf"
+        },
+        {
+            "title": "FIGARO: Generating Symbolic Music with Fine-Grained Artistic Control",
+            "doi": "arXiv:2201.10936",
+            "year": 2022,
+            "institution": null,
+            "location": null,
+            "database": "ArXiv",
+            "file": "2201.10936.pdf"
+        },
+        {
+            "title": "Music Generation Using an LSTM",
+            "doi": "arXiv:2203.12105",
+            "year": 2022,
+            "institution": ["Milwaukee School of Engineering"],
+            "location": ["United States"],
+            "database": "ArXiv",
+            "file": "2203.12105.pdf"
+        },
+        {
+            "title": "Proteção intelectual de obras produzidas por sistemas baseados em inteligência artificial: uma visão tecnicista sobre o tema",
+            "doi": "arXiv:2206.03215",
+            "year": 2022,
+            "institution": ["Universidade Federal do Oeste do Pará"],
+            "location": ["Brazil"],
+            "database": "ArXiv",
+            "file": "2206.03215.pdf"
+        },
+        {
+            "title": "An adaptive music generation architecture for games based on the deep learning Transformer model",
+            "doi": "arXiv:2207.01698",
+            "year": 2022,
+            "institution": ["PUC-Rio","Sorbonne Université"],
+            "location": ["Brazil","France"],
+            "database": "ArXiv",
+            "file": "2207.01698.pdf"
+        },
+        {
+            "title": "WHAT IS MISSING IN DEEP MUSIC GENERATION? A STUDY OF REPETITION AND STRUCTURE IN POPULAR MUSIC",
+            "doi": "arXiv:2209.00182",
+            "year": 2022,
+            "institution": ["Carnegie Mellon University"],
+            "location": ["United States"],
+            "database": "ArXiv",
+            "file": "2209.00182.pdf"
+        },
+        {
+            "title": "VIS2MUS: EXPLORING MULTIMODAL REPRESENTATION MAPPING FOR CONTROLLABLE MUSIC GENERATION",
+            "doi": "arXiv:2211.05543",
+            "year": 2022,
+            "institution": ["Queen Mary University of London","NYU Shanghai", "MBZUAI"],
+            "location": ["United Kingdom","China","United Arab Emirates"],
+            "database": "ArXiv",
+            "file": "2211.05543.pdf"
+        },
+        {
+            "title": "GENERATING MUSIC WITH SENTIMENT USING TRANSFORMER-GANS",
+            "doi": "arXiv:2212.11134",
+            "year": 2022,
+            "institution": ["State University of Campinas"],
+            "location": ["Brazil"],
+            "database": "ArXiv",
+            "file": "2212.11134.pdf"
+        },
+        {
+            "title": "WuYun: Exploring hierarchical skeleton-guided melody generation using knowledge-enhanced deep learning",
+            "doi": "arXiv:2301.04488",
+            "year": 2023,
+            "institution": ["Zhejiang University", "Alibaba-Zhejiang University Joint Institute of Frontier Technologies","Innovation Center of Yangtze River Delta","Microsoft Research Asia"],
+            "location": ["China"],
+            "database": "ArXiv",
+            "file": "2301.04488.pdf"
+        },
+        {
+            "title": "An investigation of the reconstruction capacity of stacked convolutional autoencoders for log-mel-spectrograms",
+            "doi": "arXiv:2301.07665",
+            "year": 2023,
+            "institution": ["Technological University of Dublin"],
+            "location": ["Ireland"],
+            "database": "ArXiv",
+            "file": "2301.07665.pdf"
+        },
+        {
+            "title": "Byte Pair Encoding for Symbolic Music",
+            "doi": "arXiv:2301.11975",
+            "year": 2023,
+            "institution": null,
+            "location": null,
+            "database": "ArXiv",
+            "file": "2301.11975.pdf"
+        }
+    ]
+}

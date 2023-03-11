@@ -1,0 +1,184 @@
+{
+    "articles":[
+        {
+            "title": "A Symbolic-domain Music Generation Method Based on Leak-GAN",
+            "doi": "10.1109/IAECST54258.2021.9695533",
+            "year": 2021,
+            "institution": ["Xihua University"], 
+            "location": ["China"],
+            "database": "IEEE Xplore",
+            "file": "A_Symbolic-domain_Music_Generation_Method_Based_on_Leak-GAN.pdf"
+        },
+        {
+            "title": "AI Music Therapist: A Study on Generating Specific Therapeutic Music based on Deep Generative Adversarial Network Approach",
+            "doi": "10.1109/ICETCI55101.2022.9832398",
+            "year": 2022,
+            "institution": ["Walnut Hill School for The Arts"],
+            "location": ["United States"],
+            "database": "IEEE Xplore",
+            "file": "AI_Music_Therapist_A_Study_on_Generating_Specific_Therapeutic_Music_based_on_Deep_Generative_Adversarial_Network_Approach.pdf"
+        },
+        {
+            "title": "An intelligent music generation based on Variational Autoencoder",
+            "doi": "10.1109/ICCST50977.2020.00082",
+            "year": 2020,
+            "institution": ["Zhengzhou University"],
+            "location": ["China"],
+            "database": "IEEE Xplore",
+            "file": "An_intelligent_music_generation_based_on_Variational_Autoencoder.pdf"
+        },
+        {
+            "title": "APE-GAN: A Novel Active Learning Based Music Generation Model With Pre-Embedding",
+            "doi": "10.1109/ICEICT53123.2021.9531287",
+            "year": 2021,
+            "institution": ["Mars Laboratory Whittle School","Peking University"],
+            "location": ["China"],
+            "database": "IEEE Xplore",
+            "file": "APE-GAN_A_Novel_Active_Learning_Based_Music_Generation_Model_With_Pre-Embedding.pdf"
+        },
+        {
+            "title": "Automatic Music Generation System based on RNN Architecture",
+            "doi": "10.1109/ICTACS56270.2022.9988652",
+            "year": 2022,
+            "institution": ["KoneruLakshmaiah Educational Foundation","Symbiosis Institute of Technology Symbiosis International Deemed University"],
+            "location": ["India"],
+            "database": "IEEE Xplore",
+            "file": "Automatic_Music_Generation_System_based_on_RNN_Architecture.pdf"
+        },
+        {
+            "title": "Development of Application Software for Generating Music Composition Inspired by Nature Using Deep Learning",
+            "doi": "10.1109/ICCSEA54677.2022.9936506",
+            "year": 2022,
+            "institution": ["Jamia Hamdard"],
+            "location": ["India"],
+            "database": "IEEE Xplore",
+            "file": "Development_of_Application_Software_for_Generating_Music_Composition_Inspired_by_Nature_Using_Deep_Learning.pdf"
+        },
+        {
+            "title": "Evaluating Deep Music Generation Methods Using Data Augmentation",
+            "doi": "10.1109/MMSP53017.2021.9733502",
+            "year": 2021,
+            "institution": ["Imperial College London","University of Augsburg"],
+            "location": ["United Kingdom","Germany"],
+            "database": "IEEE Xplore",
+            "file": "Evaluating_Deep_Music_Generation_Methods_Using_Data_Augmentation.pdf"
+        },
+        {
+            "title": "Generating Music Algorithm with Deep Convolutional Generative Adversarial Networks",
+            "doi": "10.1109/ELTECH.2019.8839521",
+            "year": 2019,
+            "institution": ["HiFive Tech Co.","Sichuan Institute of Computer Sciences"],
+            "location": ["China"],
+            "database": "IEEE Xplore",
+            "file": "Generating_Music_Algorithm_with_Deep_Convolutional_Generative_Adversarial_Networks.pdf"
+        },
+        {
+            "title": "Generating Music with Emotions",
+            "doi": "10.1109/TMM.2022.3163543",
+            "year": 2022,
+            "institution":  ["Singapore Management University"],
+            "location": ["Singapore"],
+            "database": "IEEE Xplore",
+            "file": "Generating_Music_with_Emotions.pdf"
+        },
+        {
+            "title": "Generating Music with Generative Adversarial Networks and Long Short-Term Memory",
+            "doi": "10.1109/CEI52496.2021.9574491",
+            "year": 2021,
+            "institution": ["University of California", "Shanghai University"],
+            "location": ["United States", "China"],
+            "database": "IEEE Xplore",
+            "file": "Generating_Music_with_Generative_Adversarial_Networks_and_Long_Short-Term_Memory.pdf"
+        },
+        {
+            "title": "Generation of Music With Dynamics Using Deep Convolutional Generative Adversarial Network",
+            "doi": "10.1109/CW52790.2021.00030",
+            "year": 2021,
+            "institution": ["Nanyang Technological University"],
+            "location": ["Singapore"],
+            "database": "IEEE Xplore",
+            "file": "Generation_of_Music_With_Dynamics_Using_Deep_Convolutional_Generative_Adversarial_Network.pdf"
+        },
+        {
+            "title": "Monophonic Music Generation With a Given Emotion Using Conditional Variational Autoencoder",
+            "doi": "10.1109/ACCESS.2021.3113829",
+            "year": 2021,
+            "institution": ["Bialystok University of Technology"],
+            "location": ["Poland"],
+            "database": "IEEE Xplore",
+            "file": "Monophonic_Music_Generation_With_a_Given_Emotion_Using_Conditional_Variational_Autoencoder.pdf"
+        },
+        {
+            "title": "Music Deep Learning: A Survey on Deep Learning Methods for Music Processing",
+            "doi": "10.1109/MOCAST54814.2022.9837541",
+            "year": 2022,
+            "institution": ["Aristotle University of Thessaloniki","University of Macedonia", "University of Western Macedonia"],
+            "location": ["Greece"],
+            "database": "IEEE Xplore",
+            "file": "Music_Deep_Learning_A_Survey_on_Deep_Learning_Methods_for_Music_Processing.pdf"
+        },
+        {
+            "title": "Music Generation using Deep Generative Modelling",
+            "doi": "10.1109/ICCDW45521.2020.9318683",
+            "year": 2020,
+            "institution": ["Thakur College of Engineering and Technology"],
+            "location": ["India"],
+            "database": "IEEE Xplore",
+            "file": "Music_Generation_using_Deep_Generative_Modelling.pdf"
+        },
+        {
+            "title": "Music Generation using Deep Learning with Spectrogram Analysis",
+            "doi": "10.1109/AINIT54228.2021.00119",
+            "year": 2021,
+            "institution": ["University of Electronic Science and Technology of China","Peking University"],
+            "location": ["China"],
+            "database": "IEEE Xplore",
+            "file": "Music_Generation_using_Deep_Learning_with_Spectrogram_Analysis.pdf"
+        },
+        {
+            "title": "Music Generation with AI technology: Is It Possible?",
+            "doi": "10.1109/ICET55676.2022.9824149",
+            "year": 2022,
+            "institution": ["BNU-HKBU United International Colloge"],
+            "location": ["China"],
+            "database": "IEEE Xplore",
+            "file": "Music_Generation_with_AI_technology_Is_It_Possible.pdf"
+        },
+        {
+            "title": "Music Generation with Bi-Directional Long Short Term Memory Neural Networks",
+            "doi": "10.1109/ICCCNT54827.2022.9984228",
+            "year": 2022,
+            "institution": ["Sardar Patel Institute of Technology"],
+            "location": ["Inida"],
+            "database": "IEEE Xplore",
+            "file": "Music_Generation_with_Bi-Directional_Long_Short_Term_Memory_Neural_Networks.pdf"
+        },
+        {
+            "title": "RE-RLTuner: A topic-based music generation method",
+            "doi": "10.1109/RCAR52367.2021.9517538",
+            "year": 2021,
+            "institution": ["University of Chinese Academy of Science","Shenzhen Institute of Advanced Technology","Guangdong-Hong Kong-Macao Joint Laboratory of Human-Machine Intelligence-Synergy Systems"],
+            "location": ["China"],
+            "database": "IEEE Xplore",
+            "file": "RE-RLTuner_A_topic-based_music_generation_method.pdf"
+        },
+        {
+            "title": "Some Reflections on the Potential and Limitations of Deep Learning for Automated Music Generation",
+            "doi": "10.1109/PIMRC.2018.8581038",
+            "year": 2018,
+            "institution": ["University of Bologna"],
+            "location": ["Italy"],
+            "database": "IEEE Xplore",
+            "file": "Some_Reflections_on_the_Potential_and_Limitations_of_Deep_Learning_for_Automated_Music_Generation.pdf"
+        },
+        {
+            "title": "The Effect of Explicit Structure Encoding of Deep Neural Networks for Symbolic Music Generation",
+            "doi": "10.1109/MMRP.2019.00022",
+            "year": 2019,
+            "institution": ["NYU Shanghai","University of Illinois Urbana-Champaign","University of California","Fudan University"],
+            "location": ["China", "United States"],
+            "database": "IEEE Xplore",
+            "file": "The_Effect_of_Explicit_Structure_Encoding_of_Deep_Neural_Networks_for_Symbolic_Music_Generation.pdf"
+        }
+    ]
+}

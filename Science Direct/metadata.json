@@ -1,0 +1,67 @@
+{
+    "articles":[
+        {
+            "title": "PopMNet: Generating structured pop music melodies using neural networks",
+            "doi": "https://doi.org/10.1016/j.artint.2020.103303",
+            "year": 2020,
+            "institution": ["Tsinghua Universtity","LingDongYin Technology Co."],
+            "location": ["China"],
+            "database": "Science Direct",
+            "file": "1-s2.0-S000437022030062X-main.pdf"
+        },
+        {
+            "title": "Singability-enhanced lyric generator with music style transfer",
+            "doi": "https://doi.org/10.1016/j.comcom.2021.01.002",
+            "year": 2021,
+            "institution": ["National Taichung University of Science and Technology","National Chung Hsing University"],
+            "location": ["Taiwan"],
+            "database": "Science Direct",
+            "file": "1-s2.0-S0140366421000104-main.pdf"
+        },
+        {
+            "title": "Human, I wrote a song for you: An experiment testing the influence of machines’ attributes on the AI-composed music evaluation",
+            "doi": "https://doi.org/10.1016/j.chb.2022.107239",
+            "year": 2022,
+            "institution": ["University of Southern California"],
+            "location": ["United States"],
+            "database": "Science Direct",
+            "file": "1-s2.0-S0747563222000619-main.pdf"
+        },
+        {
+            "title": "Rethinking musicality in dementia as embodied and relational",
+            "doi": "https://doi.org/10.1016/j.jaging.2018.01.006",
+            "year": 2018,
+            "institution": ["Toronto Rehabilitation Institute-University","University of Toronto"],
+            "location": ["Canada"],
+            "database": "Science Direct",
+            "file": "1-s2.0-S0890406518300161-main.pdf"
+        },
+        {
+            "title": "deepsing: Generating sentiment-aware visual stories using cross-modal music translation",
+            "doi": "https://doi.org/10.1016/j.eswa.2020.114059",
+            "year": 2021,
+            "institution": ["Aristotle University of Thessaloniki","DataScouting"],
+            "location": ["Greece"],
+            "database": "Science Direct",
+            "file": "1-s2.0-S0957417420308228-main.pdf"
+        },
+        {
+            "title": "ComposeInStyle: Music composition with and without Style Transfer",
+            "doi": "https://doi.org/10.1016/j.eswa.2021.116195",
+            "year": 2022,
+            "institution": ["Manipal Academy of Higher Education"],
+            "location": ["India"],
+            "database": "Science Direct",
+            "file": "1-s2.0-S0957417421015128-main.pdf"
+        },
+        {
+            "title": "The algorithmic composition for music copyright protection under deep learning and blockchain",
+            "doi": "https://doi.org/10.1016/j.asoc.2021.107763",
+            "year": 2021,
+            "institution": ["Harbin University","Moscow State Normal University,","Chuzhou University","University of Perpetual Help System DALTA"],
+            "location": ["China","Philippines","Russia"],
+            "database": "Science Direct",
+            "file": "1-s2.0-S1568494621006840-main.pdf"
+        }
+    ]
+}
