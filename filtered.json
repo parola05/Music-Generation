@@ -1,0 +1,903 @@
+{
+    "filtered": [
+        {
+            "title": "FIGARO: Generating Symbolic Music with Fine-Grained Artistic Control",
+            "architecture": [
+                "Especially the Transformer architecture (Vaswani\net al., 2017), popularized in the context of Natural Language\nprocessing (Brown et al., 2020) and then successfully ap-\n1Department of Computer Science, ETH Z \u00a8urich, Z \u00a8urich,\nSwitzerland.",
+                "Karras, T., Laine, S., and Aila, T. A Style-Based\nGenerator Architecture for Generative Adversarial Net-\nworks."
+            ],
+            "training parameters": [],
+            "learning rate": [
+                "We use the inverse-square-root learning rate\nschedule with initial constant warmup at 10\u00004given by\n10\u00004=max(1;p\nn=N)whereN= 4000 is the number of\nwarmup steps."
+            ],
+            "batch size": [
+                "We train each model for\n100k steps with a batch size of 512 sequences.",
+                "Due to GPU\nmemory constraints we reduce the context size from 2048 to 1024 and use an accumulated batch size of 16, ensuring stable\ntraining."
+            ],
+            "ethical": [
+                "Ethical Considerations\nAutomatic music generation may raise ethical concerns sim-\nilar to those of large language models."
+            ],
+            "impact": [],
+            "society": [],
+            "copyright": [
+                "Copyright 2022 by the authors.plied in several other Machine Learning tasks (Dosovitskiy\net al., 2021; Lample & Charton, 2019; Biggio et al., 2021),\nhas proven to be a powerful tool for musical sequence mod-\nelling.",
+                "The model might also reproduce copyrighted material that is\npresent in the training data and potentially generate samples\nthat infringe on copyright law."
+            ],
+            "evaluation metrics": [
+                "Evaluation Metrics\n5.3.1.",
+                "We see a drop in performance in all evaluation metrics for\nevery model compared to the conditional generation task,\nwhich is expected due to distributional shifts in the data.",
+                "mv 1\njNjP\nn2NVELOCITY (n)\nmd 1\njNjP\nn2NDURATION (n)\nQuantize nd,mp,mvandmd\ndi (i;ts;nd;mp;mv;md)klist(I)klist(C)\nd dkdi\nend for\nreturn d\nC. Evaluation Metrics\nC.1."
+            ],
+            "metric": [
+                "Evaluation Metrics\n5.3.1.",
+                "We use perplexity (PPL) as a way to measure \ufb02uency and\nto compare the likelihood of different models in addition\nto task-speci\ufb01c metrics.",
+                "Metrics are computed as an empirical estimate\nover the test distribution.",
+                "We compute accuracy metrics for categorical\nvalues, namely for instruments, chords and time signature.",
+                "Previous work has used the\noverlapping area (OA) metric to quantify similarity between\ntwo musical sequences for a given feature (Choi et al., 2020;\nWu & Yang, 2021).",
+                "However, we \ufb01nd that the standard OA\nmetric fails to take the order of the sequences into account,\nas feature histograms are computed over the entire sequence.",
+                "We use the MOA metric to compute\nsimilarity in pitch, velocity and duration between ground\ntruth and reconstruction.",
+                "Perhaps unsurprisingly, FIGARO (expert) performs very\nwell on all metrics that are directly present in the expert\ndescription.",
+                "(2020) on most metrics by a slight\nmargin.",
+                "However, the model experiences\nposterior collapse in our experiments when trained on the\ndiverse LakhMIDI dataset, which is apparent by the low\nentropy of the model distribution (see Table 2) as well as the\nworse-than-unconditional performance on some description\nmetrics.",
+                "0.561 0.996 0.319 0.759 0.658 0.514 0.712 0.637\nFIGARO (learned) 1.973 0.594 0.195 0.969 0.738 0.701 0.653 0.546 0.544 0.697\nFIGARO 1.705 0.960 0.593 0.997 0.238 0.827 0.735 0.748 0.790 0.853\n(a) Conditional generation perplexity and similarity metrics.",
+                "ModelFluency Accuracy Fidelity\nPPL# I\" C\" TS\" ND# P\" V\" D\"sc\"sg\"\nChoi et al. (2020) 2.213 0.441 0.129 0.808 1.407 0.603 0.396 0.448 0.437 0.643\nFIGARO (expert) 1.824 0.944 0.524 0.992 0.384 0.741 0.559 0.497 0.705 0.575\nFIGARO (learned) 2.186 0.381 0.128 0.829 0.831 0.649 0.424 0.478 0.446 0.614\nFIGARO 1.782 0.917 0.514 0.988 0.335 0.807 0.702 0.694 0.748 0.744\n(b) Zero-shot medley generation perplexity and similarity metrics.",
+                "ModelFluency Accuracy Fidelity\nPPL# I\" C\" TS\" ND# P\" V\" D\"sc\"sg\"\nFIGARO (expert) 1.894 0.955 0.553 0.996 0.360 0.700 0.646 0.434 0.710 0.639\n- w/o instruments 1.980 0.373 0.568 1.000 0.424 0.674 0.586 0.436 0.687 0.625\n- w/o chords 2.023 0.895 0.100 0.995 0.564 0.672 0.603 0.413 0.294 0.615\n- w/o meta information 1.966 0.908 0.536 0.795 0.878 0.574 0.205 0.334 0.636 0.584\n(c) Ablation study perplexity and similarity metrics.",
+                "(2018) and MuseMorphose (Wu & Yang, 2021)\non perplexity (PPL) and similarity metrics.",
+                "Similarity metrics include instrument F1-score (I), chord F1-score (C) and time signature\naccuracy (TS) as well as note density NRMSE (ND), pitch MOA (P), velocity MOA (V), duration MOA (D), chroma similarity scand\ngrooving similarity sg.",
+                "We see a drop in performance in all evaluation metrics for\nevery model compared to the conditional generation task,\nwhich is expected due to distributional shifts in the data.",
+                "As one would expect, removing each component reduces\nthe performance signi\ufb01cantly in the respective metrics, in-\ndicating that each component carries useful information\nnot entirely inferable through the remaining components.",
+                "Interestingly, our experiments show that removing any com-\nponent slightly decreases the over-all performance even in\nmetrics that we would not necessarily expect to be affected.",
+                "mv 1\njNjP\nn2NVELOCITY (n)\nmd 1\njNjP\nn2NDURATION (n)\nQuantize nd,mp,mvandmd\ndi (i;ts;nd;mp;mv;md)klist(I)klist(C)\nd dkdi\nend for\nreturn d\nC. Evaluation Metrics\nC.1.",
+                "Macro Overlapping Area\nAs used by previous work, the overlapping area (OA) metric does not consider the sequential order of the investigated\nfeature, as feature histograms are computed over the entire sequence.",
+                "To alleviate this limitation, we adapt the OA metric to also consider temporal order."
+            ],
+            "pitch accuracy": [],
+            "rhythm accuracy": [],
+            "melodic": [],
+            "harmonic complexity": [],
+            "expressiveness": [],
+            "types of music": [],
+            "homophonic": [],
+            "heterophonic": [],
+            "a cappella": [],
+            "solo": [],
+            "choral": [],
+            "orchestral": [],
+            "electronic": [],
+            "pop": [
+                "Especially the Transformer architecture (Vaswani\net al., 2017), popularized in the context of Natural Language\nprocessing (Brown et al., 2020) and then successfully ap-\n1Department of Computer Science, ETH Z \u00a8urich, Z \u00a8urich,\nSwitzerland.",
+                "Brunner et al. (2018) propose MIDI-\nV AE as a method for conditional generation as well as genre\ntransfer between pop and jazz music.",
+                "Pop Music Transformer: Beat-\nbased Modeling and Generation of Expressive Pop Piano\nCompositions."
+            ],
+            "Demo availability": [],
+            "dataset": [
+                "Dataset\nWe use the LakhMIDI dataset (Raffel, 2016) as training data\nin all of our experiments, which to the best of our knowl-\nedge is the largest publicly available symbolic music dataset.",
+                "However, the model experiences\nposterior collapse in our experiments when trained on the\ndiverse LakhMIDI dataset, which is apparent by the low\nentropy of the model distribution (see Table 2) as well as the\nworse-than-unconditional performance on some description\nmetrics.",
+                "In terms of sample quality, our method\nbeats other state-of-the-art symbolic music generative mod-\nels trained on the LakhMIDI dataset.",
+                "Unlike the original work, we do not use data\naugmentation since the dataset is large enough and in order to allow for fair comparison between the models.",
+                "We limit the training data to a subset of the entire dataset (20k samples) due to technical limitations.",
+                "This is still considerably more training data than what was used in the original paper (1k samples) and should not affect\nperformance signi\ufb01cantly compared to using the full dataset."
+            ]
+        },
+        {
+            "title": "Music Generation Using an LSTM",
+            "architecture": [
+                "Enlisting a mapping \nfunction and designing a model architecture implementing fo ur-layer types, LSTM, \ndropout, dense, and the activation layer, we used the structure of the network presented \nhere as a springboard for our work.",
+                "Although there are a multitude of methods that apply to artificially generating music, \narchitecture design r emains nontrivial, training parameters remain poorly understood, and \nissues of overfitting and ambiguity in the most effective method to model complex data \nfeatures abound.",
+                "Ultimately, in their paper An Empirical Exploration of Recurrent Network Architectures \nthey found through a straightforward architecture search that  the existing  structure of \nLSTMs can\u2019t be beat for most applications.",
+                "We then repeated the architecture \nsearch process on the best performing models.",
+                "We \ntake inspiration from evolutionary architecture and \nhyperparameter search in this process, however as \nmusic quality is a subjective metric without a trivial \nautomatic validation metric there is no way that \nevolution can be done without human intervention.",
+                "In the same sense, \nour network\u2019s tiered LSTM architecture  may allow it to pick apart the various  aspects of \nmusic such as if it is building tension , speeding up, or looking at any other type of pattern \nthat may be found in music.",
+                "\u201cAn Empirical Exploration \nof Recurrent Network Architectures.\u201d"
+            ],
+            "training parameters": [
+                "Although there are a multitude of methods that apply to artificially generating music, \narchitecture design r emains nontrivial, training parameters remain poorly understood, and \nissues of overfitting and ambiguity in the most effective method to model complex data \nfeatures abound."
+            ],
+            "learning rate": [
+                "8  \n 3 Experiments  \nTo find which network structures and \nhyperparameters would yield the best results, we \ncreated a multitude of models with variations in \nhyperparameters such as batch size and learning rate, \nas well as the optimizations and activation functions, \nand the struct ure and size of our layers , then for each \nof those variations we generated a set of five songs \nwhich start predictions from the same input."
+            ],
+            "batch size": [
+                "8  \n 3 Experiments  \nTo find which network structures and \nhyperparameters would yield the best results, we \ncreated a multitude of models with variations in \nhyperparameters such as batch size and learning rate, \nas well as the optimizations and activation functions, \nand the struct ure and size of our layers , then for each \nof those variations we generated a set of five songs \nwhich start predictions from the same input."
+            ],
+            "ethical": [],
+            "impact": [
+                "This paper presents the application of a n LSTM network for music  generation , includes a \nbrief, comprehensible overview into the intuition and theory behind LSTMs and their \napplication in music sequence modeling, provides an analysis on the benefits and \ndisadvantages of our network and training data, shows the qualitati ve impact on our \nmodel output, and discusses potential improvements for our network."
+            ],
+            "society": [],
+            "copyright": [],
+            "evaluation metrics": [],
+            "metric": [
+                "We \ntake inspiration from evolutionary architecture and \nhyperparameter search in this process, however as \nmusic quality is a subjective metric without a trivial \nautomatic validation metric there is no way that \nevolution can be done without human intervention."
+            ],
+            "pitch accuracy": [],
+            "rhythm accuracy": [],
+            "melodic": [],
+            "harmonic complexity": [],
+            "expressiveness": [],
+            "types of music": [],
+            "homophonic": [],
+            "heterophonic": [],
+            "a cappella": [],
+            "solo": [],
+            "choral": [],
+            "orchestral": [],
+            "electronic": [],
+            "pop": [
+                "1  \n  \n \nMusic Generation Using an LSTM  \n \nMichael Conner, Lucas Gral,  Kevin Adams  \nDavid Hunger, Reagan Strelow, and Alexander Neuwirth  \nDepartment of Electrical Engineering and Computer Science  \nMilwaukee School of Engineering  \n{connerm, grall, adamsk, hungerd, strelowr, neuwirtha}@msoe.edu  \n \n \nAbstract  \nOver the past several years, deep learning for sequence modeling has grown in popularity."
+            ],
+            "Demo availability": [],
+            "dataset": [
+                "To convert the MIDI files in our dataset into an input format that our model can train on, \nwe first utilized the Music21 library\u2019s  converter to parse MIDI data into a numerical \nformat."
+            ]
+        },
+        {
+            "title": "WuYun: Exploring hierarchical skeleton-guided melody generation using knowledge-enhanced deep learning",
+            "architecture": [
+                "Here, we present WuYun, a\nknowledge-enhanced deep learning architecture for improving the structure of\ngenerated melodies, which \ufb01rst generates the most structurally important notes to\nconstruct a melodic skeleton and subsequently in\ufb01lls it with dynamically decorative\nnotes into a full-\ufb02edged melody.",
+                "Numerous specialized architectures of the language model for music generation have demonstrated\npromising performance in generating long-range coherent melodies, including effective attention\nmechanisms (15, 16), enhanced memory networks (17\u201319), large-scale deep neural networks (20),\nand explicit musicality regularization (21).",
+                "In this study, we propose WuYun, a hierarchical skeleton-guided melody generation architecture\nbased on knowledge-enhanced deep learning that incorporates the melodic skeleton as deep structural\nsupport to provide explicit guidance on the development direction of melody generation (Fig. 1A).",
+                "At the stage of melody inpainting, we adopt a Transformer encoder\u2013decoder\narchitecture (39) to elaborate the melodic skeleton into a full-\ufb02edged melody by encoding the melodic\nskeleton as additional knowledge into the decoder to guide the melody generation process (Fig.",
+                "To prove the effectiveness of the architecture, we evaluate WuYun on a publicly available melody\ndataset.",
+                "The hierarchical\nskeleton-guided melody generation architecture effectively improves generated melodies\u2019 long-term\nstructure and musicality and outperforms other state-of-the-art methods by 0.51 on average on all\nsubjective evaluation metrics.",
+                "Input Module(Embedding)Positional Encoding\nTransformer-XL\uff084 blocks\uff09Output Module(Classifier)Ca) Melodic Skeleton Generation ModuleInput(Melodic skeleton)RepresentationInput Module(Embedding)Encoder\uff084 blocks\uff09Decoder\uff084 blocks\uff09Recurrent Transformerb) Melodic Prolongation Generation ModuleRepresentationInput Module(Embedding)Input(Melody)RepresentationInput(Melodic skeleton)Output Module(Classifier)TrainA\nMelodic SkeletonMelody (example)\nMelodic skeletonSequence learning modelY1Y2Yn\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\nX1X2Xn\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7Partial sequenceMelodic skeleton\u00b7\u00b7\u00b7\nX1X2Xn\u00b7\u00b7\u00b7EncoderY2Y3Yn\u00b7\u00b7\u00b7Y1Y2Yn-1\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7Decoder\n\u2026\nPredicted tokens\nPredicted tokens\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7Sequence-to-sequencelearning modelMelodyFigure 1: Architecture of WuYun.",
+                "( C) Architecture details of WuYun.",
+                "In the following, we elaborate on the\nmelodic skeleton extraction framework from rhythm and pitch dimensions and introduce the design of\nWuYun melody generation architecture that \ufb01rst constructs the melodic skeleton and then completes\nthe melody instead of sequentially generating a melody note-by-note at once.",
+                "2D shows the tonal skeleton of\nthe \ufb01rst eight bars from the song \u201cHey Jude.\u201d\n2.3 Design of WuYun\nFigure 1C shows the diagram of the proposed hierarchical melody generation architecture called\nWuYun.",
+                "Then, we design a hierarchical melody generation architecture with two generative modules\nresponsible for melodic skeleton construction and melody inpainting, respectively.",
+                "In this subsection,\nwe will introduce the hierarchical melody generation architecture about how we generate the melodic\nskeleton and incorporate it to guide the melody generation process.",
+                "The details about the MeMIDI\nsymbolic music representation method and the word embedding technique used in this architecture\u2019s\ninput module are described in the Materials and Methods section.",
+                "At the stage of melody inpainting, we employ the recurrent Transformer-based\nencoder\u2013decoder architecture (18) in a sequence-to-sequence setup as the melody inpainting module\nto complete the melody conditioned on the melodic skeleton, i.e., \ufb01lling the missing information\nbetween the melodic skeleton notes.",
+                "In this work, we focus on designing a hierarchical skeleton-guided melody generation architecture\nbased on knowledge-enhanced deep learning, following the hierarchical organization principle of\nstructure and prolongation.",
+                "Therefore, we used common language models in NLP to make the WuYun\narchitecture accessible.",
+                "Each subject\nwas required to rate 18 musical pieces, which cost approximately 25 min.\nFigure 3A shows the mean opinion scores of WuYun architecture\u2019s melody generation performances\nwith nine different settings on the \ufb01ve subjective evaluation metrics from all subjects in the form of\nhistograms.",
+                "This phenomenon can be explained by\nthe structure and prolongation proportion tradeoffs in the design of two-stage melody generation\narchitecture using an end-to-end learning framework.",
+                "2.6 Comparisons with other melody generation methods\nTo prove the effectiveness of the proposed hierarchical skeleton-guided melody generation architecture\nbased on knowledge-enhanced deep learning, we compared WuYun-RS (i.e., using the rhythmic\nskeleton setting) to \ufb01ve public SOTA Transformer-based melody generation models, namely, Music\nTransformer (15), Pop Music Transformer (17), Compound Word Transformer (19), Melons (33)\nand MeMIDI, that follow an end-to-end left-to-right note-by-note generative paradigm and treat\neach note equally.",
+                "However, the original music representation of Music\n9Figure 3: Subjective evaluation results of the WuYun melody generation architecture based on different\nmelodic skeleton settings, and the other public melody generation models.",
+                "(A) Subjective comparison of the\nperformance of the WuYun architecture based on different melodic skeleton settings in Experiment 1.",
+                "The WuYun architecture with the rhythmic skeleton setting achieves the best performance in\nall melodic skeleton settings on all subjective evaluation metrics.",
+                "However, there is still an obvious gap between the WuYun melody generation architecture\nand human-composed music, leaving room for improvement.",
+                "On the\nother hand, although the Compound Word Transformer and Melons (Nos. 4 and 5) were inferior to\nWuYun-RS, their effective compound word representation and the linear Transformer as the backbone\narchitecture enable it to process multidimensional music information in one step simultaneously and\nobtain a better result among these \ufb01ve public SOTA melody generation models.",
+                "Thus, combining the\nproposed knowledge-enhanced hierarchical skeleton-guided music generation architecture with more\nef\ufb01cient music representation methods and advanced language models can bring a better result for\nmelody generation tasks.",
+                "3 Discussion\nThe methodology we have taken in designing WuYun, a hierarchical skeleton-guided melody genera-\ntion architecture based on knowledge-enhanced deep learning, combines music analysis theory and\nmusical psychology.",
+                "4 Materials and Methods\n4.1 Details of dataset preprocessing\nWe evaluate the effectiveness of WuYun architecture on a commonly used and publicly available\nsymbolic melody dataset of Wikifonia (32, 33, 67).",
+                "4.3 WuYun architecture\nHere, we brie\ufb02y elaborate on the con\ufb01guration details of the two Transformer-based generative\nmodules of WuYun architecture, i.e., the melodic skeleton generation module for the melodic skeleton\nconstruction stage and the melodic prolongation generation module for the melody inpainting stage.",
+                "For reproducibility, we do not tweak the architecture of\nreferenced models so that our music generation architecture can be easily assembled with the public\nimplementation of Transformers.",
+                "144.4 Training\nWe implemented the WuYun architecture with Pytorch (v1.7.1) (69).",
+                "The parameters of the WuYun\narchitecture were optimized by minimizing the cross-entropy loss on a single NVIDIA GTX 2080-Ti\nGPU with 11 GB memory."
+            ],
+            "training parameters": [],
+            "learning rate": [
+                "Speci\ufb01cally, the training loss was minimized with the Adam optimizer\n(\f1= 0:9,\f2= 0:98), a learning rate of \"= 10\u00003, and dropout was applied with a ratio of 0.1."
+            ],
+            "batch size": [],
+            "ethical": [],
+            "impact": [],
+            "society": [
+                "[31] S. Dai, Z. Jin, C. Gomes, R. B. Dannenberg, Controllable deep melody generation via hierarchical music\nstructure representation, in Proceedings of the 22nd International Society for Music Information Retrieval\nConference (ISMIR, 2021), pp. 143\u2013150."
+            ],
+            "copyright": [],
+            "evaluation metrics": [
+                "We demonstrate that WuYun can generate melodies with better\nlong-term structure and musicality and outperforms other state-of-the-art methods\nby 0.51 on average on all subjective evaluation metrics.",
+                "The hierarchical\nskeleton-guided melody generation architecture effectively improves generated melodies\u2019 long-term\nstructure and musicality and outperforms other state-of-the-art methods by 0.51 on average on all\nsubjective evaluation metrics.",
+                "2.4 Evaluation metrics\nSubjective and objective evaluations are the two essential aspects of evaluating the performance of\nmusic generation systems.",
+                "Consequently, almost all the proposed objective\n7evaluation metrics are dif\ufb01cult to apply for comparing different music creation systems and lack\nsustainability for future development demands.",
+                "We tried to calculate the averaging overlapped area\nof some musical feature distributions between generated musical pieces and ground-truth musical\npieces as the objective evaluation metrics like (18, 60) using the public evaluation toolbox.",
+                "Each subject\nwas required to rate 18 musical pieces, which cost approximately 25 min.\nFigure 3A shows the mean opinion scores of WuYun architecture\u2019s melody generation performances\nwith nine different settings on the \ufb01ve subjective evaluation metrics from all subjects in the form of\nhistograms.",
+                "The rhythmic skeleton setting (No. 3) achieved the best\nresult on all subjective evaluation metrics, followed by the tonal skeleton setting (No. 4).",
+                "Among\nthe three types of melodic skeletons associated with rhythm (Nos. 1, 2, and 3), the melodic skeleton\ncomposed of a single type of accent (e.g., metrical accents or agogic accents (31)) has a large gap with\nthe rhythmic skeleton in richness, expectation, and overall quality and even surpassed by the random\nmelodic skeletons (Nos. 7, 8, and 9) on most subjective evaluation metrics.",
+                "In this study, we chose the setting of the rhythmic skeleton (No. 3) that performed best on all\nsubjective evaluation metrics in this experiment as the default skeleton con\ufb01guration (denoted as\nWuYun-RS) for the next experiment to compare with other melody generation models.",
+                "The WuYun architecture with the rhythmic skeleton setting achieves the best performance in\nall melodic skeleton settings on all subjective evaluation metrics.",
+                "The average experiment time\ncost each subject about 2 h.\nFigure 3B shows the mean opinion scores and one-tailed t-test results of the different music generation\nsystems on the \ufb01ve evaluation metrics in the form of violin plots.",
+                "Furthermore, WuYun-RS and WuYun-RRS demonstrate highly similar\nperformances in terms of the quality of generated melodies on all evaluation metrics."
+            ],
+            "metric": [
+                "We demonstrate that WuYun can generate melodies with better\nlong-term structure and musicality and outperforms other state-of-the-art methods\nby 0.51 on average on all subjective evaluation metrics.",
+                "The hierarchical\nskeleton-guided melody generation architecture effectively improves generated melodies\u2019 long-term\nstructure and musicality and outperforms other state-of-the-art methods by 0.51 on average on all\nsubjective evaluation metrics.",
+                "Based on the listeners\u2019\nperception of tonal music, GTTM lists four hierarchical structure relationships from rhythm and pitch\ndimensions: grouping structure, metrical structure, time span reduction, and prolongational reduction.",
+                "The rhythmic\nskeleton consists of the metrical accents, agogic accents on metrical accents, and agogic accents on syncopations\nin each measure.",
+                "Metrical and rhythmic accents are the\ntwo main accents in the symbolic melody data.",
+                "A metrical accent is an accent that falls on the strong\nbeat position within a measure.",
+                "The metrical accent is periodic and cyclic, whose distribution pattern\ndepends on the type of meter.",
+                "Note that a note cannot be both a metrical accent and a syncopation, which are\ncon\ufb02icted with each other.",
+                "In this study, we extract the metrical accents, the agogic accents falling on the metrical accent, and\nthe agogic accents falling on the syncopation as the rhythmic skeleton notes, as illustrated in Fig.",
+                "2B. Metrical accents are the foundation of other types of accent (34).",
+                "Therefore, when a rhythmic accent and a metrical accent overlap, the rhythmic accent is generally\nmore perceptible and is the one that is preferred.",
+                "For the tonal skeleton extraction method, we use the tension level as a metric to quantify the relative\nimportance of the pitch.",
+                "6\u2022First, we used the position of the rhythmic skeleton notes as the boundary of the individual\ncontext because the metrical structure is the important basis of all hierarchical structure\ntypes (34).",
+                "2.4 Evaluation metrics\nSubjective and objective evaluations are the two essential aspects of evaluating the performance of\nmusic generation systems.",
+                "However, for the\nobjective evaluation, many efforts have been made to design quantitative metrics; there is not a set of\nconvincing and uni\ufb01ed metrics.",
+                "Consequently, almost all the proposed objective\n7evaluation metrics are dif\ufb01cult to apply for comparing different music creation systems and lack\nsustainability for future development demands.",
+                "We tried to calculate the averaging overlapped area\nof some musical feature distributions between generated musical pieces and ground-truth musical\npieces as the objective evaluation metrics like (18, 60) using the public evaluation toolbox.",
+                "Therefore, before formal experiments, we conducted multiple rounds of discussions,\ntesting, and validation with musicians and nonmusicians regarding the above subjective evaluation\nmetrics and their descriptions until they could easily understand and grasp them.",
+                "To ensure that\nthe recruited subjects have a common understanding of the metrics and scales in the questionnaire,\nwe also conducted evaluation training for them, including the explanation of subjective evaluation\nmetrics and preliminary experiments.",
+                "All experimental settings\nand the proportion of melodic skeleton notes in the melody are described below:\n1.Downbeat only uses metrical accents as the melodic skeleton (32.8%).",
+                "Each subject\nwas required to rate 18 musical pieces, which cost approximately 25 min.\nFigure 3A shows the mean opinion scores of WuYun architecture\u2019s melody generation performances\nwith nine different settings on the \ufb01ve subjective evaluation metrics from all subjects in the form of\nhistograms.",
+                "The rhythmic skeleton setting (No. 3) achieved the best\nresult on all subjective evaluation metrics, followed by the tonal skeleton setting (No. 4).",
+                "Among\nthe three types of melodic skeletons associated with rhythm (Nos. 1, 2, and 3), the melodic skeleton\ncomposed of a single type of accent (e.g., metrical accents or agogic accents (31)) has a large gap with\nthe rhythmic skeleton in richness, expectation, and overall quality and even surpassed by the random\nmelodic skeletons (Nos. 7, 8, and 9) on most subjective evaluation metrics.",
+                "In contrast, a rigid melodic skeleton (i.e., including only one type\nof accent, especially metrical accents) reduces the quality of the generated melody and limits the\nmodels\u2019 performance.",
+                "In this study, we chose the setting of the rhythmic skeleton (No. 3) that performed best on all\nsubjective evaluation metrics in this experiment as the default skeleton con\ufb01guration (denoted as\nWuYun-RS) for the next experiment to compare with other melody generation models.",
+                "The WuYun architecture with the rhythmic skeleton setting achieves the best performance in\nall melodic skeleton settings on all subjective evaluation metrics.",
+                "The average experiment time\ncost each subject about 2 h.\nFigure 3B shows the mean opinion scores and one-tailed t-test results of the different music generation\nsystems on the \ufb01ve evaluation metrics in the form of violin plots.",
+                "Overall, WuYun-RS (No. 6) and WuYun-RRS (No. 7) outperformed the\nother \ufb01ve current SOTA end-to-end left-to-right note-by-note melody generation models on all metrics,\nincluding MusicTransformer (No. 1), Pop Music Transformer (No. 2), Compound Word Transformer\n(No. 4), Melons (No. 5), and MeMIDI (No. 3).",
+                "Furthermore, WuYun-RS and WuYun-RRS demonstrate highly similar\nperformances in terms of the quality of generated melodies on all evaluation metrics.",
+                "We\ncontend that a more precise and adaptable time grid is required to model a more expressive\nmetrical context, including the 32nd (18), 64th note, and even triplets.",
+                "2.68\u00061.03 2.73\u00060.95\n9 Random75% 2.82\u00060.95 2.58\u00061.12 2.50\u00061.11 2.45\u00061.04 2.53\u00061.08\nTable S2: One-tailed t-test results between WuYun-RS and other music generation models on the \ufb01ve evaluation\nmetrics in experiment 2.\nModel Rhythm Richness Structure Expectation Overall\nMT"
+            ],
+            "pitch accuracy": [],
+            "rhythm accuracy": [],
+            "melodic": [
+                "Here, we present WuYun, a\nknowledge-enhanced deep learning architecture for improving the structure of\ngenerated melodies, which \ufb01rst generates the most structurally important notes to\nconstruct a melodic skeleton and subsequently in\ufb01lls it with dynamically decorative\nnotes into a full-\ufb02edged melody.",
+                "Speci\ufb01cally, we use music domain knowledge\nto extract melodic skeletons and employ sequence learning to reconstruct them,\nwhich serve as additional knowledge to provide auxiliary guidance for the melody\ngeneration process.",
+                "Our study provides a\nmultidisciplinary lens to design melodic hierarchical structures and bridge the\ngap between data-driven and knowledge-based approaches for numerous music\ngeneration tasks.",
+                "Although melodies\nappear to be a simple linear succession of notes unfolding over time, the organizational structure of\nthe melodic notes is hierarchical, like a tree resulting in intricate long-distance dependencies (9, 10).",
+                "Such a strategy requires\nrecognizing the group structure of the musical syntax in a melodic surface (e.g., phrases and sections)\nto extract music features for building a structure generation model.",
+                "Nonetheless, inadequate music\nstructure boundary detection algorithms hinder the extraction of accurate melodic group structure.",
+                "Conversely, little attention has been paid to the organizational logic of the deep structure beneath\nthe melodic surface, organized by different levels of structural importance among various musical\nevents (34\u201336) with the potential to enhance structured melody generation.",
+                "In this study, we propose WuYun, a hierarchical skeleton-guided melody generation architecture\nbased on knowledge-enhanced deep learning that incorporates the melodic skeleton as deep structural\nsupport to provide explicit guidance on the development direction of melody generation (Fig. 1A).",
+                "WuYun follows the hierarchical organization principle of structure and prolongation (35, 37), thus\ndividing traditional single-stage end-to-end melody generation into two stages: melodic skeleton\nconstruction and melody inpainting (Fig. 1B).",
+                "At the stage of melodic skeleton construction, we \ufb01rst\nextract the most structurally important notes in a musical piece from rhythm and pitch dimensions\nas melodic skeletons on the basis of the music domain knowledge.",
+                "We then train an autoregressive\ndecoder-only Transformer-based network (38) on the collected melodic skeleton data to construct\nnew melodic skeletons (Fig. 1C, a).",
+                "We treat the melodic skeleton as the underlying framework of the\n\ufb01nal generated melody.",
+                "At the stage of melody inpainting, we adopt a Transformer encoder\u2013decoder\narchitecture (39) to elaborate the melodic skeleton into a full-\ufb02edged melody by encoding the melodic\nskeleton as additional knowledge into the decoder to guide the melody generation process (Fig.",
+                "Experimental results show that the generated melodic skeleton has comparable quality with\nthe real one extracted by our proposed melodic skeleton extraction framework.",
+                "2Melodic skeletonMelodyMelodyDatabaseMelodic Skeleton ExtractionFramework\nPairingB\nStage 1: melodic skeleton constructionStage 2: melody inpainting\nMelodicSkeletonDatabase\nHierarchical structure analysis in music(Music domain knowledge)",
+                "Input Module(Embedding)Positional Encoding\nTransformer-XL\uff084 blocks\uff09Output Module(Classifier)Ca) Melodic Skeleton Generation ModuleInput(Melodic skeleton)RepresentationInput Module(Embedding)Encoder\uff084 blocks\uff09Decoder\uff084 blocks\uff09Recurrent Transformerb) Melodic Prolongation Generation ModuleRepresentationInput Module(Embedding)Input(Melody)RepresentationInput(Melodic skeleton)Output Module(Classifier)TrainA\nMelodic SkeletonMelody (example)\nMelodic skeletonSequence learning modelY1Y2Yn\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\nX1X2Xn\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7Partial sequenceMelodic skeleton\u00b7\u00b7\u00b7\nX1X2Xn\u00b7\u00b7\u00b7EncoderY2Y3Yn\u00b7\u00b7\u00b7Y1Y2Yn-1\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7Decoder\n\u2026\nPredicted tokens\nPredicted tokens\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\n\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7Sequence-to-sequencelearning modelMelodyFigure 1: Architecture of WuYun.",
+                "The upper part of the \ufb01gure shows the basic shape of the melodic motion, and the low\npart of the \ufb01gure shows the melodic skeleton in the rhythm dimension.",
+                "Every melody has an underlying melodic\nskeleton that provides structural support and connections among musical elements to guide the melodic motion.",
+                "WuYun divides the melody generation process into melodic skeleton\nconstruction and melody inpainting stages following the hierarchical organization principle of structure and\nprolongation.",
+                "At the melodic skeleton construction stage, the melodic skeleton extraction framework is proposed\nto extract the melodic skeleton in the rhythm and pitch dimensions by the hierarchical structure theory from\nmusic domain knowledge.",
+                "A neural network for sequence learning trained on melodic skeletons can generate\nnovel ones.",
+                "At the melody inpainting stage, another neural network for sequence-to-sequence learning would\n\ufb01ll the generated melodic skeleton into a full-\ufb02edged melody.",
+                "WuYun is\ncomposed of a melodic skeleton generation module and a melodic prolongation generation module; the former\nis used for the melodic skeleton construction stage, and the latter is used for the melody inpainting stage with the\nguidance of the melodic skeleton.",
+                "Inspired by the iterative mode of human composition guided by the principles of structure and\nprolongation, the whole process of melody creation can be seen as progressively \ufb01lling individual\ndecorative notes among the melodic skeleton; it is an effective modern composition technique that\nperfectly combines rules and composers\u2019 personality (35).",
+                "In the following, we elaborate on the\nmelodic skeleton extraction framework from rhythm and pitch dimensions and introduce the design of\nWuYun melody generation architecture that \ufb01rst constructs the melodic skeleton and then completes\nthe melody instead of sequentially generating a melody note-by-note at once.",
+                "2.2 Melodic skeleton extraction framework\nMusic theories present that there is an underlying identi\ufb01able framework beneath the melody surface\ncalled the melodic skeleton (35, 50).",
+                "The melodic skeleton is composed of certain notes, which\nsound more structurally important from rhythm and pitch dimensions (34, 48) and are called the\nskeleton notes.",
+                "The melodic skeleton\nserves as the crucial structural support of rhythm and harmony, indicating the direction of melody\ndevelopment.",
+                "Knowledge of melodic skeleton information can help humans and machines better\n4Figure 2: Melodic skeleton extraction framework.",
+                "5analyze, understand, and learn the logic of melodic hierarchy organization from surface to deep\nlayers.",
+                "Here, we introduce a framework for melodic skeleton extraction based on the knowledge of music\ntheory (34, 35, 50\u201353) and music psychology (48, 49) to identify the dominant and subordinate\nrelationship of structural importance from rhythm and pitch dimensions between melody notes.",
+                "The term \u201crhythmic cell\u201d de\ufb01nes as a \u201csmall rhythmic and melodic\ndesign that can be isolated or can make up one part of a thematic context\u201d (56).",
+                "First, we convert the melody MIDI \ufb01les and their melodic skeletons into musical event\nsequences as the input data for model training using the MeMIDI symbolic music representation\nmethod.",
+                "Then, we design a hierarchical melody generation architecture with two generative modules\nresponsible for melodic skeleton construction and melody inpainting, respectively.",
+                "In this subsection,\nwe will introduce the hierarchical melody generation architecture about how we generate the melodic\nskeleton and incorporate it to guide the melody generation process.",
+                "WuYun is designed to generate melodies in two stages hierarchically: melodic skeleton construc-\ntion and melody inpainting, instead of the dominant end-to-end left-to-right note-by-note melody\ngeneration paradigm.",
+                "At the stage of melodic skeleton construction, we use the Transformer-XL\nmodel with only the decoder as the melodic skeleton generation module (19), which has the ad-\nvantage of remarkable performance in capturing long-term dependence.",
+                "To develop the capacity\nof melodic skeleton construction, we trained the Transformer-XL model on the extracted melodic\nskeleton database.",
+                "At the stage of melody inpainting, we employ the recurrent Transformer-based\nencoder\u2013decoder architecture (18) in a sequence-to-sequence setup as the melody inpainting module\nto complete the melody conditioned on the melodic skeleton, i.e., \ufb01lling the missing information\nbetween the melodic skeleton notes.",
+                "In this work, the melody inpainting problem can be de\ufb01ned as\nfollows: given a melodic skeleton sequence Cs, generate an inpainted melody sequence Cm.",
+                "The\nencoder maps the discrete input symbols of the melodic skeleton sequence Csto a high-dimensional\ncontinuous vector as conditional input into the decoder, and the decoder then generates an output\nsequenceCmin an autoregressive manner.",
+                "The melodic skeleton sequence will be saved in the \ufb01nal\ngenerated melody.",
+                "This method provides users an entry point to interact with the melody generation\nmodel by adjusting melodic skeleton notes between two stages to control the melodic motion.",
+                "Therefore, we conducted two subjective evaluation experiments to evaluate the performance of our\nproposed WuYun, including different melodic skeleton settings in rhythm and pitch dimensions and\ncomparisons with public state-of-the-art (SOTA) music generation models.",
+                "\u2022Structure: Whether the brain can feel the boundary of melodic phrases and the balance\namong melodic phrases\u2019 length.",
+                "2.5 Model performance based on different melodic skeleton settings\nTo compare the effectiveness of variants of melodic skeleton extracted from rhythm and pitch\ndimensions, we comprehensively evaluated the performance of WuYun based on different settings of\nthe melodic skeleton.",
+                "Furthermore, we added three control group settings of randomly selected notes\nwith different percentages as the melodic skeleton in order to verify the effectiveness of the proposed\nmelodic skeleton extraction method based on music domain knowledge.",
+                "All experimental settings\nand the proportion of melodic skeleton notes in the melody are described below:\n1.Downbeat only uses metrical accents as the melodic skeleton (32.8%).",
+                "2.Long Note only uses agogic accents as the melodic skeleton (27.4%).",
+                "3.Rhythm uses rhythmic skeleton notes as the melodic skeleton (33.8%).",
+                "4.Tonic uses tonal skeleton notes as the melodic skeleton (43.2%).",
+                "5.Interaction uses the intersection of rhythmic skeleton notes and tonal skeleton notes as the\nmelodic skeleton (14.2%).",
+                "6.Union uses the union of rhythmic skeleton notes and tonal skeleton notes as the melodic\nskeleton (62.8%).",
+                "7.Random25% randomly selects 25% of melody notes as the melodic skeleton (25%).",
+                "8.Random50% randomly selects 50% of melody notes as the melodic skeleton (50%).",
+                "9.Random75% randomly selects 75% of melody notes as the melodic skeleton (75%).",
+                "Generally, among all melodic\nskeleton settings, the proposed rhythmic and tonal skeleton based on music theory and psychological\nstudy performs better than other skeletons.",
+                "Among\nthe three types of melodic skeletons associated with rhythm (Nos. 1, 2, and 3), the melodic skeleton\ncomposed of a single type of accent (e.g., metrical accents or agogic accents (31)) has a large gap with\nthe rhythmic skeleton in richness, expectation, and overall quality and even surpassed by the random\nmelodic skeletons (Nos. 7, 8, and 9) on most subjective evaluation metrics.",
+                "In contrast, a rigid melodic skeleton (i.e., including only one type\nof accent, especially metrical accents) reduces the quality of the generated melody and limits the\nmodels\u2019 performance.",
+                "We can preliminarily see that with the increased\npercentage of melodic skeleton notes, the performance of the two-stage melody generation went up\n\ufb01rst",
+                "On the one hand, a low proportion of melodic skeleton notes makes it easier\nto train the melodic skeleton construction model in the \ufb01rst stage.",
+                "However, the generated skeleton\nnotes will be too sparse to guide the second stage of melodic inpainting (such as the intersection\nskeleton setting, only 14.2%).",
+                "On the other hand, if the proportion of melodic skeleton notes is too\nlarge, the training dif\ufb01culty and data dependency of the melodic skeleton construction model will\nincrease.",
+                "The MeMIDI setting uses the MeMIDI data representation method like WuYun-\nRS and employs the Transformer-XL model without using the melodic skeleton for the melody\ngeneration task.",
+                "Moreover, to prove the effectiveness of the generated melodic skeleton, we added\nthe setting of WuYun-RRS, skipped the melodic skeleton construction in the \ufb01rst stage, and directly\nused the real rhythmic skeleton as additional knowledge to guide the melody generation process\nof melody inpainting in the second stage.",
+                "However, the original music representation of Music\n9Figure 3: Subjective evaluation results of the WuYun melody generation architecture based on different\nmelodic skeleton settings, and the other public melody generation models.",
+                "(A) Subjective comparison of the\nperformance of the WuYun architecture based on different melodic skeleton settings in Experiment 1.",
+                "The WuYun architecture with the rhythmic skeleton setting achieves the best performance in\nall melodic skeleton settings on all subjective evaluation metrics.",
+                "This result\nindicates the effectiveness of the melodic skeletons generated via the melodic skeleton construction\nmodule.",
+                "This also shows that designing clever\ndecorations for melodic skeletons is another dif\ufb01cult research problem, even for human composers.",
+                "Unlike the dominant end-to-end left-to-right note-by-note melody generation\nparadigm, we use the hierarchical organization principle of structure and prolongation to decompose\nthe melody generation process into melodic skeleton construction and melody inpainting stages.",
+                "We\nextract the most structurally important notes based on hearing sensitivity as melodic skeletons and\nincorporate them into the melody generation process as a deep structure to guide the model to learn\nthe hierarchical dependency structures among musical event sequences from the limited melody data\nwithout music boundary detection (31).",
+                "In general, WuYun allows human users to edit the\ngenerated melodic skeleton and adjust its shape to guide and constrain the range of the decorative\nnotes at the next stage of melody inpainting.",
+                "Thus, the proposed generation strategy based on the\n11hierarchical organization principle of structure and prolongation not only can maintain the long-range\ntonal coherence of generated melodies but also achieve control over the target of melodic motion by\nhuman users.",
+                "Additionally, with WuYun and its melodic skeleton analysis framework, human users\ncan directly extract the skeleton from existing music compositions for music composition analysis or\nre-creation.",
+                "Our study has some limitations, notably the performance of the melody inpainting model, except\nthat the quality of generated melodic skeleton may be poor; even if an original rhythmic skeleton\nis provided, the quality of the completed melody is still far from the real one.",
+                "Another issue is how to effectively extract an organic\nmelodic skeleton from hierarchical musical structures combining two or more musical dimensions\n(e.g., rhythm and pitch) to further improve the structure of generated melodies.",
+                "Additionally,\nwe expect to investigate other systematic music analysis theories and gain further psychological\nknowledge to analyze and compare the hierarchical levels of important musical events along different\nmusical dimensions for designing a more effective melodic skeleton extraction framework.",
+                "\u2022Octave Transposition: All melodies are applied octave transposition to shift the pitch into\nthe range from C3 to C5 or are removed, which are out of the regular melodic pitch range\n(32).",
+                "For simplicity, we do not use the Chord symbol in the melodic\nskeleton event sequence.",
+                "4.3 WuYun architecture\nHere, we brie\ufb02y elaborate on the con\ufb01guration details of the two Transformer-based generative\nmodules of WuYun architecture, i.e., the melodic skeleton generation module for the melodic skeleton\nconstruction stage and the melodic prolongation generation module for the melody inpainting stage.",
+                "We use an unconditional sequence learning model Transformer-XL for the melodic skeleton genera-\ntion module.",
+                "Here, we used the\nmelodic skeleton data extracted from the training part of the Wikifonia dataset to train the melodic\nskeleton generation module.",
+                "We use a conditional sequence-to-sequence model based on Transformer-based recurrent en-\ncoder\u2013decoder neural networks for the melodic prolongation generation module (18).",
+                "We keep the same input module, output\nmodule, sampling method, length of training input tokens, and memory as same as the melodic\nskeleton generation module.",
+                "For training the melodic prolongation generation module, we use the\nMeMIDI representations of the paired melodic skeleton and melody data as the encoder and decoder\ninput data, respectively.",
+                "The mini-batches of the input data for the melodic skeleton generation module and the melodic\nprolongation generation module were 20 and 44, respectively.",
+                "Subjective evaluation scores of generated melodies based on different melodic skeleton settings in\nExperiment 1 (mean \u0006standard deviation)."
+            ],
+            "harmonic complexity": [],
+            "expressiveness": [
+                "Accents can be expressed in various ways to increase musical\nexpressiveness and add character to the movement of music."
+            ],
+            "types of music": [],
+            "homophonic": [],
+            "heterophonic": [],
+            "a cappella": [],
+            "solo": [],
+            "choral": [],
+            "orchestral": [],
+            "electronic": [],
+            "pop": [
+                "1 Introduction\nAutomatic music generation is one of the popular multidisciplinary research topics in generative\nart and computational creativity (1), which has achieved revolutionary advances in various arti\ufb01cial\nintelligence-generated content applications by utilizing deep learning techniques (2, 3), including\ninteractive music production collaboration tools (4, 5), video background music generation (6), music\neducation (7), and music therapy (8).",
+                "We\narrived at a similar conclusion as PopMNet (32) that a better result of objective evaluation does not\nmean better structure and musicality of generated music.",
+                "2.6 Comparisons with other melody generation methods\nTo prove the effectiveness of the proposed hierarchical skeleton-guided melody generation architecture\nbased on knowledge-enhanced deep learning, we compared WuYun-RS (i.e., using the rhythmic\nskeleton setting) to \ufb01ve public SOTA Transformer-based melody generation models, namely, Music\nTransformer (15), Pop Music Transformer (17), Compound Word Transformer (19), Melons (33)\nand MeMIDI, that follow an end-to-end left-to-right note-by-note generative paradigm and treat\neach note equally.",
+                "Additionally, the MIDI quantization level of the Pop MusicTransformer, Compound\nWord Transformer, and Melons only considered the 16th note time grid.",
+                "Overall, WuYun-RS (No. 6) and WuYun-RRS (No. 7) outperformed the\nother \ufb01ve current SOTA end-to-end left-to-right note-by-note melody generation models on all metrics,\nincluding MusicTransformer (No. 1), Pop Music Transformer (No. 2), Compound Word Transformer\n(No. 4), Melons (No. 5), and MeMIDI (No. 3).",
+                "2.84\u00060.89 2.68\u00060.95 2.75\u00060.87 2.67\u00060.87 2.71\u00060.88\n6 WuYun-RS 3.13\u00060.88 3.07\u00060.87 3.13\u00060.86 3.02\u00060.92 3.00\u00060.87\n7 WuYun-RRS 3.20\u00060.81 3.11\u00060.85 3.15\u00060.88 3.00\u00060.96 3.02\u00060.88\n8 Human 3.54\u00060.82 3.65\u00060.76 3.68\u00060.89 3.55\u00060.92 3.57\u00060.84\nMT, PMT, and CWT stand for Music Transformer, Pop Music Transformer, and Compound Word Trans-\nformer, respectively.",
+                "Yang, Pop music transformer: Beat-based modeling and generation of expressive pop piano\ncompositions, in Proceedings of the 28th ACM International Conference on Multimedia (MM, 2020), pp.",
+                "Ren, J. He, X. Tan, T. Qin, Z. Zhao, T. Liu, Popmag: Pop music accompaniment generation, in\nProceedings of the 28th ACM International Conference on Multimedia (MM, 2020), pp.",
+                "[32] J. Wu, X. Liu, X. Hu, J. Zhu, Popmnet:",
+                "Generating structured pop music melodies using neural networks.",
+                "3:43\u000210\u000075:37\u000210\u000092:44\u000210\u0000126:50\u000210\u000062:21\u000210\u000010\nPMT 2:18\u000210\u000081:21\u000210\u000091:20\u000210\u000062:55\u000210\u000061:13\u000210\u00007\nMeMIDI 1:88\u000210\u000063:09\u000210\u000066:86\u000210\u000072:31\u000210\u000056:29\u000210\u00007\nCWT 3:31\u000210\u000048:47\u000210\u000043:02\u000210\u000042:03\u000210\u000031:69\u000210\u00003\nMelons 4:60\u000210\u000031:54\u000210\u000038:02\u000210\u000042:12\u000210\u000037:41\u000210\u00003\nWuYun-RRS 0.26 0.36 0.42 0.42 0.41\nMT, PMT, and CWT stand for Music Transformer, Pop Music Transformer, and Compound Word Trans-\nformer, respectively.\n19"
+            ],
+            "Demo availability": [],
+            "dataset": [
+                "To prove the effectiveness of the architecture, we evaluate WuYun on a publicly available melody\ndataset.",
+                "We randomly selected ten melodies from the evaluation dataset for the listening materials.",
+                "Therefore, in this experiment,\nwe applied the 16th note time grid as the MIDI quantization level to the melody dataset for all music\ngeneration models.",
+                "4 Materials and Methods\n4.1 Details of dataset preprocessing\nWe evaluate the effectiveness of WuYun architecture on a commonly used and publicly available\nsymbolic melody dataset of Wikifonia (32, 33, 67).",
+                "The Wikifonia dataset contains thousands of\nlead sheets in MusicXML format.",
+                "Here, we describe the procedure below to clean\nup noisy data and arti\ufb01cial errors since the dataset is user-generated.",
+                "We set one chord per beat\nand unify the chord representation of the Wikifonia dataset using the chord dictionary as\ndescribed in the following subsection.",
+                "\u2022Chord\nTo cover the chord types in the Wikifonia dataset, we use a more comprehensive chord\nevent list.",
+                "Here, we used the\nmelodic skeleton data extracted from the training part of the Wikifonia dataset to train the melodic\nskeleton generation module.",
+                "Acknowledgements\nThanks to Huawei Technologies Co., Ltd for the help in dataset collection and comments."
+            ]
+        },
+        {
+            "title": "Byte Pair Encoding for Symbolic Music",
+            "architecture": [
+                "Indeed, most recent models are based on the\nTransformer architecture (Vaswani et al., 2017).",
+                "Model and training\nAs we speci\ufb01cally focus on sequential models, we exper-\niment with the state of the art deep learning architecture\nfor most NLP tasks at the time of writing, the Transformer(Vaswani et al., 2017) architecture."
+            ],
+            "training parameters": [],
+            "learning rate": [
+                "We use a one cycle learning rate scheduler:\nthe initial learning rate is close to 0 and gradually grows for the 30% \ufb01rst steps to 5e\u00006,1e\u00006and5e\u00007for the generators,\nclassi\ufb01er pre-training and classi\ufb01er \ufb01ne-tuning respectively, then slowly decreases down to 0."
+            ],
+            "batch size": [
+                "The batch size is set to 16 for the generator, and 24 for the classi\ufb01er."
+            ],
+            "ethical": [],
+            "impact": [
+                "We experiment\non music generation and composer classi\ufb01cation,\nand study the impact of BPE on how models learn\nthe embeddings, and show that it can help to in-\ncrease their isotropy, i.e., the uniformity of the\nvariance of their positions in the space.",
+                "Furthermore, Section 7 provides an additional\nstudy on the impact of BPE on how the models learn the\nembeddings.",
+                "The decoding step time, i.e.,\nthe time of the conversion of tokens to a MIDI \ufb01le, is almost not impacted by BPE."
+            ],
+            "society": [
+                "In\nProceedings of the 20th International Society for Mu-\nsic Information Retrieval Conference, ISMIR 2019,\nDelft, The Netherlands, November 4-8, 2019 , pp. 685\u2013\n692, 2019.",
+                "In Extended Abstracts for\nthe Late-Breaking Demo Session of the 22nd Interna-\ntional Society for Music Information Retrieval Con-\nference , 2021.",
+                "In Extended Ab-\nstracts for the Late-Breaking Demo Session of the 23nd In-\nternational Society for Music Information Retrieval Con-\nference , 2022.",
+                "In Transactions of the Interna-\ntional Society for Music Information Retrieval , vol-\nume 5, pp.",
+                "In Proceedings of the 18th In-\nternational Society for Music Information Retrieval\nConference, ISMIR 2017, Suzhou, China, October\n23-27, 2017 , pp.",
+                "In Proceedings of the 21rd\nInternational Society for Music Information Retrieval\nConference , Bengalore, India, December 2022.",
+                "In Extended abstracts\nfor the Late-Breaking Demo Session of the 16th Inter-\nnational Society for Music Information Retrieval Con-\nference , 2015."
+            ],
+            "copyright": [],
+            "evaluation metrics": [
+                "Section 4 describes our experimental settings and\nSection 5 describes the evaluation metrics that we use for\nthe experimental evaluation.",
+                "5. Evaluation metrics\nGenerative models are often evaluated with automatic met-\nrics on the generated results."
+            ],
+            "metric": [
+                "Section 4 describes our experimental settings and\nSection 5 describes the evaluation metrics that we use for\nthe experimental evaluation.",
+                "5. Evaluation metrics\nGenerative models are often evaluated with automatic met-\nrics on the generated results.",
+                "Language models are often assessed\nwith BLEU (Papineni et al., 2002), ROUGE (Lin, 2004) or\nother metrics that compare generated results with reference\nsentences.",
+                "It exists no reference-free metric measuring\nits quality or \ufb01delity.",
+                "Metrics with reference such as BLEU\nmay be suited for machine translation tasks, but remains\nirrelevant for open-ended generation, such as in our case.",
+                "With this motivation,\nwe introduce a new metric we called Tokenization Syntax\nErrors (TSE).",
+                "Metrics of generated results.",
+                "The results of all metrics are reported in Table 1.",
+                "Kilgour, K., Zuluaga, M., Roblek, D., and Shar-\ni\ufb01, M. Fr \u00b4echet audio distance: A reference-\nfree metric for evaluating music enhancement\nalgorithms."
+            ],
+            "pitch accuracy": [],
+            "rhythm accuracy": [],
+            "melodic": [],
+            "harmonic complexity": [],
+            "expressiveness": [
+                "Kermarec, M., Bigo, L., and Keller, M. Improving tokeniza-\ntion expressiveness with pitch intervals."
+            ],
+            "types of music": [],
+            "homophonic": [],
+            "heterophonic": [],
+            "a cappella": [],
+            "solo": [],
+            "choral": [
+                "Hadjeres, G., Pachet, F., and Nielsen, F. DeepBach:\na steerable model for Bach chorales generation.",
+                "Liang, F. T., Gotham, M., Johnson, M., and Shotton,\nJ. Automatic stylistic composition of bach chorales\nwith deep LSTM."
+            ],
+            "orchestral": [],
+            "electronic": [],
+            "pop": [
+                "strategies can be split in two categories: 1) embedding pool-\ning strategies such as Compound Word (Hsiao et al., 2021)\n(CPWord ),Octuple (Zeng et al., 2021) or PopMag (Ren\net al., 2020); 2) token combination strategies such as in\nMuseNet (Payne, 2019) or LakhNES (Donahue et al., 2019).",
+                "Datasets\nWe experiment with two datasets: POP909 (Wang et al.,\n2020b) and GiantMIDI (Kong et al., 2021).",
+                "The POP909 dataset (Wang et al., 2020b) is composed of\n909 piano tracks of Pop musics, with aligned MIDI and\naudio versions.",
+                "Normalized distributions of the token types of the BPE\ntokens, per BPE factor for the POP909 dataset.\n0",
+                "2k 4k 6k 8k 10k 12k 14k\nVocabulary size2.02.53.03.54.0Avg. token combinationsPOP909 TSD\nPOP909 REMI\nGiantMIDI TSD",
+                "The\nPOP909 dataset being smaller than GiantMIDI, it naturally\nleads to a higher maximum number of combinations as the\nlatter is more diverse.",
+                "Overall (\")\nPOP909 TSD 0.66 \u00b1 0.13 0.84 \u00b1 0.12 0.69 \u00b1 0.14",
+                "No BPE 1.0 \u00b1 1.8 13.6 \u00b1 8.0 - 0.59 \u00b1 0.08 0.82 \u00b1 0.10 0.64 \u00b1 0.09 0.00 0.00\nBPE\u00024 0.2 \u00b1 0.9 21.9 \u00b1 19.9 - 0.65 \u00b1 0.07 0.82 \u00b1 0.10 0.74 \u00b1 0.08 0.24 0.19\nBPE\u000210 0.5 \u00b1 2.2 13.4 \u00b1 14.6 - 0.64 \u00b1 0.07 0.78 \u00b1 0.12 0.74 \u00b1 0.07 0.53 0.42\nBPE\u000220 0.8 \u00b1 2.1 12.8 \u00b1 11.0 - 0.62 \u00b1 0.07 0.79 \u00b1 0.11 0.70 \u00b1 0.09 0.20 0.31\nBPE\u000250 22.4 \u00b1 24.0 4.4 \u00b1 5.3 - 0.56 \u00b1 0.07 0.70 \u00b1 0.12 0.62 \u00b1 0.11 0.02 0.02\nBPE\u0002100 21.5 \u00b1 40.2 35.6 \u00b1 56.0 - 0.54 \u00b1 0.08 0.66 \u00b1 0.14 0.63 \u00b1 0.10 0.00 0.00\nPVm 6.1 \u00b1 6.6 6.9 \u00b1 9.3 - 0.59 \u00b1 0.08 0.78 \u00b1 0.12 0.73 \u00b1 0.08 0.01 0.06\nPVDm 23.6 \u00b1 19.3 0.2 \u00b1 0.7 - 0.43 \u00b1 0.09 0.57 \u00b1 0.19 0.54 \u00b1 0.12 0.00 0.00\nPOP909 REMI 0.66 \u00b1 0.13 0.84 \u00b1 0.12 0.69 \u00b1 0.14",
+                "In particular, big jumps\nof maximum number of combinations, e.g. from 14 to 27\nfor POP909 Remi , indicate that two already big BPE tokens\nrepresent the most recurrent succession.",
+                "Number of tokens sampled and not sampled by generative\nmodels, respectively right and left separated by j.\nStrategy POP909 TSD POP909 Remi GiantMIDI",
+                "Generator POP909 TSD POP909 Remi GiantMIDI TSD GiantMIDI Remi\nNo BPE 0.09 0.14 0.08 0.09\nBPE\u00024 0.02 0.04 0.02 0.02\nBPE\u000210 0.12 0.11 0.02 0.07\nBPE\u000220 0.13 0.05 0.02 0.02\nBPE\u000250 0.02 0.01 0.01 0.01\nBPE\u0002100 0.01 0.01 0.01 0.00\nPVm 0.02 0.02 0.01 0.02\nPVDm 0.00 0.00 0.00 0.00\nCPWord - 0.04 - 0.08\nOctuple - 0.04 - 0.02\nClassi\ufb01er TSD (\") Remi (\") TSD Large ( \")",
+                "The estimations are\nmore accurate when N\u001dd, as more samples populate allByte Pair Encoding for Symbolic Music\nGen. POP909 TSD\nnoBPEbpe4bpe10 bpe20 bpe50bpe100PVmPVDm020406080DimensionlPCA\nMLE\nMOM\nTLE\nT woNN",
+                "FisherS Gen. POP909 Remi\nnoBPEbpe4bpe10bpe20bpe50bpe100PVmPVDm\nCPWordOctuple0204060lPCA\nMLE\nMOM\nTLE\nT woNN\nFisherS Gen. GiantMIDI TSD\nnoBPEbpe4bpe10 bpe20 bpe50bpe100PVmPVDm0510152025lPCA\nMLE\nMOM\nTLE\nT woNN\nFisherS Gen. GiantMIDI Remi\nnoBPEbpe4bpe10bpe20bpe50bpe100PVmPVDm\nCPWordOctuple020406080\nlPCA\nMLE\nMOM\nTLE\nT woNN\nFisherS\nClasmall TSD\nnoBPEbpe4bpe10 bpe20 bpe50bpe100PVmPVDm020406080Dimension\n200300400500600700lPCA\nMLE\nMOM\nTLE\nT woNN",
+                "Gen. POP909 no BPE\n Gen. POP909 BPE\u000220\nClasmall GiantMIDI",
+                "Pop music transformer:\nBeat-based modeling and generation of expressive pop\npiano compositions.",
+                "Popmag:",
+                "Pop music accompaniment generation.",
+                "URL https://openreview.\nnet/forum?id=ByxY8CNtvr .\nWang, Z., Chen, K., Jiang, J., Zhang, Y ., Xu, M., Dai,\nS., Bin, G., and Xia, G. Pop909: A pop-song dataset\nfor music arrangement generation.",
+                "B. Data downsampling\n0 1 2 3 4 5 6 7\nduration0.00.20.40.60.81.01.21.4densityDataset\nPOP909\nGiantMIDI\n0 20 40 60 80 100 120\nvelocity0.0000.0050.0100.0150.0200.0250.030densityDataset\nPOP909\nGiantMIDI\nFigure 7.",
+                "Distributions of the note durations and velocities of the POP909 and GiantMIDI datasets.",
+                "time (sec)\nPOP909 TSD\nNo BPE 139 17.81 \u00b1 4.12 - 0.04 \u00b1 0.02 0.01 \u00b1 0.02\nBPE\u00024 556 9.71 \u00b1 2.12 -45.50 0.20 \u00b1 0.05 0.02 \u00b1 0.02\nBPE\u000210 1390 8.05 \u00b1 1.75 -54.80 0.44 \u00b1 0.10 0.02 \u00b1 0.02\nBPE\u000220 2780 6.95 \u00b1 1.53 -60.99 0.77 \u00b1 0.18 0.02 \u00b1 0.02\nBPE\u000250 6950 5.84 \u00b1 1.28 -67.20 1.59 \u00b1 0.37 0.02 \u00b1 0.02\nBPE\u0002100 13.9k 5.33 \u00b1 1.16 -70.10 2.72 \u00b1 0.63 0.02 \u00b1 0.02\nPVm 747 12.72 \u00b1 2.92 -28.59 0.03 \u00b1 0.01 0.01 \u00b1 0.01\nPVDm 14.1k 7.63 \u00b1",
+                "0.02 \u00b1 0.01 0.01 \u00b1 0.01\nPOP909 Remi\nNo BPE 152 18.06 \u00b1 4.12 - 0.03 \u00b1 0.02 0.01 \u00b1 0.01\nBPE\u00024 608 10.55 \u00b1 2.26 -41.61 0.21 \u00b1 0.05 0.02 \u00b1 0.02\nBPE\u000210 1520 8.85 \u00b1 1.90 -51.00 0.47 \u00b1 0.11 0.02 \u00b1 0.02\nBPE\u000220 3040 8.01 \u00b1 1.74 -55.64 0.86 \u00b1 0.19 0.02 \u00b1 0.02\nBPE\u000250 7600 7.32 \u00b1 1.58 -59.46 1.97 \u00b1 0.43 0.02 \u00b1 0.02\nBPE\u0002100 15.2k 6.70 \u00b1 1.43 -62.92",
+                "Figure 10 shows the pairwise cosine similarity of the learned embedding vectors, for the TSD andRemi representation on\nthe POP909 dataset.",
+                "POP909\n100101102\nDimension0.00.20.40.60.81.0Singular valuenoBPE\nbpe4\nbpe10\nbpe20\nbpe50\nbpe100\nPVm\nPVDm\nnoBPE adj.",
+                "Pairwise cosine similarity matrix of learned embedding of the generative models, on the POP909 dataset.",
+                "UMAP 3d representations of the embeddings of generative models with the POP909 dataset."
+            ],
+            "Demo availability": [],
+            "dataset": [
+                "This work aims at closing this gap by shedding light on the\nresults and performance gains of using BPE:\n\u2022We experiment on two public datasets (Wang et al.,\n2020b; Kong et al., 2021), with two base tokenizations,\non which BPE is learned with several vocabulary sizes,\non the generation and composer classi\ufb01cation tasks,\nand show that it improves the results;\n\u2022We compare BPE with other sequence reduction tech-\nniques introduced in recent research;\n\u2022We study the geometry of the learned embeddings, and\nshow that BPE can improve their isotropy;\n\u2022We show some limits of BPE, such as on the proportionarXiv:2301.11975v1",
+                "Algorithm 1 Learning of BPE pseudo-code\nRequire: Base vocabularyV, target vocabulary size N,\ndatasetX\n1:whilejVj<N do\n2: Finds=ft1;t2g2V2, fromX, the most recurrent\ntoken succession\n3: Add a new token tinV, mapping to s\n4: Substitute every occurrence of sinXwitht\n5:end while\n6:returnV\nBPE is nowadays largely used in the NLP \ufb01eld as it allows\nto encode rare words and segmenting unknown or com-\nposed words as sequences of sub-word units (Sennrich et al.,\n2016).",
+                "In\nthis context, BPE can allow to represent a note, or even a\nsuccession of notes, that is very recurrent in the dataset, as\na single token.",
+                "Experimental settings\nThis section details the experimental protocol by describing\nthe models, the training and the datasets used along with the\nspeci\ufb01c tokenization processes.",
+                "We split datasets\nin two subsets: one only used for training and updating\nthe models, one for validation to monitor trainings, that is\nalso used to test the models after training.",
+                "These subsets\nrepresent respectively 65% and 35% of the original datasets.",
+                "Datasets\nWe experiment with two datasets: POP909 (Wang et al.,\n2020b) and GiantMIDI (Kong et al., 2021).",
+                "The POP909 dataset (Wang et al., 2020b) is composed of\n909 piano tracks of Pop musics, with aligned MIDI and\naudio versions.",
+                "The GiantMIDI dataset (Kong et al., 2021) is composed\nof 10k piano MIDI \ufb01les, transcribed from audio to MIDI\nwithout downbeat and tempo estimation.",
+                "Considering the com-\nplexity of its content, we make the assumption that it is a\ndif\ufb01cult dataset for a model to learn from.",
+                "We perform data augmentation on the pitch dimension on\nboth datasets.",
+                "Normalized distributions of the token types of the BPE\ntokens, per BPE factor for the POP909 dataset.\n0",
+                "The distribution for\nthe GiantMIDI dataset are showned in Appendix C.\nFigure 4 shows the evolution of the average number of non-\nBPE token combinations represented by the BPE tokens.",
+                "The\nPOP909 dataset being smaller than GiantMIDI, it naturally\nleads to a higher maximum number of combinations as the\nlatter is more diverse.",
+                "Sim stands for similarity, the best results are\nthe closest to the datasets.",
+                "These numbers,\ncorrelated with the model, dataset sizes and overall token\ndistribution of the dataset, might help to choose an optimal\nvocabulary size.",
+                "Composer classi\ufb01cation\nComposer classi\ufb01cation is performed with the top-10 most\npresent composers of the GiantMIDI dataset.",
+                "We also plan to experiment with larger model, dataset and\nvocabulary sizes, hoping to \ufb01nd guidelines for choosing an\noptimum vocabulary size.",
+                "Giantmidi-\npiano: A large-scale midi dataset for classical\npiano music.",
+                "URL https://openreview.\nnet/forum?id=ByxY8CNtvr .\nWang, Z., Chen, K., Jiang, J., Zhang, Y ., Xu, M., Dai,\nS., Bin, G., and Xia, G. Pop909: A pop-song dataset\nfor music arrangement generation.",
+                "B. Data downsampling\n0 1 2 3 4 5 6 7\nduration0.00.20.40.60.81.01.21.4densityDataset\nPOP909\nGiantMIDI\n0 20 40 60 80 100 120\nvelocity0.0000.0050.0100.0150.0200.0250.030densityDataset\nPOP909\nGiantMIDI\nFigure 7.",
+                "Distributions of the note durations and velocities of the POP909 and GiantMIDI datasets.",
+                "Figure 7 shows the distributions of velocity and duration values of the notes from the two datasets we use.",
+                "Normalized distributions of token types per BPE factor for the GiantMIDI dataset.",
+                "The tokenization time could be\ndecreased if performed by a faster compiled language such as Rust or C. The Figure 8 complements the Figure 3, with the\nGiantMIDI dataset.",
+                "Figure 10 shows the pairwise cosine similarity of the learned embedding vectors, for the TSD andRemi representation on\nthe POP909 dataset.",
+                "Pairwise cosine similarity matrix of learned embedding of the generative models, on the POP909 dataset.",
+                "UMAP 2d representations of the embeddings of classi\ufb01er models pre-trained with the GiantMIDI dataset and TSD tokenization.",
+                "UMAP 3d representations of the embeddings of generative models with the POP909 dataset."
+            ]
+        },
+        {
+            "title": "ComposeInStyle: Music composition with and without Style Transfer",
+            "architecture": [
+                "The GAN architecture of the style transfer step\nis built out of the GAN architecture of the second step.",
+                "The compositions generated from each architecture\nis finally evaluated by the common pre-trained classifier of the first step.",
+                "Using the latest state of the art architectures, a hybrid model is\ndeveloped which capture the entire objective of this paper in a nutshell.",
+                "Since\nthere is no exactly relevant work on music composer style transfer,\ncomparison has been done by implementing the model architecture in\na contextually similar work on genre style transfer.",
+                "The entire setup\nis same except the model architecture of the comparison paper.",
+                "This\ngives an opportunity to compare and contrast the advantages of our\nproposed hybrid style transfer architecture as compared to another style\ntransfer model in a recent work by Brunner, Wang, Wattenhofer, and\nZhao (2018b ).",
+                "The architecture has been\ndescribed later in the paper in details.",
+                "Another\npaper (Zhu, Park, Isola, & Efros, 2017) introduces the architecture\nfor cycle GAN which is also a significant advancement in the field\nof generative networks.",
+                "The models vary in\narchitecture and the authors also extend it to generate accompanying\ntracks for human composed music.",
+                "Encoder/Decoder architecture has\nbeen used along with adversarial training to learn music represen-\ntations and skip connections have been used for pitch information.",
+                "CNN in Siamese architecture have been used as the\nmodel which has been evaluated using KNN classifiers.",
+                "Architecture of the hybrid model\nThe hybrid model in Fig. 2 visualizes the architectures of the\nresearch objectives in a nutshell.",
+                "The style transfer GAN architecture focuses on keeping the\nFig.",
+                "Architecture of using Vanilla GAN for generating compositions from noise in\nStep 2.\ncontent of composition by composer A and outputs the melody in the\nstyle of the preferred composer B of choice.",
+                "Architecture of the vanilla GAN\nThe audio melodies thus generated are in MIDI format which is then\nconverted into raw audio format (wav).",
+                "Description of GAN architectures \ud835\udc3a\ud835\udc34,\ud835\udc3a\ud835\udc35,\ud835\udc37\ud835\udc34and\ud835\udc37\ud835\udc35\nIn step 2, paired vanilla GAN has been trained to generate multi-\ntrack polyphonic music.",
+                "In this step, composer specific melody isExpert Systems With Applications 191 (2022) 116195\n6S. Mukherjee and M. Mulimani\nFig. 4. High level generator architecture as used in the proposed hybrid model.",
+                "5. High level discriminator architecture as used in the proposed hybrid model.\ngenerated from noise.",
+                "The overall architecture of a single GAN consists\nmainly of 2 parts: Generator and Discriminator 4.",
+                "The architecture of each of the\nindividual components is described in detail below.",
+                "Individual Architecture of a single GAN:\n1.Generator: The generator which is used here for step 2 com-\nprises of the following high-level components:",
+                "The main parts of the architecture are detailed below.",
+                "(1)Generator: Generator works similar to the encoding\u2013decoding\narchitecture.",
+                "Full style transfer architecture",
+                "6. Low level generator architecture as used in the proposed hybrid model.",
+                "Residual network architecture as used in the proposed hybrid model.",
+                "8. Low level discriminator architecture as used in the proposed hybrid model.",
+                "Complete style transfer model architecture.",
+                "The configurations used for the training of the style transfer model\narchitecture are:\n1.",
+                "One can note that since there is no recent works on music composer\nspecific composition generation and style transfer, comparison has\nbeen done strictly on the model architectures.",
+                "Key differences between the 2 model architectures\nThe main differences between the proposed hybrid style transfer\nmodel and the comparison model are given in Table 8.",
+                "Since here\ncomparison is done architecture wise (due to unavailability of work\non composer style transfer), Table 8 captures in detail the major\ndifferences between the 2 models in the next sections.",
+                "The style transfer architecture has been trained with only 100\nsongs from each composer.",
+                "Vol. 3807 , In Advanced signal processing algorithms, architectures, and\nimplementations (pp. 637\u2013645)."
+            ],
+            "training parameters": [],
+            "learning rate": [
+                "Other parameters such as learning rates and other training pa-\nrameters are also kept constant for both the cases."
+            ],
+            "batch size": [
+                "Batch size: 4\n4.6."
+            ],
+            "ethical": [],
+            "impact": [
+                "With the recent boom of ML/AI, the impact has\nbeen so huge that the nature of jobs for human beings are about to\nchange.",
+                "Music is such a creative gift that has endless impact on human\nbeings.",
+                "This would help in explaining which feature had more impact in the\nprediction of composer classes for each basic model.",
+                "From the figures, it is observed that Feature 8 which is one of the\nchromagram feature is having a commendable impact on the classifica-\ntion of all 3 composer classes for all the basic models.",
+                "For the Decision\nTree model, feature 8 has highest impact for determining the composer\nclasses Liszt and Schubert (see Supplementary Figure S1).",
+                "However,\nfeature 3 stands out of the rest in terms of the highest impact it has\non classifying the composer class Chopin.",
+                "For KNN model on the other\nhand, feature 8 is seen to have the highest impact value for determining\nthe classes of composers Liszt and Chopin (see Supplementary Figure\nS2).",
+                "Class Description\nClass 0 Liszt\nClass 1 Chopin\nClass 2 Schubert\n6 is seen to have the highest impact (see Supplementary Figure S2).",
+                "Using Random Forest classifier, feature\n8 seems to have highest impact for the classification of composer\nclasses Liszt and Schubert as shown in Supplementary Figure S4.",
+                "Classifiers SVM with linear and radial\nkernels show similar feature importance in terms of classifying com-\nposers Liszt and Schubert as shown in Supplementary Figures S5 and\nS6 with feature 8 as having the highest impact.",
+                "The only difference\nis seen during classification of composer Chopin where feature 4 and\n6 seem to have the highest impact value using linear SVM and radial\nSVM respectively.",
+                "4.7.2.1 Composer class wise drill down\nIn the composer level Shapley values representation, Supplementary\nFigures S7 to S24 shows the impact and importance of each feature\non the classification task for each composer.",
+                "As it is seen, feature 8 is\nhaving consistently high impact in determining the composer classes.",
+                "Feature 8 seem to consistently dominate the rest of the features in\nterms of impact value and importance as seen in Supplementary Figures\nS7, S8, S9, S10, S11 and S12.",
+                "For composer Chopin however, Supplementary Figures S13 to S18\ndoes not show any consistently high impact feature.",
+                "Feature 19 in\nSupplementary Figure S13 is seen to have the highest impact for\nDecision Tree model.",
+                "On the other hand, features 4, 1 and 16 is seen to\nhave the highest impact on the model outputs for KNN, Gaussian Naive\nBayes and Random Forest respectively as in Supplementary Figures\nS14, S15 and S16.",
+                "Feature 4 seem to have the highest impact on the\nmodel output using SVM with linear and radial kernels as shown in\nSupplementary Figures S17 and S18.",
+                "For composer Schubert, Supplementary Figures S19 to S24 shows\nfeature 6 as the consistent high impact feature for all the models except\nDecision Tree as seen in S20, S21, S22, S23 and S24.",
+                "Although the scenario remains the same\nin case of ensemble models as well, the proposed hybrid model is seen\nperforming better than the comparison model, however the ensemble\ntechnique seems not to have a significant impact on the classifier\nperformances.",
+                "Although tremendous research efforts are being put towards improv-\ning the impact of machines in various scientific fields, relatively less\nresearch has been done towards bringing the impact of machines in the\ncreative fields like music."
+            ],
+            "society": [
+                "In\nInternational society for music information retrieval conference (ISMIR) (pp. 747\u2013754).",
+                "In International society for music information\nretrieval conference .",
+                "In International society for music\ninformation retrieval conference (ISMIR) (pp. 190\u2013196).",
+                "IEEE Computer Society.",
+                "IEEE Computer Society.",
+                "In International society for music information retrieval conference (ISMIR)\n(pp. 524\u2013530).",
+                "In International society for music information retrieval\nconference late breaking and demo papers (pp. 84\u201393).",
+                "International Society for Optics and Photonics.",
+                "In International society\nfor music information retrieval conference (ISMIR) (pp. 324\u2013331).",
+                "IEEE Computer Society."
+            ],
+            "copyright": [],
+            "evaluation metrics": [
+                "Human evaluation along with instrument activity detection has been\nused as the evaluation metrics for this step."
+            ],
+            "metric": [
+                "In\nthe field of classification also, some of the recent works like Zhou, Li,\nand Mitri (2016) compares and contrasts the effectiveness of various\nclassification models using classification rate and Cohen\u2019s kappa as the\nmetrices.",
+                "Human evaluation along with instrument activity detection has been\nused as the evaluation metrics for this step.",
+                "Human\nevaluation is used as the only metric for evaluation.",
+                "Accuracy is chosen as the metric for evaluation in this case.",
+                "(2)Discriminator: The discriminator consists of 5 Conv layers with\nvarious types of activations as shown in Fig. 8 like leaky Rec-\ntiLinear Unit (ReLU) and Parametric RectiLinear Unit (PReLU).",
+                "Metric Proposed Hybrid Style Transfer Model Comparison model\nGenerators Paired Vanilla GAN (2 GANs) and\nCycle GAN (2 GANs)Cycle GAN (only 2 GANs)\nDiscriminators Discriminator for composer A,\nDiscriminator for composer BDiscriminator for composer A,\nDiscriminator for composer B,\nDiscriminator for composer A\n(mixed) and\nDiscriminator for composer B\n(mixed)",
+                "A multimodal approach to song-level style identification in\npop/rock using similarity metrics."
+            ],
+            "pitch accuracy": [],
+            "rhythm accuracy": [],
+            "melodic": [
+                "In particular, the melodic aspect (T3) of the style transferred mu-\nsic clips rated highly positively.",
+                "Technical quality T1: How successful is the composition after style transfer from A to\nB?\nT2: Do the harmonic elements of the style transferred version B\nshow technical correctness concerning the style of composer B?\nT3: Do the melodic elements of the style transferred version B show\ntechnical correctness concerning the style of composer B?\nExpressiveness E1:"
+            ],
+            "harmonic complexity": [],
+            "expressiveness": [
+                "In this work, CAT\nevaluates the quality of music in terms of creativity, technical quality,\nand expressiveness using domain experts.",
+                "Technical quality T1: How successful is the composition after style transfer from A to\nB?\nT2: Do the harmonic elements of the style transferred version B\nshow technical correctness concerning the style of composer B?\nT3: Do the melodic elements of the style transferred version B show\ntechnical correctness concerning the style of composer B?\nExpressiveness E1:",
+                "E1 and E2: Questions correspond to expressiveness criteria."
+            ],
+            "types of music": [],
+            "homophonic": [],
+            "heterophonic": [],
+            "a cappella": [],
+            "solo": [],
+            "choral": [],
+            "orchestral": [],
+            "electronic": [
+                "Electronics ,9(3),\n424."
+            ],
+            "pop": [
+                "The machine learning models which focus on clas-\nsifying music based on genre like classical, jazz, pop, rock and others,\ndo not focus on the composer specific styles.",
+                "The same composer\ncan compose music in all styles like jazz, pop, blues, etc. dependingon the requirement.",
+                "It shows that it works better\nthan Hard Thresholding (HT) and Bernoulli Sampling (BS) methods\npopularly used.",
+                "Nakamura, Shibata, Nishikimi, and Yoshii (2019)\nperforms genre based style conversion (say classical to pop) using\nunsupervised models.",
+                "The authors\nconvert MIDI music from one genre to another (say jazz to pop) which\nis evaluated using neural style classifiers.",
+                "Wang and Tzanetakis (2018)\nperforms a singing style investigation on pop music using variants of\nneural network.",
+                "Popular 4/4 time signature signifies 1 bar, contains 4 beats and\neach beat can contain 1/4 note, 2/8 note or 4/16 note (Brunner et al.,\n2018b).",
+                "Audio thumbnailing of popular music using\nchroma-based representations.",
+                "A multimodal approach to song-level style identification in\npop/rock using similarity metrics."
+            ],
+            "Demo availability": [],
+            "dataset": [
+                "The paper focuses on 3 composer maestros Liszt, Chopin and Schubert taken from\nthe Maestro dataset.",
+                "The highest accuracy obtained is\n80% for composer classification using the maestro dataset, 77.27% for the classification of the generated style\ntransferred version of a composition into the target composer class using the pre-trained classifiers.",
+                "116195\n3S. Mukherjee and M. Mulimani\nNow the dataset consisting of 100 songs of each of the 3 composers,\nare classified using various well-known ML models like:\n\u2022Basic Models: Decision Tree, K-Nearest Neighbors (KNN), Gaus-\nsian Naive Bayes (GNB), Support Vector Machine (SVM) using\nboth linear and radial kernels, Random Forest.",
+                "The GAN is\ntrained by divide and conquer by dividing the dataset with overlap and\nthen concatenating the generated output again with overlap in order\nto minimize information loss.",
+                "Dataset\nThe dataset used here consists of 3 composers named Liszt, Chopin\nand Schubert from the Maestro dataset ( Hawthorne et al. , 2019 ).",
+                "The\nMIDI files from Maestro v2 dataset is taken, converted to wav format,\npreprocessed and features are extracted from them.",
+                "Step 1: Audio data in the MIDI format is taken from the Maestro\ndataset ( Hawthorne et al. , 2019 ) and features are extracted from them.",
+                "The dataset: The dataset of 3 composers (Liszt, Chopin and\nSchubert) taken from the Maestro dataset (Hawthorne et al.,\n2019) are used to train both the networks.",
+                "(2018b) performs on the dataset after\nevaluation using the classifiers trained in step 1.\n4.7.4.",
+                "The dataset used here is the Maestro dataset (Hawthorne\net al., 2019).",
+                "Enabling factorized piano music modeling and generation with the\nMAESTRO dataset."
+            ]
+        },
+        {
+            "title": "Conditional hybrid GAN for melody generation from lyrics",
+            "architecture": [
+                "InMaskGAN, [ 18] proposes the actor-critic GAN\narchitecture that uses reinforcement learning to\ntrain the generator, where the in-\ufb01lling techniquemay alleviate mode collapse.",
+                "1 Architecture of\nconditional hybrid GAN3194 Neural Computing and Applications (2023) 35:3191\u20133202\n123yp\nt\u00fe1/C24softmax \u00f0ot\u00de: \u00f03\u00de\nHere, softmax \u00f0ot\u00derepresents the multinomial distribution\non the set of all possible MIDI numbers.",
+                "Therefore, to evaluate our proposed architecture, we\nuse Self-BLEU in [ 30] to measure the diversity of gener-\nated samples and maximum mean discrepancy (MMD) in\n[31] to measure the quality of generated samples.",
+                "During the adversarial training,\nSelf-BLEU values of our C-Hybrid-GAN architecturereach the peak around 45 epochs, decrease until 100\nepochs, and then approach to the stability."
+            ],
+            "training parameters": [],
+            "learning rate": [
+                "Initially, the generator network is pre-\ntrained with the MLE objective for 40 epochs using a\nlearning rate of 10/C02.",
+                "And then, adversarial training is\nperformed for 120 epochs with a learning rate of 10/C02for\nboth the generator and discriminator."
+            ],
+            "batch size": [
+                "The batch size is set to 512 and\na maximum temperature bmax\u00bc1000 is used during the\nadversarial training."
+            ],
+            "ethical": [],
+            "impact": [
+                "On the other hand, due to the\nquantization error, the generated music attributes could beassociated with an improper discrete-valued music attri-\nbute, which would lead to a negative impact on melody\ngeneration.",
+                "As Gumbel-Softmaxand RMC are mainly involved in the proposed C-Hybrid-\nGAN, their impacts are further investigated as the ablation\nstudy, and the results of TBC-LSTM-MLE and TBC-LSTM-GAN are shown in Table 2.\n4.1 Experimental setup\nWe use the Adam [ 32] optimizer with b1\u00bc0:9 and b2\u00bc\n0:99 and perform gradient clipping if the norm of the\ngradients exceeds 5."
+            ],
+            "society": [],
+            "copyright": [],
+            "evaluation metrics": [
+                "Through extensive experiments using evaluation metrics, e.g., maximum mean\ndiscrepancy, average rest value, and MIDI number transition, we demonstrate that the proposed C-Hybrid-GAN outper-forms the existing methods in melody generation from lyrics."
+            ],
+            "metric": [
+                "Through extensive experiments using evaluation metrics, e.g., maximum mean\ndiscrepancy, average rest value, and MIDI number transition, we demonstrate that the proposed C-Hybrid-GAN outper-forms the existing methods in melody generation from lyrics.",
+                "In TextGAN, [ 19] utilizes a kernelized\ndiscrepancy metric to map high-dimensional latent\nfeature distributions of real and synthetic sentences,\nwith the aim of mitigating the model collapse.",
+                "The con\ufb01guration of generator anddiscriminator is summarized in Table 1.4.2 Diversity evaluation of generated sequences\nWe use the Self-BLEU score by [ 30] as a metric to measure\nthe diversity of melodies generated by our proposed model.",
+                "We calculate the BLEU\nscore for every generated melody and de\ufb01ne the averageBLEU score as the Self-BLEU metric.",
+                "In addition, for\nmetrics on temporal attributes such as average rest value\nand the number of notes without rest, C-Hybrid-GAN isalso closest to the ground truth.",
+                "Besides metrics discussed in Table 2, the distribution of\nthe transitions between MIDI numbers is a very important\nattribute for quantitatively measuring generated melodies.",
+                "Mean values\narelrs\u00bc1:3666, lrn\u00bc1:3692,\nandlrns\u00bc1:3679, respectively\nTable 2 Metrics evaluation of attributes\nGround truth C-LSTM-GAN C-Hybrid-MLE C-Hybrid-GAN TBC-LSTM-MLE TBC-LSTM-GAN\n2-MIDI repetitions 7.4 9.7 6.8 6.5 9.1 10.6\n3-MIDI repetitions 3.8 2.2 2.8 2.7 2.1 3.0MIDI span 10.8 7.7 12.7 12.0 13.7 12.1Unique MIDI number 5.9 5.1 6.0 6.1 6.2 6.1Average rest value 0.8 0.6 1.4 0.7 1.1 0.8Non-rest note number 15.6 16.7 12.7 16.1 12.7 15.9Song length 43.3 39.2 60.9 39.1 51.0 41.4\nFig.",
+                "Following the existing works, threekinds of subjective measurements are used as evaluation\nmetrics: (1) how about the entire melody?"
+            ],
+            "pitch accuracy": [],
+            "rhythm accuracy": [],
+            "melodic": [
+                "Monteith K, Martinez TR, Ventura D (2012) Automatic genera-\ntion of melodic accompaniments for lyrics."
+            ],
+            "harmonic complexity": [],
+            "expressiveness": [],
+            "types of music": [],
+            "homophonic": [],
+            "heterophonic": [],
+            "a cappella": [],
+            "solo": [
+                "The gradient of the generator lossoloss G\nohG\ncannot be back propagated to the generator via the dis-\ncriminator, and hence generator parameters hGcannot be\nupdated."
+            ],
+            "choral": [],
+            "orchestral": [],
+            "electronic": [],
+            "pop": [],
+            "Demo availability": [],
+            "dataset": [
+                "Large-scale Chinese language lyrics-melody\ndataset was built to evaluate the proposed learning model.",
+                "In our initial work by [ 1], we not only built a large dataset\nconsisting of 12,197 MIDI songs each with paired lyricsand melody, but also have veri\ufb01ed the feasibility of melody\ngeneration from lyrics by LSTM-based deep generative\nmodel [ 8].",
+                "In our dataset, the number of distinct MIDI numbersis 100.",
+                "The melody-lyrics dataset in [ 1] is utilized in\nour experiment, which contains 13,251 sequences, eachconsisting of 20 syllables aligned with the triplet of music\nattributes { y\np\nt;yd\nt;yr\nt}.",
+                "The dataset is split into training,\nvalidation and test sets with the ratio of 8:1:1.",
+                "2 Training curves of self-\nBLEU scores on testing dataset\nFig.",
+                "Average note duration distance between generatedsequences and sequences from ground truth dataset is\ncalculated and shown in Fig.",
+                "Average rest duration\ndistance between generated sequences and sequences from\nground truth dataset is shown in Fig. 7.",
+                "4 Training curves of MMD\nscores on testing dataset3198 Neural Computing and Applications (2023) 35:3191\u20133202\n123melodies generated by our model C-Hybrid-GAN,\nC-Hybrid-MLE, and C-LSTM-GAN.",
+                "Data Availability The datasets generated during and/or analyzed\nduring the current study are available in [ 1] repository, https://github."
+            ]
+        },
+        {
+            "title": "Self-Supervised Music Motion Synchronization Learning for Music-Driven Conducting Motion Generation",
+            "architecture": [
+                "An overview of the two-\nstage training procedure can be found in Algorithm 1.\n4.3 Network Architectures\nAs shown in Fig.3, four neural networks are involved\nin our approach: a music encoder Emusic, a motion en-\ncoderEmotion , a generator G, and a discriminator D.",
+                "Although\nthe architectures of these studies[57{60]appear similarto that of our proposed approach, there are three fun-\ndamental di\u000berences between them."
+            ],
+            "training parameters": [],
+            "learning rate": [
+                "As suggested in [19], our\nM2S-GAN is trained by the RMSprop optimizer[64]with a learning rate of 0.000 5.",
+                "M2S-Net and other com-\nparable models are trained by the Adam optimizer[65]\nwith a learning rate of 0.001."
+            ],
+            "batch size": [
+                "The batch size of the\ncontrastive and generative learning stage is 10 and 3 re-\nspectively."
+            ],
+            "ethical": [],
+            "impact": [
+                "6.5 Impact of Di\u000berent Negative Pairs\nAs addressed in Subsection 4.5, hard negatives\nshould have the advantage over easy and super-hard\nnegatives for M2S learning.",
+                "In our experiment, although\nthe super-hard negatives under-perform hard negatives\nin M2S learning, the training process under super-hard\nnegatives is reasonably smooth, as shown in Fig.9.6.6 Impact of Training Set Scale\nWe next conduct another experiment to demon-\nstrate the necessity of discarding the MSE loss: we\ntrain the MSE model and our proposed M2S-GAN us-\ning di\u000berent scales of the training set."
+            ],
+            "society": [
+                "the 19th International Society for Music\nInformation Retrieval Conference , September 2018, pp.218-\n224.",
+                "the 20th International Society for Music Information\nRetrieval Conference , November 2019, pp.894-899.",
+                "the 20th International Society for Music Infor-\nmation Retrieval Conference , November 2019, pp.115-122.\nDOI: 10.5281/zenodo.3527753."
+            ],
+            "copyright": [],
+            "evaluation metrics": [
+                "3) We conduct extensive experiments on Conductor-\nMotion100, using both standard evaluation metrics and\nseveral newly designed metrics.",
+                "6.2 Evaluation Metrics\nSince learning music-driven conducting motion\ngeneration is a very new task, there are few existing\nmetrics available for measuring the outcomes."
+            ],
+            "metric": [
+                "In\nthe subsequent generative stage, the previously learned\nmusic representations provide semantic information for\nthe motion generator, while the motion representations\nare used to calculate a proposed perceptual training\nmetric named sync loss.",
+                "3) We conduct extensive experiments on Conductor-\nMotion100, using both standard evaluation metrics and\nseveral newly designed metrics.",
+                "6.2 Evaluation Metrics\nSince learning music-driven conducting motion\ngeneration is a very new task, there are few existing\nmetrics available for measuring the outcomes.",
+                "Notably\nthese metrics require a feature encoder, which is typ-\nically obtained by classi\fcation pre-training; however,\nthere are no available class labels for the conducting\nmotions.",
+                "Therefore, to evaluate the quality of conduct-\ning motions more e\u000bectively, we propose several new\nmetrics in addition to the existing metrics, as detailed\nin the below.",
+                "To provide a better understanding of\nthe characteristics of these metrics, we illustrate the\nchanges in metric values under spatial-temporal pertur-\nbation in Fig.5.",
+                "Temporal perturba-\n6\u25cbhttps://pytorch.org, Apr. 2022.Fan Liu et al. : Self-Supervised Music Motion Synchronization Learning 549\n0.040Metric Value0.030\n0.020\n0.010\n0.000\n0.80.91.01.11.2\nAmplitude Scaling FactorTime Stretch Factor2.00\n1.50\n1.00\n0.50\n0.00\nMetric Value3.0\n2.0\n1.0\n0.0\n0.80.91.01.11.2\nAmplitude Scaling FactorTime Stretch Factor2.00\n1.50\n1.00\n0.50\n0.00\nMetric Value\n0.80.91.01.11.2\nAmplitude Scaling FactorTime Stretch Factor2.002.00\n1.501.50\n1.001.00\n0.500.50\n0.000.00\nMetric Value1.4\n1.0\n0.6\n0.2\n0.8\n0.91.01.11.2\nAmplitude Scaling FactorTime Stretch Factor2.00\n1.50\n1.00\n0.50\n0.00\nMetric Value0.150\n0.100\n0.050\n0.000\n0.80.91.01.11.2\nAmplitude Scaling FactorTime Stretch Factor2.00\n1.50\n1.00\n0.50\n0.00\u03a410-1\n\u03a410-1\n0.80.91.01.11.2\nAmplitude Scaling FactorTime Stretch Factor2.00\n1.50\n1.00\n0.50",
+                "0.00Metric Value4\n3\n2\n1\n0(b) (a)\n(d) (c)\n(f) (e)\nFig.5.",
+                "Changes in metric values under spatial-temporal perturbation.",
+                "6.2.1 Mean Squared Error\nMean squared error (MSE) is the most straight-\nforward way to measure how close the generated mo-\ntion is to the ground truth, and has thus been widely\nused as an evaluation metric by existing audio-to-\nmotion translation work[3,4,29,30,32,43].",
+                "The only ex-\nisting learning-based music-driven conducting motion\ngeneration method, KHMM[12], also adopts a mean ab-\nsolute error (MAE)-like metric.",
+                "How-\never, it would not be suitable to use the sync loss as\nan evaluation metric, since our proposed M2S-GAN\ndirectly minimizes it."
+            ],
+            "pitch accuracy": [],
+            "rhythm accuracy": [],
+            "melodic": [],
+            "harmonic complexity": [],
+            "expressiveness": [],
+            "types of music": [],
+            "homophonic": [],
+            "heterophonic": [],
+            "a cappella": [],
+            "solo": [
+                "Tempo: ~130 BPM\n0.001 0.000 0.002 0.003 0.004 0.005 0.006\nPiano solo\n100 200 300 400 500 600 7002.5\n2.0\n1.5\n1.0\n0.5\n0.0Frequency (Hz)2.5\n2.0\n1.5\n1.0\n0.5\n0.0Frequency (Hz)\nPiano solo\n100 200 300 400 500\n0.82 Hz, 49.2 BPM\nMvt.",
+                "Tempo: ~170 BPM\n0.000 0.002 0.004 0.006 0.008\n 100 200 300 40050 150 250 3502.5\n2.0\n1.5\n1.0\n0.5\n0.0Frequency (Hz)2.5\n2.0\n1.5\n1.0\n0.5\n0.0Frequency (Hz)Motion Contour Motion Contour Motion Contour\nPiano Solo\n1000 200 300 400 500 600 700\nPiano Solo\n0.0 0.5 1.0 1.5 2.0\n\u03a41040.010\n0.008\n0.006\n0.004\n0.002\n0.0000.004\n0.003\n0.002\n0.001\n0.000\nPiano Solo\n100 0 200 300 400 500\nPiano Solo\n0.2 0.6 1.0 1.4 0.0 0.4 0.8 1.2 1.6 1.8\n\u03a41040.010\n0.008\n0.006\n0.004\n0.002\n0.0000.003\n0.002\n0.001\n0.000\n100 0 200 300 40050 150 250 350\n 0.2 0.6 1.0 0.0 0.4 0.8 1.2\n\u03a41040.010\n0.008\n0.006\n0.004\n0.002\n0.0000.004\n0.003\n0.002\n0.001\n0.000Time (s)",
+                "Both strength contour and summed motion speed can recognize the piano solo section in Mvt.1 and Mvt.2.552 J. Comput.",
+                "Fig.6(c) and Fig.6(d) present the examples\nof summed motion speed and strength contour, respec-\ntively, from which the piano solo sections can be clearly\nidenti\fed."
+            ],
+            "choral": [],
+            "orchestral": [
+                "Although\nrecent studies have successfully generated motion for singers, dancers, and musicians, few have explored motion generation\nfor orchestral conductors.",
+                "2 Related Work\n2.1 Music-Driven Conducting Motion\nGeneration\nMusic-driven conducting motion generation involves\nthe generation of skeleton sequences of an orchestral\nconductor according to a given piece of music.",
+                "[25] Dansereau D G, Brock N, Cooperstock J R. Predicting\nan orchestral conductor's baton movements using machine\nlearning.",
+                "[51] Huang Y, Chen T, Moran N, Coleman S, Su L. Identifying\nexpressive semantics in orchestral conducting kinematics."
+            ],
+            "electronic": [],
+            "pop": [
+                "For its part, our proposed approach has two\nlearning stages: we \frst obtain an optimal M2S-Net,\nand then apply it to M2S-GAN.\n5.2 Sync Loss vs Perceptual Loss\nPerceptual loss[61]is a popular choice in many ill-\nposed image manipulation tasks.",
+                "In a study of music-driven dance\ngeneration, Ren et al.[1]proposed pose perceptual loss,\nwhere a motion encoder pre-trained on dance genre\nclassi\fcation (distinguishing ballet, pop, and hip-hop\ndance) was used as the perceptual loss network."
+            ],
+            "Demo availability": [],
+            "dataset": [
+                "To verify the e\u000bectiveness of our method,\nwe construct a large-scale dataset, named ConductorMotion100, which consists of unprecedented 100 hours of conducting\nmotion data.",
+                "In addition, we \fnd that existing conducting mo-\ntion datasets are too small to train a generative deep\nlearning model.",
+                "Thus, we collect and construct a large-\nscale conducting motion dataset.",
+                "The constructed dataset, named\nConductorMotion100, has 100 hours of conducting mo-\ntion data and aligned Mel spectrograms.",
+                "Its scale\nsigni\fcantly exceeds that of existing conducting mo-\ntion datasets.",
+                "2) We collect and construct a large-scale conduct-\ning motion dataset, ConductorMotion100, based on\nadvanced object detection and pose estimation tech-\nniques.",
+                "ConductorMotion100 contains 100 hours of\nconducting motion and aligned music data; its scale\nsigni\fcantly exceeds that of existing conducting motion\ndatasets.",
+                "Both the dataset ConductorMotion100 and the ex-\nperimental codes are open-sourced1\u25cb.",
+                "3 Data Preparation\nDue to the scale of existing conducting motion\ndatasets being insu\u000ecient to train a deep genera-\ntive model, we construct a large-scale conducting mo-\ntion dataset, named ConductorMotion100, by deploy-\ning pose estimation on conductor view videos of con-\ncert performance recordings collected from online video\nplatforms.",
+                "As\nshown in Table 1, its scale far exceeds that of exist-\ning conducting motion datasets.",
+                "To facilitate related\nresearch, the dataset is made public4\u25cb.",
+                "Comparison on the Scale of Conducting Motion Datasets\nYear Dataset Length (min)\n2013 Saras\u0013 ua et al.[48]120.0\n2013 Dansereau et al.[25]0.5\n2014 Saras\u0013 ua and Guaus[49]250.0\n2017 Karipidou et al.[50]36.0\n2019 Huang et al.[51]180.0\n2019 Lemouton et al.[52](IDEA dataset) 56.0\n2021 Ours (ConductorMotion100) 6 000.0\n4\u25cbhttps://github.com/ChenDelong1999/VirtualConductor, Mar. 2022.Fan",
+                "Therefore, we \frst annotate a small object detec-\ntion dataset, Concert300, and \fne-tune a pre-trained\nYOLO-V3[20]to recognize which human is the conduc-\ntor.",
+                "Formally, the ConductorMotion100 dataset can be\ndescribed asD=f(Xi;Yi)gN\ni=1, where Xi=fxtgTx\ni\nt=1\nandYi=fytgTy\ni\nt=1are thei-th Mel spectrogram and\nconducting motion sequence respectively.",
+                "In Fig.2 ,\nwe present the visualization of a sample ( X;Y) in the\nConductorMotion100 dataset; the sample corresponds\nto the \fnal part of Tchaikovsky's 1812 Overture.",
+                "Visualization of a sample in the ConductorMotion100\ndataset.",
+                "4.2 Overview of Proposed Approach\nFormally, given the ConductorMotion100 dataset D,\nour goal is to learn a music encoder Emusic and a gener-\natorGto predict a motion sequence from a given Mel\nspectrogram Xand random zsampled from a normal\ndistribution, i.e., ^Y=G(Emusic(X);z).",
+                "Training Procedure of M2S-Net and M2S-GAN\nInput : datasetD=f(Xi;Yi)gN\ni=1; loss function weights \u0015adv,\u0015sync,wGP;\nOutput : trained music encoder Emusic , generator G;\n/",
+                "During training,\nthe positive and negative pairs are automatically sam-\npled from the dataset.",
+                "In addition, their method is computationally ine\u000ecient,\nespecially when facing our large-scale ConductorMo-\ntion100 dataset.",
+                "knowledge of the music motion relationship is learned\nfrom the large dataset by the model itself.",
+                "In addition, we construct a large-scale conducting\nmotion dataset, ConductorMotion100, which contains\nan unprecedented 100 hours of conducting motion and\ncorresponding music data.",
+                "The ConductorMotion100\ndataset enables M2S-GAN to learn rich music seman-\ntics.",
+                "Since the scale of ConductorMotion100 is also\nlarger than many datasets for music information re-\ntrieval (MIR) tasks, in future, we will also validate the\ne\u000bectiveness of using it as a pretraining dataset for MIR\ntasks, such as beat tracking and tempo estimation.",
+                "On our collected ConductorMo-\ntion100 dataset, the proposed method achieved 0.049\nRDE and 2.046 SCE, outperforming all the compared\nmethods.",
+                "[52] Lemouton S, Borghesi R, Haapam\u007f aki S, Bevilacqua F, Fl\u0013 ety\nE. Following orchestra conductors: The IDEA open move-\nment dataset."
+            ]
+        },
+        {
+            "title": "CycleDRUMS: automatic drum arrangement for bass lines using CycleGAN",
+            "architecture": [
+                "In addition, more solutions based on deep learning \ntechniques, such as RL-Duet [4 ]\u2014a deep reinforcement learning algorithm for online accompaniment generation\u2014or \nPopMAG, a transformer-based architecture which relies on a multi-track MIDI representation of music [5], continue to be \nstudied.",
+                "In particular, we \ntrained a CycleGAN architecture on 5s bass and drum samples (equivalent to 256\u00d7256 mel-spectrograms) coming from \nboth the Free Music Archive (FMA) dataset [8 ] and the musdb18 dataset [9 ].",
+                "To sum up, our main contributions are the following:\n\u2022 we trained a CycleGAN architecture on bass and drum mel-spectrograms in order to automatically generate drums \nthat follow the beat and sound credible for any given bass line;\n\u2022 our approach can generate drum arrangements with low computational resources and limited inference time, if \ncompared to other popular solutions for automatic music generation [12];\n\u2022 we developed a metric\u2014partially based on or correlated to human (and expert) judgment\u2014to automatically evaluate \nthe obtained results and the creativity of the proposed system, given the challenges of a quantitative assessment of \nmusic;\n\u2022 we compared our method to Pix2Pix, another popular image transfer network, showing that the music arrangement \nproblem can be better tackled with an unpaired approach and adding a cycle-consistency loss.",
+                "The following contributions used MIDI, piano rolls, chord \nand note names to feed several deep learning architectures and tackle different aspects of the music generation problem.",
+                "In [21], symbolic sequences of polyphonic music are modeled in an entirely general piano-roll representation, while the \nauthors of [22] propose a novel architecture to generate melodies satisfying positional constraints in the style of the \nsoprano parts of the J.S. Bach chorale harmonizations encoded in MIDI.",
+                "[38] tested a model for unconditional audio synthesis based on generating one audio sample at a time, and \n[39] applied Restricted Boltzmann Machine and LSTM architectures to raw audio files in the frequency domain in order \nto generate music.",
+                "The authors of [40] present a raw audio music generation model based on the WaveNet architecture, \nwhich takes the composition notes as a secondary input.",
+                "Nonetheless, due to the \ncomputational resources required to model long-range dependencies in the time domain directly, either short samples \nof music can be generated or complex and large architectures and long inference time are required.",
+                "As to \nthe arrangement generation task, the large majority of approaches proposed in the literature is based on a symbolic \nrepresentation of music: in [5 ], a novel multi-track MIDI representation (MuMIDI) is presented, which enables simultane -\nous multi-track generation in a single sequence and explicitly models the dependency of the notes from different tracks \nutilizing a Transformer-based architecture; in [4 ], a deep reinforcement learning algorithm for online accompaniment \ngeneration is described.",
+                "It features a U-NET encoder\u2013decoder architecture with a bidirectional LSTM as hidden layer.",
+                "The architecture assumes some underlying relationship between \ndomains and tries to learn it.",
+                "In particular, we trained a CycleGAN architecture on 5s bass and drum samples (equivalent to 256\u00d7256 mel-spectrograms) coming from \nboth the Free Music Archive (FMA) dataset",
+                "[7] to obtain:\nWe adopt the architecture from [56] for our generative networks, which have shown impressive neural style transfer \nand super-resolution results.",
+                "Figure\u00a0 2 shows a schema summarizing the entire architecture.\n3.4  Automatic bass to\u00a0drums arrangement\nCycleDRUMS takes as input a set of N  music songs in the waveform domain X={xi}N\ni=1 , where /u1D431/u1D422 is a waveform whose \nnumber of samples depends on the sampling rate and the audio length.",
+                "In the final stage of our pipeline, we fed CycleGAN architecture with the obtained dataset.",
+                "The architecture assumes \nsome underlying relationship between domains and tries to learn it.",
+                "For this reason, our training strategy is to pre-train the architecture with the artificially source-\nseparated FMA dataset and then fine-tune it with musdb18.",
+                "Ultimately, instead of forcing a pre-\nexisting method to work in our specific scenario, we decided to replicate our experiments using the Pix2Pix architecture \n[11], another image-to-image translation network.",
+                "At this website7 a private Sound Cloud playlist of some of the most exciting results is available, \nwhile at this link8 we uploaded some samples obtained with the Pix2Pix baseline architecture.",
+                "Even with the promising results, some critical issues \nmust be addressed before a more compelling architecture can be developed.",
+                "Moreover, the model architecture should be further improved to focus on longer dependencies and consider \nthe actual degradation of high frequencies."
+            ],
+            "training parameters": [],
+            "learning rate": [
+                "The Adam \noptimizer [ 59] was chosen both for the generators and the discriminators, with betas (0.5,\u00a00.999) and a learning rate equal \nto 0.0002.",
+                "Hyperparameter Value\nEpochs 20\nWindow size 256\nPatch size 70 \u00d7 70\nLearning rate 2e\u22124\n/u1D706 10\n/u1D6FD (0.5, 0.999)\nReferences\n 1."
+            ],
+            "batch size": [
+                "The batch size was set to 1."
+            ],
+            "ethical": [],
+            "impact": [
+                "Even though the discretization step introduces some distortion\u2014original spectrogram values are floats\u2014the impact \non the audio quality is negligible.",
+                "S\u00e1nchez Fern\u00e1ndez LP , S\u00e1nchez P\u00e9rez LA, Carbajal Hern\u00e1ndez JJ, Rojo Ruiz A. Aircraft classification and acoustic impact estimation based \non real-time take-off noise measurements."
+            ],
+            "society": [],
+            "copyright": [
+                "If material is not included in \nthe article\u2019s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will \nneed to obtain permission directly from the copyright holder."
+            ],
+            "evaluation metrics": [],
+            "metric": [
+                "In the absence of an objective way of evaluating the output of both \ngenerative adversarial networks and generative music systems, we further defined a possible metric for the proposed \ntask, partially based on human (and expert) judgment.",
+                "To sum up, our main contributions are the following:\n\u2022 we trained a CycleGAN architecture on bass and drum mel-spectrograms in order to automatically generate drums \nthat follow the beat and sound credible for any given bass line;\n\u2022 our approach can generate drum arrangements with low computational resources and limited inference time, if \ncompared to other popular solutions for automatic music generation [12];\n\u2022 we developed a metric\u2014partially based on or correlated to human (and expert) judgment\u2014to automatically evaluate \nthe obtained results and the creativity of the proposed system, given the challenges of a quantitative assessment of \nmusic;\n\u2022 we compared our method to Pix2Pix, another popular image transfer network, showing that the music arrangement \nproblem can be better tackled with an unpaired approach and adding a cycle-consistency loss.",
+                "In [13], CNNs are used for generating melody as a series of MIDI notes either from scratch, by following a chord sequence, \nor by conditioning on the melody of previous bars, whereas in [14\u2013 17] LSTMs are used to generate musical notes, melo -\ndies, polyphonic music pieces, and long drum sequences under constraints imposed by metrical rhythm information and Vol.:(0123456789)Discover Artificial Intelligence             (2023) 3:4  | https://doi.org/10.1007/s44163-023-00047-7 \n Research\n1 3\na given bass sequence.",
+                "[48], and (ii) the definition of an objective \nmetric and loss is a common problem to generative models such as GANs: as of now, generative models in the music \ndomain are evaluated based on the subjective response of a pool of listeners, because an objective metric for the raw \naudio representation has never been proposed so far.",
+                "Just for the MIDI representation, a set of simple musically informed \nobjective metrics was proposed",
+                "The /u1D706 weights for cycle losses were both equal to 10.\n4.3  Experimental setting\nEven though researchers proposed some effective metrics to predict how popular a song will become [60], there \nis an intrinsic difficulty in objectively evaluating artistic artifacts such as music.",
+                "In light of the limits linked \nto this human-based approach, we propose a new metric that correlates well with human judgment.",
+                "4.4  Metrics\nIf we consider as a general objective for a system the capacity to assist composers and musicians, rather than to \nautonomously generate music, we should also consider as an evaluation criteria the satisfaction of the composer, \nrather than the satisfaction of the auditors [1 ].",
+                "This metric leverages the established Inception pre-trained model by getting a vector representation of each mel-\nspectrogram (i.e. each song), and uses these vectors to compare the distributions of generated and gold examples.",
+                "Wang X, Takaki S, Yamagishi J. Neural source-filter waveform models for statistical parametric speech synthesis.",
+                "Lee J, Lee J. Music popularity: metrics, characteristics, and audio-based prediction."
+            ],
+            "pitch accuracy": [],
+            "rhythm accuracy": [],
+            "melodic": [],
+            "harmonic complexity": [],
+            "expressiveness": [
+                "Indeed, even if it is possible to use synthesizers \nto produce sounds from symbolic music, MIDI, music sheets, and piano rolls are not always easy to find or produce, and \nthey sometimes lack expressiveness."
+            ],
+            "types of music": [],
+            "homophonic": [],
+            "heterophonic": [],
+            "a cappella": [],
+            "solo": [],
+            "choral": [
+                "In [21], symbolic sequences of polyphonic music are modeled in an entirely general piano-roll representation, while the \nauthors of [22] propose a novel architecture to generate melodies satisfying positional constraints in the style of the \nsoprano parts of the J.S. Bach chorale harmonizations encoded in MIDI.",
+                "In [23], RNNs are used for the prediction and \ncomposition of polyphonic music; in [24], highly convincing chorales in the style of Bach were automatically generated \nusing note names [25]; added higher-level structure on generated polyphonic music, whereas in [26] an end-to-end \ngenerative model capable of composing music conditioned on a specific mixture of composer styles was designed.",
+                "Hadjeres G, Pachet F, Nielsen F. Deepbach: a steerable model for bach chorales generation."
+            ],
+            "orchestral": [],
+            "electronic": [],
+            "pop": [
+                "Keywords Automatic music arrangement\u00a0\u00b7 Cycle-GAN\u00a0\u00b7 Deep learning\u00a0\u00b7 Source separation\u00a0\u00b7 Audio and speech \nprocessing\n1 Introduction\nThe development of home music production has brought significant innovations into the process of pop music composi-\ntion.",
+                "In addition, more solutions based on deep learning \ntechniques, such as RL-Duet [4 ]\u2014a deep reinforcement learning algorithm for online accompaniment generation\u2014or \nPopMAG, a transformer-based architecture which relies on a multi-track MIDI representation of music [5], continue to be \nstudied.",
+                "The results were then compared to Pix2Pix \n[11], another popular paired image-to-image translation network.",
+                "To sum up, our main contributions are the following:\n\u2022 we trained a CycleGAN architecture on bass and drum mel-spectrograms in order to automatically generate drums \nthat follow the beat and sound credible for any given bass line;\n\u2022 our approach can generate drum arrangements with low computational resources and limited inference time, if \ncompared to other popular solutions for automatic music generation [12];\n\u2022 we developed a metric\u2014partially based on or correlated to human (and expert) judgment\u2014to automatically evaluate \nthe obtained results and the creativity of the proposed system, given the challenges of a quantitative assessment of \nmusic;\n\u2022 we compared our method to Pix2Pix, another popular image transfer network, showing that the music arrangement \nproblem can be better tackled with an unpaired approach and adding a cycle-consistency loss.",
+                "Given the size of FMA, we chose to select only untrimmed songs tagged as either pop, soul-RnB, or indie-\nrock, for approximately 10,000 songs ( \u2248700 h of audio).",
+                "The /u1D706 weights for cycle losses were both equal to 10.\n4.3  Experimental setting\nEven though researchers proposed some effective metrics to predict how popular a song will become [60], there \nis an intrinsic difficulty in objectively evaluating artistic artifacts such as music.",
+                "We \nthen asked a professional guitarist who has been playing in a pop-rock band for more than ten years, a professional \ndrummer from the same band, and two pop and indie-rock music producers with more than four years of experience \nto manually annotate these samples, capturing the following musical dimensions: sound quality, contamination, \ncredibility, and whether the generated drums followed the beat.",
+                "Ren Y, He J, Tan X, Qin T, Zhao Z, Liu T-Y. Popmag: pop music accompaniment generation.",
+                "Zhu H, Liu Q, Yuan NJ, Qin C, Li J, Zhang K, Zhou G, Wei F, Xu Y, Chen E. Xiaoice band: a melody and arrangement generation framework for \npop music.",
+                "Lee J, Lee J. Music popularity: metrics, characteristics, and audio-based prediction."
+            ],
+            "Demo availability": [],
+            "dataset": [
+                "In particular, we \ntrained a CycleGAN architecture on 5s bass and drum samples (equivalent to 256\u00d7256 mel-spectrograms) coming from \nboth the Free Music Archive (FMA) dataset [8 ] and the musdb18 dataset [9 ].",
+                "Coming to the most relevant issues in the development of music generation systems, both the training and evalu-\nation of such systems have proven challenging, mainly because of the following reasons: (i) the available datasets for \nmusic generation tasks are challenging due to their inherent high-entropy",
+                "After the source separation task is carried out on our song dataset, both the bass and drum waveforms are turned \ninto the corresponding mel-spectrograms using PyTorch Audio.1 PyTorch works very fast and is optimized to perform \nrobust GPU-accelerated conversion.",
+                "In particular, we trained a CycleGAN architecture on 5s bass and drum samples (equivalent to 256\u00d7256 mel-spectrograms) coming from \nboth the Free Music Archive (FMA) dataset",
+                "[8] and the musdb18 dataset [9].",
+                "After the source separation task on \nour song dataset, the bass and drum waveforms are turned into the corresponding mel-spectrograms.",
+                "In the final stage of our pipeline, we fed CycleGAN architecture with the obtained dataset.",
+                "4  Experiments\n4.1  Dataset\nIt is important to carefully pick the dataset for the quality of the generated music samples.",
+                "To train and test our model, \nwe decided to use the Free Music Archive2 (FMA), and the musdb183 dataset [9 ] that were both released in 2017.",
+                "The \nFree Music Archive (FMA) is the largest publicly available dataset suitable for music information retrieval tasks [8 ].",
+                "Finally, to better validate and fine-tune our model, we decided also to use the full musdb18 dataset.",
+                "This rather small \ndataset comprises 100 tracks taken from the DSD100 dataset, 46 tracks from the MedleyDB, two tracks kindly provided by \nNative Instruments, and two tracks from the Canadian rock band The Easton Ellises.",
+                "We used the 100 tracks taken from the DSD100 dataset to fine-tune \nthe model ( \u22486.5 h) and the remaining 50 songs to test it ( \u22483.5 h).",
+                "For this reason, our training strategy is to pre-train the architecture with the artificially source-\nseparated FMA dataset and then fine-tune it with musdb18.",
+                "A large, clean dataset of separated raw-audio sources remains a research objective.",
+                "We trained our model on 2 Tesla V100 SXM2 GPUs with 32 GB of RAM for 12 epochs (FMA dataset) and fine-tuned it for \n20 more epochs (musdb18 dataset).",
+                "Moreover, the cost and time required to manually \nannotate the dataset could become prohibitive even for relatively few samples (over 1000).",
+                "At training time, we relied on the default network provided by the original \nauthors,6 we ran it on 2 Tesla V100 SXM2 GPUs with 32 GB of RAM for 50 epochs (FMA dataset), and we fine-tuned it for \n30 more epochs (musdb18 dataset).",
+                "First and foremost, a more extensive and \ncleaner dataset of source-separated songs should be created.",
+                "Data availability  The datasets generated by the survey research and analyzed during the current study are publicly available at the following \naddresses: https:// freem usica rchive.",
+                "Hawthorne C, Stasyuk A, Roberts A, Simon I, Huang C-ZA, Dieleman S, Elsen E, Engel J, Eck D. Enabling factorized piano music modeling \nand generation with the maestro dataset."
+            ]
+        }
+    ]
+}

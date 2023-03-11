@@ -82,3 +82,111 @@ def generateDataCollection(keywords, output):
 
     with open(output + ".json", 'w') as f:
         json.dump(result, f, indent=4)
+
+priorityOne = [
+    "architecture",    
+]
+
+priorityTwo = [
+    "training parameters",
+    "learning rate",
+    "batch size",
+    "ethical",
+    "impact",
+    "evaluation metrics",
+    "metric",
+    "pitch accuracy", 
+    "rhythm accuracy", 
+    "melodic",
+    "harmonic complexity", 
+    "expressiveness",
+]
+
+priorityTree = [
+    "types of music" ,
+    "homophonic",
+    "heterophonic", 
+    "a cappella", 
+    "orchestral", 
+    "electronic", 
+    "pop",
+    "Demo availability",
+    "dataset",
+]
+
+priorityKeywords = [
+    "architecture",
+    "training parameters",
+    "learning rate",
+    "batch size",
+    "ethical",
+    "impact",
+    "evaluation metrics",
+    "metric",
+    "pitch accuracy", 
+    "rhythm accuracy", 
+    "melodic",
+    "harmonic complexity", 
+    "expressiveness",
+    "types of music" ,
+    "homophonic",
+    "heterophonic", 
+    "a cappella", 
+    "orchestral", 
+    "electronic", 
+    "pop",
+    "Demo availability",
+    "dataset",
+]
+
+# @return: True if article pass in the "priority oucomes test"
+# article that pass in the test is an article that talks about 
+# >= 50% of the outomes pre defined in general
+def articleHavePriorityOutomes(article):
+    priorityBaseLimit = 40
+    i = 0
+    for key in article.keys():
+        if len(article[key]) > 0:
+            if key in priorityOne:
+                i = i + 9
+            elif key in priorityTwo:
+                i = i + 6
+            elif key in priorityTree:
+                i = i + 2
+
+    if i >= priorityBaseLimit: return True
+    else: return False
+
+# Filter only articles that have enough content
+# to a deeper analyse in our study
+# "enough content" is evaluted in order to
+# "priorities outcomes" defined  
+def includedArticlesFilter():
+    print("Executing generateDataColleciton ...")
+    generateDataCollection(priorityKeywords, "filter")
+    print("Executing articleHavePriorityOutcomes for each article ...")
+    f = open('filter.json', encoding='utf-8')
+    data = json.load(f)
+    filteredArticles = []
+    for article in data["data_collection"]:
+        if articleHavePriorityOutomes(article):
+            filteredArticles.append(article["title"])
+    return filteredArticles
+
+#filterArticles = includedArticlesFilter()
+#print("Filter articles len: ",len(filterArticles))
+#print("Filter articles: ",filterArticles)
+
+print("Executing articleHavePriorityOutcomes for each article ...")
+f = open('filter.json', encoding='utf-8')
+data = json.load(f)
+filteredArticles = {}
+filteredArticles["filtered"] = []
+for article in data["data_collection"]:
+    if articleHavePriorityOutomes(article):
+        filteredArticles["filtered"].append(article)
+print("Filter articles len: ",len(filteredArticles))
+print("Filter articles: ",filteredArticles)
+
+with open("filtered" + ".json", 'w') as f:
+    json.dump(filteredArticles, f, indent=4)
