@@ -33,21 +33,21 @@ def getNumberOfArticlesByData():
         else:
             dataCounts[metadata["year"]] = dataCounts[metadata["year"]] + 1
     
-    with open("henriqueFilterYears" + ".json", 'w') as f:
+    with open("Results/henriqueFilterYears" + ".json", 'w') as f:
         json.dump(dataCounts, f, indent=4)
 
 def getNumberOfArticlesByDatabase():
     allMetadata = dt.getAllMetaData()
     dataCounts = {}
     metadatas = allMetadata["content"]
-    for metadata in metadatas:      
+    for metadata in metadatas:    
         if not metadata["database"] in dataCounts:
             dataCounts[metadata["database"]] = 1
         else:
             dataCounts[metadata["database"]] = dataCounts[metadata["database"]] + 1
     
-    with open("henriqueFilterDatabases" + ".json", 'w') as f:
+    with open("Results/henriqueFilterDatabases" + ".json", 'w') as f:
         json.dump(dataCounts, f, indent=4)
 
-# getNumberOfArticlesByData()
-getNumberOfArticlesByDatabase()
+getNumberOfArticlesByData()
+#getNumberOfArticlesByDatabase()
