@@ -1,7 +1,7 @@
 <center><h2>Music generation with Deep Learning: a systematic review</h2></center>
 <center><h4>Support repository for the review</h4></center>
 
-![enter image description here](https://raw.githubusercontent.com/henriqueparola/Music-Generation/main/images/banner.png)
+![enter image description here](./images/banner.png)
 
 ## Websites query search results
 
