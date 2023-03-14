@@ -1,11 +1,11 @@
 import data_collection as dt
 import json
 
-musicTypes = ['homophonic', 'polyphonic', 'monophonic', 'heterophonic', 'a cappella', 'instrumental', 'vocal',
-              'choral', 'orchestral', 'chamber', 'symphonic', 'folk', 'blues', 'jazz', 'rock', 'pop', 'classical',
-              'electronic', 'hip-hop', 'reggae', 'country', 'r&b', 'heavy metal', 'punk', 'alternative', 'k-pop',
-              'pop', 'ambient', 'gospel', 'soul', 'funk', 'disco', 'techno', 'dubstep', 'opera', 'musical theatre',
-              'bluegrass', 'flamenco', 'rock']
+musicTypes = [' homophonic ', ' polyphonic ', ' monophonic ', ' heterophonic ', ' a cappella ', ' instrumental ', ' vocal ',
+              ' choral ', 'orchestral', ' chamber ', ' symphonic ', ' folk ', ' blues ', ' jazz ', ' rock ', ' classical ',
+              ' electronic ', 'hip-hop', ' reggae ', ' country ', ' r&b ', ' heavy metal ', ' punk ', ' alternative ', ' k-pop ',
+            ' pop ', ' ambient ', ' gospel ', ' soul ', ' funk ', ' disco ', ' techno ', ' dubstep ', ' opera ',
+              ' bluegrass ', ' flamenco ', ' rock ', '-rock ']
 
 def getNumberOfArticlesByLocation():
     allMetadata = dt.getAllMetaData()
@@ -23,7 +23,7 @@ def getNumberOfArticlesByLocation():
         json.dump(dataCounts, f, indent=4)
 
 def getNumberOfArticlesByMusicType():
-    #dt.generateDataCollection(musicTypes,'musicTypesFiltered')
+    dt.generateDataCollection(musicTypes,'musicTypesFiltered')
     f = open('musicTypesFiltered.json', encoding='utf-8')
     data = json.load(f)
     dataCounts = {}
