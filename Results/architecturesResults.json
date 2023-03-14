@@ -2,12 +2,11 @@
     "RNN": 41,
     "Variational Autoencoder": 8,
     "GAN": 44,
-    "gan": 50,
-    "rnn": 15,
+    "BM": 11,
     "Recurrent Neural Network": 15,
     "VAE": 14,
     "Generative Adversarial Network": 24,
-    "-GAN": 20,
     "Transformer-based": 6,
-    "vae": 9
+    "DBN": 2,
+    "Neural Autoregressive": 1
 }
