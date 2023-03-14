@@ -6,6 +6,12 @@ musicTypes = [' homophonic ', ' polyphonic ', ' monophonic ', ' heterophonic ', 
               ' electronic ', 'hip-hop', ' reggae ', ' country ', ' r&b ', ' heavy metal ', ' punk ', ' alternative ', ' k-pop ',
             ' pop ', ' ambient ', ' gospel ', ' soul ', ' funk ', ' disco ', ' techno ', ' dubstep ', ' opera ',
               ' bluegrass ', ' flamenco ', ' rock ', '-rock ']
+#architectures = ['RNN', 'Recurrent Neural Network', 'VAE', 'Variational Autoencoder', 'GAN', 'Generative Adversarial Network',
+#                 'Transformer-based', 'Tranformer', 'Hierarchical', 'Neural Autoregressive', 'NAM', 'Deep Belief Network', 'DBN',
+#                 'Markov Chain Monte Carlo', 'MCMC', 'Boltzmann Machines', 'BM', 'Hopfield Network']
+
+architectures = ['RNN', 'Recurrent Neural Network', 'VAE', 'Variational Autoencoder', 'GAN', 'Generative Adversarial Network',
+                 'Transformer-based', 'Tranformer']
 
 def getNumberOfArticlesByLocation():
     allMetadata = dt.getAllMetaData()
@@ -23,7 +29,7 @@ def getNumberOfArticlesByLocation():
         json.dump(dataCounts, f, indent=4)
 
 def getNumberOfArticlesByMusicType():
-    dt.generateDataCollection(musicTypes,'musicTypesFiltered')
+    # dt.generateDataCollection(musicTypes,'musicTypesFiltered')
     f = open('musicTypesFiltered.json', encoding='utf-8')
     data = json.load(f)
     dataCounts = {}
@@ -38,5 +44,22 @@ def getNumberOfArticlesByMusicType():
     with open("Results/musicTypeResults" + ".json", 'w') as f:
         json.dump(dataCounts, f, indent=4)
 
+def getNumberOfArticlesByArchitecture():
+    dt.generateDataCollection(architectures,'architecturesFiltered')
+    f = open('architecturesFiltered.json', encoding='utf-8')
+    data = json.load(f)
+    dataCounts = {}
+    for group in data['data_collection']:
+        for type in group:
+            if type != 'title' and group[type] != []:
+                if not type in dataCounts:
+                    dataCounts[type] = 1
+                else:
+                    dataCounts[type] = dataCounts[type] + 1
+
+    with open("Results/architecturesResults" + ".json", 'w') as f:
+        json.dump(dataCounts, f, indent=4)
+
 # getNumberOfArticlesByLocation()
-getNumberOfArticlesByMusicType()
+# getNumberOfArticlesByMusicType()
+getNumberOfArticlesByArchitecture()
