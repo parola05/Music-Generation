@@ -7,11 +7,6 @@ import json
 keywords1 = ["ethics","ethical","society impact","creativity","ethical concerns","influence"]
 keywords2 = ["evaluation","evaluation metrics", "accuracy","pitch accuracy", "rhythm accuracy", "melodic","harmonic complexity", "expressiveness"]
 
-def articleTalkAbout(article):
-    for key in article.keys():
-        if key in keywords and len(article[key]) > 0:
-            return True
-
 def getNumberOfArticlesGivenKeywords():
     print("Executing articleHavePriorityOutcomes for each article ...")
     f = open('henriqueFilter2.json', encoding='utf-8')
@@ -19,7 +14,7 @@ def getNumberOfArticlesGivenKeywords():
     filteredArticles = {}
     filteredArticles["filtered"] = []
     for article in data["data_collection"]:
-        if articleTalkAbout(article):
+        if dt.articleTalkAbout(article, keywords1):
             filteredArticles["filtered"].append(article)
     print("Number of filter articles: ",len(filteredArticles["filtered"]))
 
