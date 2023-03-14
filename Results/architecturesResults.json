@@ -1,12 +1,10 @@
 {
     "RNN": 41,
-    "Variational Autoencoder": 8,
-    "GAN": 44,
-    "BM": 11,
-    "Recurrent Neural Network": 15,
-    "VAE": 14,
-    "Generative Adversarial Network": 24,
-    "Transformer-based": 6,
+    "VAE": 18,
+    "GAN": 43,
+    "Tranformer": 23,
+    "CNN": 32,
+    "BM (Boltzmann Machine)": 7,
     "DBN": 2,
-    "Neural Autoregressive": 1
+    "NAM (Neural Autoregressive Model)": 1
 }
