@@ -77,7 +77,7 @@ def generateDataCollection(keywords, output):
         # detect which sentence has the keywords definied and add to article keyword entry
         for sent in doc.sents:
             for keyword in keywords:
-                if keyword in sent.text.lower():
+                if keyword in sent.text.strip():
                     articleData[keyword].append(sent.text.strip())
 
         result["data_collection"].append(articleData)

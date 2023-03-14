@@ -6,12 +6,11 @@ musicTypes = [' homophonic ', ' polyphonic ', ' monophonic ', ' heterophonic ', 
               ' electronic ', 'hip-hop', ' reggae ', ' country ', ' r&b ', ' heavy metal ', ' punk ', ' alternative ', ' k-pop ',
             ' pop ', ' ambient ', ' gospel ', ' soul ', ' funk ', ' disco ', ' techno ', ' dubstep ', ' opera ',
               ' bluegrass ', ' flamenco ', ' rock ', '-rock ']
-#architectures = ['RNN', 'Recurrent Neural Network', 'VAE', 'Variational Autoencoder', 'GAN', 'Generative Adversarial Network',
-#                 'Transformer-based', 'Tranformer', 'Hierarchical', 'Neural Autoregressive', 'NAM', 'Deep Belief Network', 'DBN',
-#                 'Markov Chain Monte Carlo', 'MCMC', 'Boltzmann Machines', 'BM', 'Hopfield Network']
 
 architectures = ['RNN', 'Recurrent Neural Network', 'VAE', 'Variational Autoencoder', 'GAN', 'Generative Adversarial Network',
-                 'Transformer-based', 'Tranformer']
+                 'Transformer-based', 'Tranformer', 'Neural Autoregressive', 'NAM', 'Deep Belief Network', 'DBN',
+                 'Markov Chain Monte Carlo', 'MCMC', 'Boltzmann Machines', 'BM', 'Hopfield Network']
+
 
 def getNumberOfArticlesByLocation():
     allMetadata = dt.getAllMetaData()
@@ -49,6 +48,7 @@ def getNumberOfArticlesByArchitecture():
     f = open('architecturesFiltered.json', encoding='utf-8')
     data = json.load(f)
     dataCounts = {}
+    print(data['data_collection'])
     for group in data['data_collection']:
         for type in group:
             if type != 'title' and group[type] != []:
