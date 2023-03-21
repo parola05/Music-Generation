@@ -72,7 +72,7 @@ def generateDataCollection(keywords, output):
         # detect which sentence has the keywords definied and add to article keyword entry
         for sent in doc.sents:
             for keyword in keywords:
-                if keyword in sent.text.lower():
+                if keyword in sent.text.strip():
                     articleData[keyword].append(sent.text.strip())
 
         result["data_collection"].append(articleData)
@@ -173,20 +173,18 @@ def includedArticlesFilter():
             filteredArticles.append(article["title"])
     return filteredArticles
 
-#filterArticles = includedArticlesFilter()
-#print("Filter articles len: ",len(filterArticles))
-#print("Filter articles: ",filterArticles)
+# Return articles that have the priority outcomes
+def priorityOutcomes():
+    print("Executing articleHavePriorityOutcomes for each article ...")
+    f = open('filter.json', encoding='utf-8')
+    data = json.load(f)
+    filteredArticles = {}
+    filteredArticles["filtered"] = []
+    for article in data["data_collection"]:
+        if articleHavePriorityOutomes(article):
+            filteredArticles["filtered"].append(article)
+    print("Filter articles len: ",len(filteredArticles))
+    print("Filter articles: ",filteredArticles)
 
-print("Executing articleHavePriorityOutcomes for each article ...")
-f = open('filter.json', encoding='utf-8')
-data = json.load(f)
-filteredArticles = {}
-filteredArticles["filtered"] = []
-for article in data["data_collection"]:
-    if articleHavePriorityOutomes(article):
-        filteredArticles["filtered"].append(article)
-print("Filter articles len: ",len(filteredArticles))
-print("Filter articles: ",filteredArticles)
-
-with open("filtered" + ".json", 'w') as f:
-    json.dump(filteredArticles, f, indent=4)
+    with open("filtered" + ".json", 'w') as f:
+        json.dump(filteredArticles, f, indent=4)

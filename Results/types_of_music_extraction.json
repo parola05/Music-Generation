@@ -1,0 +1,642 @@
+{
+    "data_collection": [
+        {
+            "title": "MP3net: coherent, minute-long music generation from raw audio with a simple convolutional GAN",
+            "symbolic": [
+                "For such models, the \ufb01nal conversion to\nsound relies on synthesized musical sounds (e.g. MIDI \ufb01les)\nto convert the symbolic music into an audio signal.",
+                "Dong, H.-W., Hsiao, W.-Y ., Yang, L.-C., and Yang, Y .-H.\nMusegan: Multi-track sequential generative adversarial\nnetworks for symbolic music generation and accompani-\nment, 2017."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Hierarchical Recurrent Neural Networks for Conditional Melody Generation with Long-term Structure",
+            "symbolic": [
+                "There\nare two different types of music generation systems: those that\ngenerate symbolic music and those that generate raw audio.",
+                "Hence, lots of of the existing music\ngeneration research focuses on the symbolic domain where\nmusic is represented as a series of musical events in sequence.",
+                "Popular data encoding schemes for symbolic music include\npiano-roll representation",
+                "In this work, we will focus on the symbolic\napproach, more speci\ufb01cally, we will generate melodies from\ntheir respective chord accompaniments using a novel event-\nbased representation.",
+                "COSIATEC utilizes a geometric approach much like zip-\ufb01le\ncompression, to detect repeated patterns in symbolic music\ndata.",
+                "Yang, \u201cMidinet: A convolutional\ngenerative adversarial network for symbolic-domain music generation,\u201d\ninProc.",
+                "[16] W. B. De Haas and A. V olk, \u201cMeter detection in symbolic music using\ninner metric analysis,\u201d in Proc. 17th Int.",
+                "Wang, X. Hu, and J. Zhu, \u201cA hierarchical recurrent\nneural network for symbolic melody generation,\u201d IEEE Trans."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "LEARNING TO GENERATE MUSIC WITH SENTIMENT",
+            "symbolic": [
+                "Besides music gener-\nation, the same model can be used for sentiment analysis\nof symbolic music.",
+                "We evaluate the accuracy of the model\nin classifying sentiment of symbolic music using a new\ndataset of video game soundtracks.",
+                "In this paper, we explore\nthis approach with the goal of composing symbolic music\nwith a given sentiment.",
+                "We also explore this approach as a\nsentiment classi\ufb01er for symbolic music.",
+                "In order to evaluate this approach, we need a dataset of\nmusic in symbolic format that is annotated by sentiment.",
+                "To the best of our knowledge, there\nare no datasets of symbolic music annotated according to\nsentiment.",
+                "We believe this paper is the \ufb01rst work to explore sen-\ntiment analysis in symbolic music and it presents the \ufb01rst\ndisentangled Deep Learning model for music generation\nwith sentiment.",
+                "Another contribution of this paper is a la-\nbelled dataset of symbolic music annotated according to\nsentiment.",
+                "2. RELATED WORK\nThis paper is related to previous work on Affective Al-\ngorithmic Music Composition, more speci\ufb01cally to works\nthat process music in symbolic form in order to generate\nmusic with a given emotion.",
+                "The accuracy of our method\nshows that the generative mLSTM is capable of learning,\nin an unsupervised way, a good representation of sentiment\nin symbolic music.",
+                "7. CONCLUSION AND FUTURE WORK\nThis paper presented a generative mLSTM that can be con-\ntrolled to generate symbolic music with a given sentiment.",
+                "Such neurons are found plugging a Logistic Regres-\nsion to the mLSTM and training the Logistic Regression\nto classify sentiment of symbolic music encoded with the\nmLSTM hidden states."
+            ],
+            "waveform": [
+                "[17] for anno-\ntating music pieces in audio waveform."
+            ]
+        },
+        {
+            "title": "Personalized Popular Music Generation Using Imitation and Structure",
+            "symbolic": [
+                "In this paper, music style refers to information at the symbolic music notation level,\nincluding rhythm, pitch and dynamics."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "GAN Computers Generate Arts? A Survey on Visual Arts, Music, and Literary Text Generation using Generative Adversarial Network",
+            "symbolic": [
+                "[43] introduced a novel multi-track polyphonic symbolic music generator using GANs.",
+                "A convolutional generative adversarial network for symbolic-domain music generation,\u201d arXiv preprint arXiv:1703.10847, 2017.",
+                "Dong, W.-Y. Hsiao, L.-C. Yang, and Y.-H. Yang, \u201cMusegan: Multi-track sequential generative adversarial networks for symbolic music generation and accompaniment,\u201d in Proceedings of the AAAI Conference on Artificial Intelligence, 2018, vol."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "CONTROLLABLE DEEP MELODY GENERATION VIA HIERARCHICAL MUSIC STRUCTURE REPRESENTATION",
+            "symbolic": [
+                "While works such\nas MelNet [1] and JukeBox [2] have demonstrated a de-\ngree of success in generating music in the audio domain,\nthe majority of the work is in the symbolic domain, i.e.,\nthe score, as this is the most fundamental representation\nof music composition.",
+                "Yang,\n\u201cMusegan: Multi-track sequential generative adversar-\nial networks for symbolic music generation and accom-\npaniment,\u201d Proc. of the AAAI Conference on Arti\ufb01cial\nIntelligence , vol."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Theme Transformer: Symbolic Music Generation with Theme-Conditioned Transformer",
+            "symbolic": [
+                "Index Terms \u2014Automatic symbolic music generation, theme-\nconditioned generation, theme retrieval, contrastive learning,\nTransformers, positional encoding, parallel attention.",
+                "Research on automatic symbolic music generation or style\ntransfer has seen signi\ufb01cant progress in recent years",
+                "[13] greatly improved\nupon this by presenting the \ufb01rst Transformer decoder model\nfor symbolic music generation, showing that a Transformer\nmodel can generate coherent minute-long polyphonic piano\nmusic with local repetitions and variations.",
+                "Wang, X. Hu, and J. Zhu, \u201cA hierarchical recurrent\nneural network for symbolic melody generation,\u201d IEEE Transactions on\nCybernetics , vol.",
+                "[16] N. Zhang, \u201cLearning adversarial Transformer for symbolic music gen-\neration,\u201d IEEE Transactions on Neural Networks and Learning Systems ,\npp."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Evaluating Deep Music Generation Methods Using Data Augmentation",
+            "symbolic": [],
+            "waveform": [
+                "Recent advances in generative algorithms have been able\nto produce [1]\u2013[3] realistic sounding music in the waveform\ndomain, with large scale models now able to generate full\nlength songs, including comprehensible lyrics [1].",
+                "A. Generative Models for Music\nThere have been signi\ufb01cant advancements in the \ufb01eld of\nmusic generation, particularly in the waveform domain [1],\n[2], [4]\u2013[6], [16], [17]."
+            ]
+        },
+        {
+            "title": "FIGARO: Generating Symbolic Music with Fine-Grained Artistic Control",
+            "symbolic": [
+                "We train FIGARO\n(FIne-grained music Generation via Attention-\nbased, RObust control) by applying description-\nto-sequence modelling to symbolic music.",
+                "By\ncombining learned high level features with do-\nmain knowledge, which acts as a strong inductive\nbias, the model achieves state-of-the-art results\nin controllable symbolic music generation and\ngeneralizes well beyond the training distribution.",
+                "Initial breakthroughs by Huang et al. (2018) and\nPayne (2019) applied language modelling techniques to\nsymbolic music to achieve state-of-the-art music genera-\ntion.",
+                "On the other hand,\nit is dif\ufb01cult to \ufb01nd meaningful attributes in the \ufb01rst place,\nas obtaining salient features for discrete data such as text or\nin this case symbolic music can be prohibitively dif\ufb01cult or\nexpensive (Shao et al., 2008; Ens & Pasquier, 2019).",
+                "We call\nthis the description-to-sequence task and apply it to the do-\nmain of symbolic music to demonstrate that it is effective\nat enabling controllable symbolic music generation.",
+                "by applying description-to-sequence modelling to symbolic\nmusic, we propose two different description functions: 1)",
+                "We evaluate the proposed method on its ability to adhere to\nthe prescribed condition by comparing it to state-of-the-art\nmethods for controllable symbolic music (Choi et al., 2020;\nWu & Yang, 2021).",
+                "Next, we introduce\nthedescription-to-sequence modelling task and describe our\nmethod by applying the task to symbolic music.",
+                "Related Work\nThe capabilities of symbolic music generative models have\nbeen steadily improving with notable contributions by\nHuang et al. (2018), Payne (2019), Huang & Yang (2020)\nand Hsiao et al. (2021).",
+                "present MMM\nwhich is capable of bar-level and track-level symbolic music\ninpainting.",
+                "We compare our\nmethod to other state-of-the-art symbolic music generation methods on modelling capability (can the model generate multi-track/multi-\nsignature music?) and controllability (can the generation be controlled on a global/\ufb01ne-grained level?).",
+                "Method\nWe train FIGARO by applying the description-to-sequence\ntask to symbolic music.",
+                "We use relative positional embeddings (Huang et al., 2020)\nas this has been shown to be bene\ufb01cial for symbolic music\ngeneration (Huang et al., 2018).",
+                "Dataset\nWe use the LakhMIDI dataset (Raffel, 2016) as training data\nin all of our experiments, which to the best of our knowl-\nedge is the largest publicly available symbolic music dataset.",
+                "Future Work\nWhile our work represents a step towards high-quality con-\ntrollable symbolic music generation, we recognize several\navenues for future work.",
+                "Finally, as the description-to-sequence objective is not ex-\nclusively applicable to symbolic music, it will be interesting\nto apply this method to different data.",
+                "Conclusion\nWe present the description-to-sequence objective as a self-\nsupervised modelling task and apply it in the context of\nsymbolic music generation.",
+                "To\nthe best of our knowledge, our method is the \ufb01rst that can\ngenerate symbolic music based on user-provided sequence-\nlevel guidelines.",
+                "In terms of sample quality, our method\nbeats other state-of-the-art symbolic music generative mod-\nels trained on the LakhMIDI dataset.",
+                "We can combine both\napproaches to achieve human-interpretable, high \ufb01delity\ncontrollable symbolic music generation.",
+                "Biggio, L., Bendinelli, T., Neitz, A., Lucchi, A., and\nParascandolo, G. Neural symbolic regression that\nscales.",
+                "Lample, G. and Charton, F. Deep learning for symbolic\nmathematics, 2019.",
+                "arXiv: 2105.04090.FIGARO: Generating Symbolic Music with Fine-Grained Artistic Control\nA. REMI+ Input Representation\nWe extend the original REMI representation (Huang & Yang, 2020) to make it suitable for general multi-track, multi-\nsignature symbolic music sequences."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Music Generation Using an LSTM",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Prote\u00e7\u00e3o intelectual de obras produzidas por sistemas baseados em intelig\u00eancia artificial: uma vis\u00e3o tecnicista sobre o tema",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "An adaptive music generation architecture for games based on the deep learning Transformer model",
+            "symbolic": [
+                "[15] (illustrated in Fig. 1) is multi-agent and multi-technique:\n2\u2022theharmony role agent , which generates a chord progression, using an RNN (trained on a corpus of\nsymbolic chord sequences, actually an extension of the harmony system from the same authors [14]);\n\u2022themelody role agents (one for each instrument), which instantiate characteristics (length, pitch, propor-\ntion of diatonic notes. . . ) of pre-existing melodies, using an evolutionary rule system (XCS, for eXtended\nlearning Classi\fer System",
+                "Using symbolic-level music models as opposed to signal-level music models brings the advantages of higher\nlevel manipulation (at the composition level) and less computer resources (although, recent waveform-level mod-\nels such as WaveNet [38] demonstrated the feasibility of real-time conditioned generation, used for instance for\nintelligent assistants such as Google Echo or Amazon Alexa).",
+                "The compressed audio \fles (mp3) corresponding to the musical training examples have been uncompressed\ninto waveform (wav) \fles and then, by using a pitch detector, to symbolic (midi) \fles.",
+                "Obviously, we may also use instead\ndirectly MIDI music scores from existing symbolic music libraries."
+            ],
+            "waveform": [
+                "Using symbolic-level music models as opposed to signal-level music models brings the advantages of higher\nlevel manipulation (at the composition level) and less computer resources (although, recent waveform-level mod-\nels such as WaveNet [38] demonstrated the feasibility of real-time conditioned generation, used for instance for\nintelligent assistants such as Google Echo or Amazon Alexa).",
+                "The compressed audio \fles (mp3) corresponding to the musical training examples have been uncompressed\ninto waveform (wav) \fles and then, by using a pitch detector, to symbolic (midi) \fles."
+            ]
+        },
+        {
+            "title": "WHAT IS MISSING IN DEEP MUSIC GENERATION? A STUDY OF REPETITION AND STRUCTURE IN POPULAR MUSIC",
+            "symbolic": [
+                "Repe-\ntition becomes especially useful in segmenting symbolic\nmusic or lead sheet representations where timbre and tex-\nture may be lacking [13]."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "VIS2MUS: EXPLORING MULTIMODAL REPRESENTATION MAPPING FOR CONTROLLABLE MUSIC GENERATION",
+            "symbolic": [
+                "In addition, we released the Vis2Mus system as a con-\ntrollable interface for symbolic music generation.1\nIndex Terms \u2014Multimodal representation learning, Con-\ntrollable music generation\n1.",
+                "In addition,\nwe release the Vis2Mus system, which applies our approach\nto a large amount of paired image and music as a controllable\ninterface for symbolic music generation."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "GENERATING MUSIC WITH SENTIMENT USING TRANSFORMER-GANS",
+            "symbolic": [
+                "In\nthis paper, we propose a generative model of symbolic mu-\nsic conditioned by data retrieved from human sentiment.",
+                "To summarise, our contribu-\ntions are as following:\n\u2022 We present a neural network that, up to our knowl-\nedge, is the \ufb01rst generative model based on GANs to\nproduce symbolic music conditioned by sentiment.arXiv:2212.11134v1",
+                "\u2022 We show that promising results come from using\nGenerative Adversarial Networks within the context\nof music generation conditioned by sentiment, as our\nmodel obtains a good performance despite having\nless parameters, using a simpler symbolic represen-\ntation, and, being, up to our knowledge, the \ufb01rst on\nthis task to be trained via an adversarial scheme.",
+                "2.3 Generative Models of Music\nAs of the writing of this paper, most of the state-of-the\nart generative models of symbolic music are Transform-\ners or Transformer-based.",
+                "One of the factors that in\ufb02uence the \ufb01nal quality of the\nsamples generated by models of symbolic music is the rep-\nresentation used to train them.",
+                "To achieve this purpose, we used both the automatic evalu-\nation metrics proposed in [26,45] and a set of human eval-\nuation metrics to compare our GAN with the system that,\nas far as we know, corresponds to a state-of-the-art gen-\nerative model of symbolic music conditioned by sentiment\ncurrently available in the literature.",
+                "Since the focus\nof our work was to implement the GAN framework within\nthe context of symbolic music generation conditioned by\nsentiment, and given the complexity of this framework, es-\npecially when it is applied to the discrete domain, we chose\nto use a simpler representation in order to maintain the fo-\ncus of our work on the implementation of the GAN.",
+                "Yang, \u201cMidinet:\nA convolutional generative adversarial network for\nsymbolic-domain music generation,\u201d in ISMIR , 2017.",
+                "[31] K. Zhao, S. Li, J. Cai, H. Wang, and J. Wang, \u201cAn emo-\ntional symbolic music generation system based on lstm\nnetworks,\u201d in 2019 IEEE 3rd Information Technology,\nNetworking, Electronic and Automation Control Con-\nference (ITNEC) .",
+                "Dong, K. Chen, J. McAuley, and T. Berg-\nKirkpatrick, \u201cMuspy: A toolkit for symbolic music\ngeneration,\u201d in Proceedings of the 21st International\nSociety for Music Information Retrieval Conference\n(ISMIR) , 2020."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "WuYun: Exploring hierarchical skeleton-guided melody generation using knowledge-enhanced deep learning",
+            "symbolic": [
+                "Furthermore, various MIDI-derived symbolic music\nrepresentation methods designed auxiliary musical spatiotemporal symbols (e.g., BAR, POSITION,\nand CHORD) for the input symbolic music data to help music generation models learn the long-\ndistance dependencies better, longer, and faster (17\u201319, 22, 23).",
+                "Metrical and rhythmic accents are the\ntwo main accents in the symbolic melody data.",
+                "The dynamic accent is not used since it has no obvious changes in most\nsymbolic melody data.",
+                "First, we convert the melody MIDI \ufb01les and their melodic skeletons into musical event\nsequences as the input data for model training using the MeMIDI symbolic music representation\nmethod.",
+                "The details about the MeMIDI\nsymbolic music representation method and the word embedding technique used in this architecture\u2019s\ninput module are described in the Materials and Methods section.",
+                "Additionally, when using the same symbolic music representation method, the knowledge-enhanced\nhierarchical skeleton-guided melody generation model of WuYun-RS greatly outperformed the single-\nstage end-to-end left-to-right note-by-note melody generation model of MeMIDI (No. 3).",
+                "4 Materials and Methods\n4.1 Details of dataset preprocessing\nWe evaluate the effectiveness of WuYun architecture on a commonly used and publicly available\nsymbolic melody dataset of Wikifonia (32, 33, 67).",
+                "4.2 Symbolic melody representation\nIn this work, we adopted a modi\ufb01ed version of the \u201cMuMIDI\u201d symbolic music representation (18)\nto encode a piece of monophonic melody into discrete musical event sequences.",
+                "Raw experimental data and the generated symbolic\nmelody \ufb01les are available on Zenodo at DOI 10.5281/zenodo.7480957\nunder a Creative Commons Attribution 4.0 International license.",
+                "[21] N. Zhang, Learning adversarial transformer for symbolic music generation.",
+                "Wang, X. Hu, J. Zhu, A hierarchical recurrent neural network for symbolic melody\ngeneration."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "An investigation of the reconstruction capacity of stacked convolutional autoencoders for log-mel-spectrograms",
+            "symbolic": [],
+            "waveform": [
+                "Unsupervised deep\nlearning methods can achieve audio compression by training the\nnetwork to learn a mapping from waveforms or spectrograms\nto low-dimensional representations.",
+                "The waveform was\nsynthesized by ISTFT with the original phase when there were\nno modi\ufb01cations in the latent space or using the Grif\ufb01n Lim\nalgorithm",
+                "The waveform of the audio \ufb01les1is synthesized using\nthe Grif\ufb01th Lim algorithm",
+                "Furthermore, using Wavenet [24] as a vocoder may not pre-\nserve the phase continuity in the waveform and therefore\ngenerate more noisy instrumental sounds."
+            ]
+        },
+        {
+            "title": "Byte Pair Encoding for Symbolic Music",
+            "symbolic": [
+                "Abstract\nThe symbolic music modality is nowadays mostly\nrepresented as discrete and used with sequential\nmodels such as Transformers, for deep learning\ntasks.",
+                "Introduction\nDeep learning tasks on symbolic music are nowadays mostly\ntackled by sequential models1, such as the Transformers\n(Vaswani et al., 2017).",
+                "To use such models for symbolic music, one\nneeds to tokenize the data, i.e., convert it to sequences of\ntokens that can be decoded back.",
+                "Recently, the token representation of symbolic music has\nbeen extensively studied, with the goal to improve 1) the\nresults, e.g. the quality of generated results or the accuracy\nof a certain Music Information Retrieval (MIR) task, and;\n2) the ef\ufb01ciency of the models.",
+                "In this paper, we study the application of Byte Pair En-\ncoding (BPE, described in Section 3) for symbolic music\ngeneration, aiming to improve the two objectives mentioned\nabove, while making the models learn more isotropic em-\nbedding representations in some cases.",
+                "To the best of our\nknowledge, BPE has yet not been studied for the symbolic\nmusic modality, although it can be applied on top of any\nmusic tokenization that do not perform embedding pooling.",
+                "Related work\nIn this section we start by reminding research of speci\ufb01c\nmusic representation of symbolic music generation.",
+                "Finally, we explain their\nlimitations which conduce us to propose our novel approach\nthat is to apply Byte Pair Encoding in the \ufb01eld of symbolic\nmusic for reducing sequence length.\n2.1.",
+                "Representation of symbolic music\nMost works on symbolic music generation from deep learn-\ning use a speci\ufb01c music representation.",
+                "In the\n\ufb01eld of symbolic music speci\ufb01cally, researchers worked on\nstrategies to reduce the sequence length in order to increase\n1) the ef\ufb01ciency of the models; 2) the scope of the attention\nmechanism; 3) the quality of the generated results.",
+                "To the best of our knowledge, no work has been conducted\non applying BPE, introduced in Section 3, to symbolic mu-\nsic generation.",
+                "The following section describes the Byte Pair Encoding\ntechnique, its algorithm and depicts how it can be relevant\nto use in the \ufb01eld of symbolic music.",
+                "In symbolic music, notes are represented by successions\nof tokens that represent the values of their attributes.",
+                "When tokenizing symbolic music, it is common to down-\nsample continuous features to discrete sets of values.",
+                "Automatic evaluation of symbolic music remains however\nan open issue.",
+                "We then perform both human and automatic evaluations, as\ncommonly done for symbolic music (Huang & Yang, 2020;\nHuang et al., 2018; Hsiao et al., 2021).",
+                "Conclusion\nWe showed that BPE can increase the quality of results\nfor symbolic music generation, and composer classi\ufb01ca-\ntion, while improving the performances, with a well chosen\nvocabulary size.",
+                "BPE can be applied on top of any tokeniza-\ntion, and we advice the reader to do so for projects involving\nsymbolic music.",
+                "Musegan: Multi-track sequential genera-\ntive adversarial networks for symbolic music gen-\neration and accompaniment.",
+                "von R \u00a8utte, D., Biggio, L., Kilcher, Y ., and Hoffman, T.\nFigaro: Generating symbolic music with \ufb01ne-grained\nartistic control, 2022."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "A Symbolic-domain Music Generation Method Based on Leak-GAN",
+            "symbolic": [
+                "We introduce a novel way of \ngenerating symbolic-domain music via adversarial training, \nwhich allows the discriminator to leak its information to the \ngenerator for better guidance.",
+                "In this paper we implement symbolic-domain music melody \ngeneration experiment on a model of LeakGAN",
+                "[1 log( ( (z))]\ndata zpx pG DVD G Dx D G\uf03d\uf045 \uf02b\uf045 \uf02d \uff0c ( 1 )  \nwheredatap is the real data\u2019s distribution andzp represent the \nprior distribution of z.   \n2) Leak-GAN On condition that we focus on symbolic-domain music \ngeneration, the sequence data of text-represented melody generation is considered as a sequential decision-making \nprocess [15].",
+                "Specifically,  \nwe use a novel form of symbolic representation for better experiment results as previously mentioned.",
+                "Firstly, the MIDI music data has been represented into symbolic domain.",
+                "A \nconvolutional generative adversarial network for symbolic-domai n \nmusic generation.",
+                "Musegan: Multi-track sequential generative adversarial networks  f o r  \nsymbolic music generation and ac companiment.",
+                "u t e r - a ided \nmusicology and symbolic music data,\u201d 2010."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "AI Music Therapist: A Study on Generating Specific Therapeutic Music based on Deep Generative Adversarial Network Approach",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "An intelligent music generation based on Variational Autoencoder",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "APE-GAN: A Novel Active Learning Based Music Generation Model With Pre-Embedding",
+            "symbolic": [
+                "Musegan: Multi-track sequential generative adversarial networks for\nsymbolic music generation and accompaniment."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Automatic Music Generation System based on RNN Architecture",
+            "symbolic": [],
+            "waveform": [
+                "[6] Zhao, Yi, Xin Wang, LauriJuvela, and Junichi Yamagishi, \n\u201cTransferring neural speech waveform synthesizers to musical \ninstrument sounds generation,\u201d In IEEE International Conference on \nAcoustics, Speech and Signal Processing (ICASSP), pp. 6269-6273, \n2020."
+            ]
+        },
+        {
+            "title": "Development of Application Software for Generating Music Composition Inspired by Nature Using Deep Learning",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Evaluating Deep Music Generation Methods Using Data Augmentation",
+            "symbolic": [],
+            "waveform": [
+                "Recent advances in generative algorithms have been able\nto produce [1]\u2013[3] realistic sounding music in the waveform\ndomain, with large scale models now able to generate full\nlength songs, including comprehensible lyrics [1].",
+                "A. Generative Models for Music\nThere have been signi\ufb01cant advancements in the \ufb01eld of\nmusic generation, particularly in the waveform domain [1],\n[2], [4]\u2013[6], [16], [17]."
+            ]
+        },
+        {
+            "title": "Generating Music Algorithm with Deep Convolutional Generative Adversarial Networks",
+            "symbolic": [
+                "\"MidiNet: A \nconvolutional generative adversarial network for symbolic-domain \nmusic generation.\""
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Generating Music with Emotions",
+            "symbolic": [
+                "[15] proposed a symbolic music dataset EMOPIA\nthat includes 1,078 music clips from 387 songs with Valence-\nArousal emotion labels.",
+                "[13] proposed a mLSTM\nbased deep generative network, which was the first work to\nexplore deep learning models for symbolic music generation\nconditioned on emotions.",
+                "In [25], a model\ncalled CV AE-GAN was proposed for emotion-conditioned\nsymbolic music generation, which synthesized Conditional-\nV AE and Conditional-GAN [26].",
+                "More recently, Hung et\nal.built an emotion-labeled symbolic music dataset called\nEMOPIA",
+                "Yang, \u201cMusegan:\nMulti-track sequential generative adversarial networks for symbolic\nmusic generation and accompaniment,\u201d in Proceedings of the AAAI\nConference on Artificial Intelligence, vol."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Generating Music with Generative Adversarial Networks and Long Short-Term Memory",
+            "symbolic": [
+                "[8] Yang L C,Chou S Y,Yang Y H.MidiNet:a convolutional generative adversarial network for symbolic -domain music generation[EB/OL] ."
+            ],
+            "waveform": [
+                "The comparison of the waveform and spectrograms of the \ngenerated audio files between investigating with 10 original \nblue music samples and 100 original blue music samples is shown in Figure 5 ."
+            ]
+        },
+        {
+            "title": "Generation of Music With Dynamics Using Deep Convolutional Generative Adversarial Network",
+            "symbolic": [
+                "In this \npaper, we only used the MIDI tracks as it contains the \nmusical information in symbolic form.",
+                "MusPy [8], an open-source Python library for symbolic \nmusic generation, was used to extract the MIDI information \nsuch as pitch, velocity and note duration.",
+                "[6]  H.-W. Dong, W.-Y. Hsiao, L.-C. Yang, and Y.-H. Yang, \n\"Musegan: Multi-track sequential generative adversarial \nnetworks for symbolic music generation and accompaniment,\" \nin Proceedings of the AAAI Conference on Artificial \nIntelligence , 2018, vol."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Monophonic Music Generation With a Given Emotion Using Conditional Variational Autoencoder",
+            "symbolic": [
+                "A similar selection of four\ncategories for generating emotional symbolic music was also\nselected in [9].\nII.",
+                "Section IV presents\nthe representation of symbolic music, which is the data form\nused during the generated model training.",
+                "In this\nstudy, the symbolic music library music21 [37] containing\ncompositions by J.S. Bach was used.",
+                "Due to the fact that the symbolic music library was to be\nannotated with emotion labels, the selection of the database\nwas guided by the fact that the database should contain\n\u001cles with varying emotions.",
+                "Dong, W.-Y. Hsiao, L.-C. Yang, and Y.-H. Yang, ``MuseGAN:\nMulti-track sequential generative adversarial networks for symbolic music\ngeneration and accompaniment,'' in Proc.",
+                "[9] K. Zhao, S. Li, J. Cai, H. Wang, and J. Wang, ``An emotional symbolic\nmusic generation system based on LSTM networks,'' in Proc.",
+                "[35] A. Valenti, A. Carta, and D. Bacciu, ``Learning style-aware symbolic\nmusic representations by adversarial autoencoders,'' in Proc.",
+                "Available: https://arxiv.org/abs/2010.06230\n[37] M. Cuthbert and C. Ariza, ``Music21: A toolkit for computer-\naided musicology and symbolic music data,'' in Proc.",
+                "Dong, K. Chen, J. McAuley, and T. Berg-Kirkpatrick, ``MusPY: A\ntoolkit for symbolic music generation,'' in Proc."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Music Deep Learning: A Survey on Deep Learning Methods for Music Processing",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Music Generation using Deep Generative Modelling",
+            "symbolic": [],
+            "waveform": [
+                "Neha Patwari \nDepartment of Information Technology\nThakur College of Engineering and \nTechnology\nMumbai, India \nneha.patwari@thakureducation.org \nAbstract - Efficient synthesis of musical sequences is a challenging \ntask from a machine learning perspective, as human perception is \naware  of the global context to shorter sequences as  well of audio \nwaveforms  on a smaller  scale.",
+                "Audio generation \nalgorithms,  known as vocoders  in TTS  and  synthesizers  in \nmusic,  respond  to higher- level  control  signals  to create  \ufb01ne- \ngrained audio waveforms.",
+                "2. Representation of musical waveforms  \nHere, we have used random interpolation to generate music on \na scaled  GAN  architecture."
+            ]
+        },
+        {
+            "title": "Music Generation using Deep Learning with Spectrogram Analysis",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Music Generation with AI technology: Is It Possible?",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Music Generation with Bi-Directional Long Short Term Memory Neural Networks",
+            "symbolic": [
+                "Yang, \u201cMidiNet: A convolutional \ngenerative adversarial network for symbolic -domain music \ngeneration,\u201d arXiv [cs.SD], 2017"
+            ],
+            "waveform": []
+        },
+        {
+            "title": "RE-RLTuner: A topic-based music generation method",
+            "symbolic": [
+                "Carrying the duration and pitch in-formation of music, symbolic representation has simplercomputation characteristics and therefor it is popular amongresearchers[12]."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Some Reflections on the Potential and Limitations of Deep Learning for Automated Music Generation",
+            "symbolic": [
+                "This paper is dedicated to music and to the current\ntrends in deep learning and arti\ufb01cial intelligence\napplied to symbolic music generation.",
+                "Yang, \u201cMidiNet: A\nconvolutional generative adversarial network for symbolic-\ndomain music generation,\u201d in Proceedings of the 18th\nInternational Society for Music Information Retrieval Con-\nference (ISMIR\u20192017), Suzhou, China, 2017."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "The Effect of Explicit Structure Encoding of Deep Neural Networks for Symbolic Music Generation",
+            "symbolic": [
+                "Despite very promising\nprogress on image and short sequence generation, symbolic music\ngeneration remains a challenging problem since the structure of\ncompositions are usually complicated.",
+                "As far as we know, this is the\n\ufb01rst study of applying WaveNet to symbolic music generation,\nas well as the \ufb01rst systematic comparison between temporal-\nCNN and RNN for music generation.",
+                "Index T erms \u2014symbolic music generation, arti\ufb01cial intelligence,\ndeep generative model, machine learning and understanding\nof music, Variable Markov Oracle, analysis of variance, music\nstructure analysis\nI. I NTRODUCTION\nAutomated music generation has always been one of the\nprincipal targets of applying AI to music.",
+                "To our knowledge, this is the \ufb01rst systematic\ncomparison between temporal-CNN and RNN for symbolic\nmusic application.",
+                "We focus on symbolic music generation because music\nstructure information is richer at the composition level than\nthe performance and acoustic level [10].",
+                "As far as we know,\nthis is the \ufb01rst attempt in applying WaveNet to symbolic music\ngeneration (The name of WaveNet implies its usage on audio\napplications, but in theory the temporal-CNN architecture can\nalso be used for symbolic generation).",
+                "B. LSTM for Music Generation\nMany music generation works by deep neural networks start\nwith unconditional (monophonic) symbolic melody genera-\ntion.",
+                "(2)\nAs shown in Fig. 2, the bottom is the original symbolic\n\ufb01le in music score.",
+                "We propose to apply WaveNet to symbolic music genera-\ntion.",
+                "Given\na symbolic sequence Q=q1,q2,...,q T, the VMO carries three\nkinds of links: forward link, suf\ufb01x link( sfx) and reverse suf\ufb01xTABLE I\nRESULT TABLE\nANOV A p-value 3.02e-16\nT-test p-value 1, 2 4.10e-16\nT-test p-value 1, 3 0.017\nT-test p-value 2, 3 5.29e-10\nFig. 6.",
+                "As shown in Fig. 7 by [13], an example of the VMO\nstructure in a symbolic signal sequence is provided.",
+                "An example of the VMO structure in a symbolic signal sequence {a,\nb, b, c, a, b, c, d, a, b, c }\n(Bottom) A visualization of how patterns {a,b,c}and{b,c}are related to lrs\nand sfx\n81\nAuthorized licensed use limited to: b-on: UNIVERSIDADE DO MINHO.",
+                "At least from the perspective of rhythm generation, WaveNet\nis more suitable for symbolic music generation than acoustic\ngeneration since sounds involve less hierarchical structures.",
+                "C ONCLUSION AND FUTURE WORK\nIn this paper, we compared two representative models for\nconditioned symbolic music generation.",
+                "In the model design,\nwe \ufb01rst modi\ufb01ed WaveNet for symbolic music generation.",
+                "[24] M. Rachel, T. Vijay, S. Ali and K. Brian, An end to end model for\nautomatic music generation: Combining deep raw and symbolic audio\nnetworks, 2018."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "PopMNet: Generating structured pop music melodies using neural networks",
+            "symbolic": [
+                "a b s t r a c t\nArticle history:\nReceived  19 August 2019\nReceived  in revised  form 12 May 2020\nAccepted  15 May 2020\nAvailable  online 26 May 2020\nKeywords:\nMelody  generation\nMelody  structure\nArti\ufb01cial  neural network\nGenerative  adversarial  network\nLSTMRecently,  many deep learning  models  have been proposed  to generate  symbolic  melodies.",
+                "[6]L.-C. Yang, S.-Y. Chou, Y.-H. Yang, Midinet:  a convolutional  generative  adversarial  network  for symbolic-domain  music generation,  in: Proceedings  of \nthe 18th International  Society  for Music Information  Retrieval  Conference,  Suzhou,  China, 2017.",
+                "[7]H. Dong, W. Hsiao, L. Yang, Y. Yang Musegan,  Multi-track  sequential  generative  adversarial  networks  for symbolic  music generation  and accompaniment,  \nin: Proceedings  of the 32nd AAAI Conference  on Arti\ufb01cial  Intelligence,  New Orleans,  Louisiana,  USA, 2018, pp.",
+                "[20]K. Chen, W. Zhang, S. Dubnov,  G. Xia, W. Li, The effect of explicit  structure  encoding  of deep neural networks  for symbolic  music generation,  in: 2019 \nInternational  Workshop  on Multilayer  Music Representation  and Processing  (MMRP),  IEEE, 2019, pp."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Singability-enhanced lyric generator with music style transfer",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Human, I wrote a song for you: An experiment testing the influence of machines\u2019 attributes on the AI-composed music evaluation",
+            "symbolic": [
+                "Musegan: Multi-track \nsequential generative adversarial networks for symbolic music generation and \naccompaniment.",
+                "A hierarchical recurrent neural \nnetwork for symbolic melody generation.",
+                "A convolutional generative adversarial \nnetwork for symbolic-domain music generation."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Rethinking musicality in dementia as embodied and relational",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "deepsing: Generating sentiment-aware visual stories using cross-modal music translation",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "ComposeInStyle: Music composition with and without Style Transfer",
+            "symbolic": [
+                "116195\n4S. Mukherjee and M. Mulimani\nof music generation such as generation from spectrograms or gener-\nation of symbolic music.",
+                "On\nthe other hand, (Chen, Wang, & Yang, 2019) describes the process of\nraw audio generation from symbolic music (piano rolls) using CNN\nmodels.",
+                "Generating music from symbolic piano rolls result in real-valued piano\nrolls which must be post-processed in order to obtain the final binary\nvalued results.",
+                "Another work by Yang, Chou, and Yang\n(2017) demonstrates the generation of symbolic music using GAN\neither from scratch, followed by a chord sequence or a priming melody.",
+                "MIDI is a struc-\ntured symbolic form of representing musical data.",
+                "A convolutional generative\nadversarial network for symbolic-domain music generation."
+            ],
+            "waveform": [
+                "(Kumar et al., 2019) takes an initial step\nat generating raw audio waveform through mel-spectrogram inversion.",
+                "(Marafioti et al., 2019) proposes GAN models to generate time\nfrequency based raw audio waveforms.",
+                "The GAN model is trained on\ntime-frequency features which produce reliable and invertible Short\nTerm Fourier Transform (STFT) representations which can be converted\nto raw audio waveforms.",
+                "Melgan: Generative adversarial networks for conditional waveform synthesis."
+            ]
+        },
+        {
+            "title": "The algorithmic composition for music copyright protection under deep learning and blockchain",
+            "symbolic": [],
+            "waveform": [
+                "The\nnumberofnetworklayerunitsissetto512,andtheiterationis\nsetto3000.Asshowninthetime-domainwaveformdiagramin\nFig.19,thefrequencydistributionrangeofthemusicgenerated\nbytheMCNNnetworkisbasicallythesameasthatofthetraining\nsamplewaveform.",
+                "20.Time-domainwaveformsoftrainingsamplesandgeneratedsamples."
+            ]
+        },
+        {
+            "title": "Towards a Deep Improviser: a prototype deep learning post-tonal free music generator",
+            "symbolic": [
+                "Natural Computing Applications Forum 2018\nAbstract\nTwo modest-sized symbolic corpora of post-tonal and post-metrical keyboard music have been constructed: one algo-\nrithmic and the other improvised.",
+                "Considering the case\nof music with symbolic representation (and thus potentially\nconventional musical notation), the highly successfulFolkRNN",
+                "Given our intent to progressively assemble a Deep\nImproviser, a machine capable of free improvisation par-\nticularly in conjunction with human partners, we started\nwith the target of multi-hand keyboard music and consid-ered carefully the symbolic representation appropriate for\nour purpose.",
+                "In Sect. 2, we describe\nsome of the long-term purposes of the work and how these\nlead to our adopted form of symbolic representation ofkeyboard music.",
+                "3 Creating multi-hand keyboard corpora\nWe constructed two keyboard corpora for the training ofour initial models, since we can \ufb01nd no prior symboliccorpus with the objectives and features we required (post-\ntonal and post-metrical)."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "From artificial neural networks to deep learning for music generation: history, concepts and trends",
+            "symbolic": [
+                "The input and output representations are symbolic, of\nthe piano roll type, with a direct encoding into one-hot\nvectors.",
+                "6.2.2 SymbolicThe main symbolic formats used are:\n\u2013MIDI\n28\u2014It it is a technical standard that describes a\nprotocol based on events, a digital interface and connec-\ntors for interoperability betwee n various electronic musi-\ncal instruments, softwares and devices [ 43].",
+                "26Indeed, at the level of processing by a deep network architecture,\nthe initial distinction between audio and symbolic representation boils\ndown, as only numerical values and operations are considered.",
+                "In this\narticle, we will focus on symbolic music representation and\ngeneration.",
+                "The use of algorithms and\ncomputers to generate music compositions (symbolic\nform) or music pieces (audio form).",
+                "Yang LC, Chou SY, Yang YH (2017) MidiNet: a convolutional\ngenerative adversarial network for symbolic-domain music gen-\neration."
+            ],
+            "waveform": [
+                "Examples are: waveform\nsignal, transformed signal (e.g., a spectrum, via aFourier transform), piano roll, MIDI, text, encoded in\nscalar variables or/and in one-hot vectors.",
+                "25However, the actual processing of these two\nmain types of representation by a deep learning architec-ture is basically the same .\n26\n6.2.1 Audio\nThe main audio formats used are:\n\u2013Signal waveform ,\n\u2013Spectrum , obtained via a Fourier transform .27",
+                "The advantage of waveform is in considering the raw\nmaterial untransformed, with its full initial resolution.",
+                "27The objective of the Fourier transform (which could be continuous\nor discrete) is the decomposition of an arbitrary signal into its\nelementary components (sinusoidal waveforms).",
+                "Fourier transform A transformation (which could be\ncontinuous or discrete) of a signal into the decompositioninto its elementary components (sinusoidal waveforms).",
+                "Examples of types of representation are: waveform\nsignal, spectrum, piano roll and MIDI.Requirement One of the qualities that may be desired\nfor music generation.",
+                "It is computed by a Fourier transformation\nwhich decomposes the original signal into its elementary(harmonic) components (sinusoidal waveforms)\nStacked autoencoder A set of hierarchically nested\nautoencoders with decreasing numbers of hidden layerunits."
+            ]
+        },
+        {
+            "title": "Conditional hybrid GAN for melody generation from lyrics",
+            "symbolic": [
+                "There are also some trans-\nformer-based adversarial learning models by [ 23]\nand [ 24] to generate discrete-valued symbolic\nmusic sequence.",
+                "Learning adversarial transformer for symbolic\nmusic generation."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "Scene2Wav: a deep convolutional sequence-to-conditional SampleRNN for emotional scene musicalization",
+            "symbolic": [],
+            "waveform": [
+                "In each image, the waveforms for the original audio,\nthe music generated from the baseline model, and the music generated from the proposed\nmodel are also plotted in that order.",
+                "The results show that, in both positive and negative emotionally charged samples, our\nScene2Wav model is able to generate music that more accurately retains the dynamic prop-\nerties of the original audio, as is demonstrated by similarities in the audio signal waveforms."
+            ]
+        },
+        {
+            "title": "Attentional networks for music generation",
+            "symbolic": [
+                "Dong HW, Hsiao WY, Yang LC, Yang YH (2018) Musegan: Multi-track sequential generative adversar-\nial networks for symbolic music generation and accompaniment.",
+                "A convolutional generative adversarial network for\nsymbolic-domain music generation."
+            ],
+            "waveform": [
+                "It extended the idea of directly utilizingwaveforms for the task of music audio tagging.",
+                "More recent generative models such as gener-ative adversarial networks (GANs) or variational auto-encoders (V AEs) can even generatenovel timbral spaces as well as render novel songs while directly working in the waveformdomain."
+            ]
+        },
+        {
+            "title": "Monophonic music composition using genetic algorithm and Bresenham\u2019s line algorithm",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Polyphonic music generation generative adversarial network with Markov decision process",
+            "symbolic": [
+                "MuseGAN V2 uses three symbolic, multi-channel, music gener-\nation models in a GAN framework: the interference model, the composer model, and thehybrid model.",
+                "Dong HW, Hsiao WY, Yang LC (2017) MuseGAN: multi-track sequential Generative Adversarial\nNetworks for symbolic music generation and accompaniment."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "A combination of multi-objective genetic algorithm and deep learning for music harmony generation",
+            "symbolic": [
+                "An end to end model for automatic music generation:\ncombining deep raw and symbolic audio networks.",
+                "A hierarchical recurrent neural network for symbolic melody\ngeneration.",
+                "MidiNet: a convolutional generative adversarial network\nfor symbolic-domain music generation.arXiv preprint arXiv:1703.10847."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "A Style-Specific Music Composition Neural Network",
+            "symbolic": [
+                "The symbolic model trained and generated at the note level is currently apopular method.",
+                "[24] proposes that the CycleGAN model can be applied to the style migration of symbolic\nmusic, adding another discriminator to keep the generator\u2019s structure features of the originalmusic, but the generated style is not rich enough.",
+                "2.3 Audio Model Based on Neural Networks\nThe symbolic model captures the long-term dependence of the fusion structure, but unableto understand the nuances and richness of the original audio generation.",
+                "This method adopts LSTM to learn music with different melodystructure styles, and then takes this unique and symbolic result as a conditional input fororiginal audio generators to generate a model that automatically produces new music.",
+                "MidiNet: a convolutional generative adversarial networks for\nsymbolic-domain music generation.",
+                "Dong HW, Hsiao WY , Yang LC, Yang YH (2018) MuseGAN: symbolic-domain music generation and\naccompaniment with multitrack sequential generative adversarial networks."
+            ],
+            "waveform": [
+                "The original audiomodel directly trains the sampled audio waveform [ 25] to produce a realistic sound, i.e.\ntimbre.",
+                "The trainingdata is an audio waveform \ufb01le, which can generate realistic music fragments."
+            ]
+        },
+        {
+            "title": "Self-Supervised Music Motion Synchronization Learning for Music-Driven Conducting Motion Generation",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Integration of a music generator and a song lyrics generator to create Spanish popular songs",
+            "symbolic": [],
+            "waveform": []
+        },
+        {
+            "title": "Transformer-based ensemble method for multiple predominant instruments recognition in polyphonic music",
+            "symbolic": [],
+            "waveform": [
+                "The time-domain waveform is converted to a\ntime-frequency representationusing a short-time Fourier\ntransform (STFT) with a frame size of 50 ms and hop\nsize of 10 ms."
+            ]
+        },
+        {
+            "title": "Genre Recognition from Symbolic Music with CNNs: Performance and Explainability",
+            "symbolic": [
+                "The Author(s) 2022\nAbstract\nIn this work, we study the use of convolutional neural networks for genre recognition in symbolically represented music.",
+                "Finally, \nwe adapt various post hoc explainability methods to the domain of symbolic music and attempt to explain the predictions \nof our best performing network.",
+                "The \ntwo most common forms of musical data are symbolic \nrepresentations\u2014such as MIDI messages, pianorolls and \nscores\u2014and audio recordings.",
+                "For instance, algorith-\nmic composition of music is almost exclusively tackled \nwith symbolic representations of music [2 , 5, 23], while music classification tasks, such as genre recognition [26, \n29, 51, 52], or mood classification [30, 33, 50] are typically \napproached in the audio domain.",
+                "This is \nalso true, to a lesser extent, for symbolic representations \nof music, and is one of the main reasons for which some \ndeep learning-based composition models cannot generate \npieces of music longer than a few bars while maintain-\ning musicality, prosody, and structure.",
+                "On the other hand, \nsymbolic music does not fully capture information that \nmight be important for solving a task such as genre recog-\nnition, for instance the different sounds of various instru-\nments or nuanced aspects of human performance.",
+                "These \ndifficulties, among others, have led to the development of \nnew approaches for processing music in both the audio \nand the symbolic domain, many of which take the form of \nspecialized neural network architectures such as WaveNets This article is part of the topical collection \u201cEvolutionary Art \nand Music\u201d guest edited by Aniko Ekart, Juan Romero and Tiago \nMartins.\n *",
+                "In this work, one of our main goals was to develop \na methodology for classification of symbolic music into \ngenres, based on neural networks, which has not been as \nextensively explored as audio, but has the potential to be \nuseful in real-world applications, as symbolic representa-\ntions (such as MIDI files) are more light-weight and are \nsometimes easier to acquire than audio representations.",
+                "Furthermore, recent hybrid approaches that utilize both \naudio and symbolic representations have shown promis-\ning results for various music-related tasks [19, 48] which \nfurther motivates studying symbolic representations.",
+                "This approach however, on the one hand, requires a suitable \ninitial baseline network to be scaled up, and on the other \nhand, it is a method proposed for computer vision tasks and \nit is unclear if the conclusions transfer to symbolic music.",
+                "In this work, we focus our \nexperiments on comparing CNNs that have the same recep-\ntive field and number of trainable parameters, but differ in \ndepth, width and kernel size to explore their effectiveness for \ngenre recognition in symbolically represented music.",
+                "There are many different approaches in the literature for \ngenre recognition in the symbolic music domain.",
+                "[4 ] used a machine learning approach, including \na simple neural network, on a custom dataset for successful \ngenre recognition in the symbolic domain.",
+                "Preliminaries\nGenre recognition from symbolic music can be described \nas a multi-label sequence classification task, in which a set \nof labels Y={y1\u2026ym} is assigned to a sequence of vectors \nX=(x1,x2\u2026xt) .",
+                "This, along with \nthe success of 1D CNNs for other tasks in the symbolic \nmusic domain [5 ] and their suitability for sequence pattern (1) F(X;/u1D703)m=P(ym/uni007C.varX),recognition, as has been shown in multiple domains, such as \npattern recognition in DNA sequences by Lanchantin et\u00a0al. \nin [18], motivates us to explore 1D CNNs for the task of \nrecognizing genres in symbolic music.",
+                "In this work, we set a baseline for tree representation uti-\nlization for information retrieval from symbolic music, using \nfull binary trees as input structures and by then treating each \nlevel of the tree as a separate input.",
+                "For instance, in \nthe case of symbolic music, a simple feature that could be \nextracted from higher levels of a tree (closer to the root) \nwould be the key signature of a large segment of the input\u2014\nwhich relates to the set of notes which appear in the seg -\nment.",
+                "Experiments\nTo explore the effectiveness of our architecture for informa-\ntion retrieval from symbolic music and to check the com -\npatibility of 1D CNNs for the task, along with the effect of \nallocating resources to network depth or to kernel size we \nconducted a set of experiments.1\nData\nFor our experiments, we use the Lakh Pianoroll Dataset \nas presented by Dong et\u00a0al.",
+                "At the time \nof writing, Ferraro and Lemstr\u00f6m in [7 ] have achieved the \nbest results with regards to genre classification of symbolic \nmusic for the MASD and topMAGD datasets.",
+                "The \u2018Sequence\u2019 networks are a typical 1D CNN archi-\ntecture, which, however, to our knowledge, have not been \nused in an end-to-end approach for symbolic music inputs \nand genre recognition.",
+                "This could be due to distinguishing musical characteristics \nof each genre, which are apparent in symbolic representa-\ntions of music\u2014for instance, jazz music tends to have com-\nplex harmony and utilize more notes, while electronic music \ntends to contain loops of very few notes.",
+                "Explanations\nEven though we have shown that deep convolutional neural \nnetworks can perform better than other methods for genre \nrecognition from symbolic music, they suffer from draw -\nbacks that most deep learning approaches do, importantly \nlack of explainability and interpretability.",
+                "In this section, we generate explanations by adapting \nvarious explainability frameworks and tools from the area \nof explainable AI (XAI) to the domain of symbolic music.",
+                "We analyze and qualitatively compare the \nusefulness of different explanation methods when applied \nto symbolic music.",
+                "There are many such methods in the relevant literature, \nfor various types of data; however, none have been designed \nspecifically for symbolic representations of music.",
+                "Here, we \nshow visual explanations for Grad-CAM and LIME, where \nthe image depicts the cumulative pianoroll of each piece of \nmusic, while for GPX we modify the explanation pipeline \nfor it to be utilized on symbolic representations of music.",
+                "In this work, the GP evolves symbolic \nexpressions for local explanation in the genre classification \ntask.",
+                "Instead, \nwe incorporate a feature extraction function h\u2236\u211dn\u2192\u211dp \nwithin the explainer function, where n  is the original num-\nber of features and p<n is the number of extracted fea-\ntures, and reformulate Eq.\u00a0 5 as:\nFor applying this idea on symbolic music, we define h  to \nextract thirteen features, which are intuitively linked to (6)/u1D709=arg min\ng\u2208G, si\u2208/u1D702d([g(h(s1)),\u2026,g(h(sm))]",
+                "For Your Precious Love (Pop-Rock, RnB, \nReggae)\nBlues Bill Quinn - He\u2019ll Have To Go (Country, Blues) Jim Reeves - He\u2019ll Have To Go (Country) SN Computer Science (2023) 4:106\n 106 Page 16 of 18\nSN Computer Science\nDiscussion\nIn this section, we showed how various explainability meth-\nods may be used in the context of symbolic music classifi-\ncation.",
+                "Especially for results that are consistent across explainability \nmethods such as for Moonlight Sonata we found the explana-\ntions to be particularly insightful.\nConclusions and\u00a0Future Work\nWe have demonstrated the effectiveness of CNNs for infor -\nmation retrieval from symbolically represented music.",
+                "This includes utiliz-\ning audio alongside symbolic representations for a hybrid \napproach for the genre recognition task.",
+                "Finally, we gained insights about what the best perform-\ning CNN has learned by adapting post hoc explainability \nmethods to our domain of symbolic music.",
+                "Specifically, we believe that it would \nbe useful to generate audible explanations, in addition to \nexplanations based on terms from music-theory, in order to \nget a better understanding of black-box models which act on \nsymbolic music.",
+                "Musegan: Multi-track \nsequential generative adversarial networks for symbolic music \ngeneration and accompaniment.",
+                "On large-scale genre classification in \nsymbolically encoded music by automatic identification of \nrepeating patterns.",
+                "Kotsifakos A, Kotsifakos EE, Papapetrou P, Athitsos V. Genre \nclassification of symbolic music with smbgt.",
+                "Lattner S, Grachten M, Widmer G. Learning transposition-invar -\niant interval features from symbolic music and audio.",
+                "Pirhdy: \nLearning pitch-, rhythm-, and dynamics-aware embeddings for \nsymbolic music."
+            ],
+            "waveform": []
+        },
+        {
+            "title": "CycleDRUMS: automatic drum arrangement for bass lines using CycleGAN",
+            "symbolic": [
+                "In the symbolic domain, the key problem of \nautomatically arranging a piece of music was extensively studied, while relatively fewer systems tackled this challenge \nin the audio domain.",
+                "Unlike most techniques that rely on a symbolic representation of music (i.e., MIDI, piano rolls, music sheets), the \napproach proposed in this paper is a first attempt at automatically generating drums in the audio domain, given a bass \nline encoded in the mel-spectrogram time-frequency domain.",
+                "Although arrangement generation has been \nextensively studied in symbolic audio, switching to mel-spectrograms allowed us to preserve the sound heritage of other \nmusical pieces and represent a valid alternative for real-case scenarios.",
+                "Indeed, even if it is possible to use synthesizers \nto produce sounds from symbolic music, MIDI, music sheets, and piano rolls are not always easy to find or produce, and \nthey sometimes lack expressiveness.",
+                "Here we present a brief \noverview of the key contributions in the symbolic and audio domains.",
+                "Music generation & arrangement in the symbolic domain: there is an extensive body of research using symbolic music \nrepresentation to perform music generation and arrangement.",
+                "In [21], symbolic sequences of polyphonic music are modeled in an entirely general piano-roll representation, while the \nauthors of [22] propose a novel architecture to generate melodies satisfying positional constraints in the style of the \nsoprano parts of the J.S. Bach chorale harmonizations encoded in MIDI.",
+                "It is worth recalling that the application of GANs to music generation tasks is not \nnew: in [45], GANs are applied to symbolic music to perform music genre transfer, while in [46, 47], authors construct \nand deploy an adversary of deep learning systems applied to music content analysis; however, to the best of our knowl-\nedge, GANs have never been applied to raw audio in the mel-frequency domain for music generation purposes.",
+                "As to \nthe arrangement generation task, the large majority of approaches proposed in the literature is based on a symbolic \nrepresentation of music: in [5 ], a novel multi-track MIDI representation (MuMIDI) is presented, which enables simultane -\nous multi-track generation in a single sequence and explicitly models the dependency of the notes from different tracks \nutilizing a Transformer-based architecture; in [4 ], a deep reinforcement learning algorithm for online accompaniment \ngeneration is described.",
+                "Yang L-C, Chou S-Y, Yang Y-H. MidiNet: a convolutional generative adversarial network for symbolic-domain music generation.",
+                "Kulis B. An end to end model for automatic music generation: combining deep raw and symbolic \naudio networks."
+            ],
+            "waveform": [
+                "After converting the waveform of the bass into a mel-spectrogram, we can automatically generate original drums \nthat follow the beat, sound credible, and be directly mixed with the input bass.",
+                "[30]\u2014capable of transcribing, composing, and synthesizing audio waveforms.",
+                "Music generation & arrangement in the audio domain: some of the most relevant approaches proposed in waveform \nmusic generation deal with raw audio representation in the time domain [ 32].",
+                "In contrast, in [36], the authors present a \nneural source-filter (NSF) waveform modeling framework that is straightforward to train and fast to generate waveforms.",
+                "In [37], recent neural waveform synthesizers such as WaveNet, WaveG-low, and a neural source filter (NSF) are compared.",
+                "In practice, given an input song, we use Demucs to separate it into vocals, bass, drums, and others, \nkeeping the original mixture.\n3.2  Music representation\u2014from raw audio to\u00a0mel\u2011spectrograms\nOur method\u2019s distinguishing feature is mel-spectrograms instead of waveforms.",
+                "After the source separation task is carried out on our song dataset, both the bass and drum waveforms are turned \ninto the corresponding mel-spectrograms using PyTorch Audio.1 PyTorch works very fast and is optimized to perform \nrobust GPU-accelerated conversion.",
+                "After the source separation task on \nour song dataset, the bass and drum waveforms are turned into the corresponding mel-spectrograms.",
+                "Figure\u00a0 2 shows a schema summarizing the entire architecture.\n3.4  Automatic bass to\u00a0drums arrangement\nCycleDRUMS takes as input a set of N  music songs in the waveform domain X={xi}N\ni=1 , where /u1D431/u1D422 is a waveform whose \nnumber of samples depends on the sampling rate and the audio length.",
+                "Demucs then separate each waveform into \ndifferent sources.",
+                "As a final step, the mel-spectrograms obtained were converted to the waveform \ndomain to evaluate the music produced.",
+                "Since the output prediction can be fully parallelized, \nthe inference time amounts to a forward pass and a Mel-spectrogram-waveform inverse conversion, whose duration \ndepends on the input length but never exceeds a few minutes.",
+                "Wang X, Takaki S, Yamagishi J. Neural source-filter waveform models for statistical parametric speech synthesis.",
+                "Zhao Y, Wang X, Juvela L, Yamagishi J. Transferring neural speech waveform synthesizers to musical instrument sounds generation."
+            ]
+        }
+    ]
+}
