@@ -1,0 +1,10 @@
+{
+    "RNN": 41,
+    "VAE": 18,
+    "GAN": 43,
+    "Tranformer": 23,
+    "CNN": 32,
+    "BM (Boltzmann Machine)": 7,
+    "DBN": 2,
+    "NAM (Neural Autoregressive Model)": 1
+}

@@ -1,12 +1,16 @@
 import data_collection as dt
 import json
 
-keywords = []
+musicTypes = [' homophonic ', ' polyphonic ', ' monophonic ', ' heterophonic ', ' a cappella ', ' instrumental ', ' vocal ',
+              ' choral ', 'orchestral', ' chamber ', ' symphonic ', ' folk ', ' blues ', ' jazz ', ' rock ', ' classical ',
+              ' electronic ', 'hip-hop', ' reggae ', ' country ', ' r&b ', ' heavy metal ', ' punk ', ' alternative ', ' k-pop ',
+            ' pop ', ' ambient ', ' gospel ', ' soul ', ' funk ', ' disco ', ' techno ', ' dubstep ', ' opera ',
+              ' bluegrass ', ' flamenco ', ' rock ', '-rock ']
 
-def articleTalkAbout(article):
-    for key in article.keys():
-        if key in keywords and len(article[key]) > 0:
-            return True
+architectures = ['RNN', 'Recurrent Neural Network', 'VAE', 'Variational Autoencoder', 'GAN', 'Generative Adversarial Network',
+                 'Transformer-based', 'Tranformer', 'Neural Autoregressive', 'NAM', 'Deep Belief Network', 'DBN',
+                 'Markov Chain Monte Carlo', 'MCMC', 'Boltzmann Machines', 'BM', 'Hopfield Network']
+
 
 def getNumberOfArticlesByLocation():
     allMetadata = dt.getAllMetaData()
@@ -24,19 +28,38 @@ def getNumberOfArticlesByLocation():
         json.dump(dataCounts, f, indent=4)
 
 def getNumberOfArticlesByMusicType():
-    allMetadata = dt.getAllMetaData()
+    # dt.generateDataCollection(musicTypes,'musicTypesFiltered')
+    f = open('musicTypesFiltered.json', encoding='utf-8')
+    data = json.load(f)
     dataCounts = {}
-    metadatas = allMetadata["content"]
-    for metadata in metadatas:
-        print("\n\n\n\n\n\nmetadata: ",metadata)
-        if not metadata["location"] == None:
-            for location in metadata["location"]:
-                if not location in dataCounts:
-                    dataCounts[location] = 1
+    for group in data['data_collection']:
+        for type in group:
+            if type != 'title' and group[type] != []:
+                if not type in dataCounts:
+                    dataCounts[type] = 1
                 else:
-                    dataCounts[location] = dataCounts[location] + 1
-    
-    with open("Results/locationResults" + ".json", 'w') as f:
+                    dataCounts[type] = dataCounts[type] + 1
+
+    with open("Results/musicTypeResults" + ".json", 'w') as f:
         json.dump(dataCounts, f, indent=4)
 
-getNumberOfArticlesByMusicType()
+def getNumberOfArticlesByArchitecture():
+    dt.generateDataCollection(architectures,'architecturesFiltered')
+    f = open('architecturesFiltered.json', encoding='utf-8')
+    data = json.load(f)
+    dataCounts = {}
+    print(data['data_collection'])
+    for group in data['data_collection']:
+        for type in group:
+            if type != 'title' and group[type] != []:
+                if not type in dataCounts:
+                    dataCounts[type] = 1
+                else:
+                    dataCounts[type] = dataCounts[type] + 1
+
+    with open("Results/architecturesResults" + ".json", 'w') as f:
+        json.dump(dataCounts, f, indent=4)
+
+# getNumberOfArticlesByLocation()
+# getNumberOfArticlesByMusicType()
+getNumberOfArticlesByArchitecture()

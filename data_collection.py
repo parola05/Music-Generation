@@ -3,6 +3,11 @@ import spacy
 import json
 import os
 
+def articleTalkAbout(article, keywords):
+    for key in article.keys():
+        if key in keywords and len(article[key]) > 0:
+            return True
+
 # Get all metadata
 # @return: object with entry "content" that is a list of all metadata objects
 def getAllMetaData():
