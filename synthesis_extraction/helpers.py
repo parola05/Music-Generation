@@ -73,3 +73,21 @@ def getNumberOfEachKeywords(filename,output,keywords):
                     resJson[key] = resJson[key] + 1
     with open(output, 'w') as f:
         json.dump(resJson, f, indent=4)
+
+'''
+    Return a JSON with the number of articles by location
+'''
+def getNumberOfArticlesByLocation():
+    allMetadata = dt.getAllMetaData()
+    dataCounts = {}
+    metadatas = allMetadata["content"]
+    for metadata in metadatas:
+        if not metadata["location"] == None:
+            for location in metadata["location"]:
+                if not location in dataCounts:
+                    dataCounts[location] = 1
+                else:
+                    dataCounts[location] = dataCounts[location] + 1
+    
+    with open("Results/locationResults" + ".json", 'w') as f:
+        json.dump(dataCounts, f, indent=4)

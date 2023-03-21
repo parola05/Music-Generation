@@ -13,4 +13,4 @@ keywords = [
     "cultural impact"
 ]
 
-dt.generateDataCollection(keywords,"Results/ethicsFilterResult")
+dt.generateDataCollection(keywords,"Results/ethical_extraction.json")

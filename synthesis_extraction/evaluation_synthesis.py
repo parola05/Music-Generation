@@ -12,4 +12,4 @@ keywords = [
     "expressiveness"
 ]
 
-dt.generateDataCollection(keywords,"Results/evaluationFilterResult")
+dt.generateDataCollection(keywords,"Results/evaluation_extraction")
